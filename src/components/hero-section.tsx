@@ -1,13 +1,10 @@
 import React from 'react'
-
 import Image from 'next/image';
 import Link from 'next/link';
 import {Button} from "@/components/ui/button";
 import { InfiniteSlider } from '@/components/motion-primitives/infinite-slider'
 import { ProgressiveBlur } from '@/components/motion-primitives/progressive-blur'
-
 import { HeroHeader } from '@/components/hero-header'
-
 
 
 export default function HeroSection() {
@@ -27,7 +24,7 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         className="px-5 text-base">
-                                        <Link href="#link">
+                                        <Link href="#">
                                             <span className="text-nowrap">Let&#39;s Work Together</span>
                                         </Link>
                                     </Button>
@@ -37,7 +34,7 @@ export default function HeroSection() {
                                         size="lg"
                                         variant="ghost"
                                         className="px-5 text-base">
-                                        <Link href="#link">
+                                        <Link href="#">
                                             <span className="text-nowrap">View My CV</span>
                                         </Link>
                                     </Button>
