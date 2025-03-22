@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero-section";
 import {client} from "@/sanity/lib/client";
 import {PORTFOLIO_QUERY} from "@/sanity/queries";
 import {PortfolioContent} from "@/data/portfolioContent";
+import {Lenis} from "lenis/react";
 
 
 const options = {next:{revalidate:30}};
@@ -13,8 +14,10 @@ export default async function Home() {
 
 
   return (
+      <Lenis root>
     <div>
     <HeroSection />
     </div>
+      </Lenis>
   );
 }
