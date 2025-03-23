@@ -6,19 +6,39 @@ import { InfiniteSlider } from '@/components/motion-primitives/infinite-slider'
 import { ProgressiveBlur } from '@/components/motion-primitives/progressive-blur'
 import { HeroHeader } from '@/components/hero-header'
 import HeroBg from '../../public/upscaled-hero-bg.png';
+import LogoImage from "../../public/logo.svg";
+import {Github, InstagramIcon, Linkedin} from "lucide-react";
+import SocialMediaIcon from "@/components/social-media-icon";
+
+
 
 
 export default function HeroSection() {
     return (
         <>
-            <Image src={HeroBg} alt={"Hero Image"}  className={'absolute max-h-screen max-w-screen'}/>
+            <Image src={HeroBg} alt={"Hero Image"}  className={'absolute h-screen w-screen'}/>
             <HeroHeader />
             <main className="overflow-x-hidden">
                 <section>
                     <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">
-                        <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
-                            <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
-                                <h1 className="mt-8 max-w-6xl text-balance text-4xl font-medium md:text-5xl lg:mt-16 xl:text-6xl">Crafting Seamless Experiences with React & Next.js</h1>
+                        <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:flex lg:flex-row justify-center items-start">
+                            <div className={" w-full lg:w-1/3 lg:pt-12 flex items-center  gap-x-4"}>
+                               <div>
+                                   <Image src={LogoImage} alt={"Haitham`s image"} className={'size-20 rounded-full'}/>
+                               </div>
+                                <div>
+                                    <h4 className={'text-black text-xl font-semibold'}>Haitham Hussein</h4>
+                                    <p className={'text-muted-foreground'}>React & NextJs Developer</p>
+                                    <ul className={'mt-4 flex space-x-4'}>
+                                        <SocialMediaIcon icon={<Github/>}/>
+                                        <SocialMediaIcon icon={<Linkedin/>}/>
+                                        <SocialMediaIcon icon={<InstagramIcon/>}/>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-2/3 lg:text-left">
+                                <h1 className="mt-8 max-w-6xl text-balance text-4xl font-medium md:text-5xl lg:mt-0 xl:text-6xl">Crafting Seamless Experiences with React & Next.js</h1>
                                 <p className="mt-8 max-w-2xl text-pretty text-lg">Focused on turning ideas into functional, high-performing web solutions with clean and maintainable code.</p>
 
                                 <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
@@ -42,6 +62,7 @@ export default function HeroSection() {
                                     </Button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>

@@ -79,8 +79,8 @@ export const HeroHeader = () => {
 
                                 <Button
                                     asChild
-                                    size="sm"
-                                    className={cn(isScrolled && 'lg:hidden')}>
+                                    size="lg"
+                                    className={cn(isScrolled && 'lg:hidden','rounded-3xl')}>
                                     <Link href="#">
                                         <span>Contact Me</span>
                                     </Link>
