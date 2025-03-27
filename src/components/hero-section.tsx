@@ -6,7 +6,7 @@ import {Button} from "@/components/ui/button";
 import { HeroHeader } from '@/components/hero-header'
 import HeroBg from '../../public/upscaled-hero-bg.png';
 import MeImage from "../../public/me.jpg";
-import {Github, InstagramIcon, Linkedin} from "lucide-react";
+import {ArrowUpRight, Github, InstagramIcon, Linkedin} from "lucide-react";
 import SocialMediaIcon from "@/components/social-media-icon";
 import PrimaryButton from "@/components/PrimaryButton";
 import CircularText from "@/components/motion-primitives/circle-text";
@@ -37,14 +37,6 @@ export default function HeroSection() {
                                             <SocialMediaIcon icon={<InstagramIcon className={'size-4 lg:size-5'}/>}/>
                                         </ul>
                                     </div>
-                                </div>
-                                <div className={'pt-12  w-fit'}>
-                                    <CircularText
-                                        text="LETS*WORK*TOGETHER*"
-                                        onHover="speedUp"
-                                        spinDuration={30}
-                                        className=""
-                                    />
                                 </div>
 
                             </div>
