@@ -3,7 +3,7 @@ import {client} from "@/sanity/lib/client";
 import {PORTFOLIO_QUERY} from "@/sanity/queries";
 import {PortfolioContent} from "@/data/portfolioContent";
 import {Lenis} from "lenis/react";
-import TechSection from "@/components/tech-section";
+import StaticsSection from "@/components/statics-section";
 import {HeroHeader} from "@/components/hero-header";
 import React from "react";
 
@@ -22,7 +22,7 @@ export default async function Home() {
       <HeroHeader />
     <HeroSection />
 
-      <TechSection/>
+      <StaticsSection/>
     </div>
       </Lenis>
   );
