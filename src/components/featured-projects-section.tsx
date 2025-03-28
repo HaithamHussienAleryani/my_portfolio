@@ -15,8 +15,11 @@ const FeaturedProjectsSection = () => {
                     <p className={'text-muted-foreground font-semibold'}> 01 - Featured Projects</p>
 
                 </div>
-                <h1 className={'text-8xl font-light max-w-4xl text-white'}>I blend creativity with technical expertise</h1>
+                <h1 className={'text-8xl font-thin max-w-4xl text-white'}>I blend creativity with technical expertise</h1>
                 <PrimaryButton className={'mt-16 '} title={"Let's work together"}/>
+            </div>
+            <div className={'mt-56 flex '}>
+
             </div>
         </section>
     );

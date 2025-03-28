@@ -128,6 +128,6 @@
     @apply bg-black relative pt-60 overflow-hidden;
   }
   .featured-projects-logo{
-  @apply absolute top-0  left-1/2;
+  @apply absolute   left-[60%] -top-6;
   }
 }
