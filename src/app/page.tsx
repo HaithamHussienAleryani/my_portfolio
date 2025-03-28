@@ -6,6 +6,7 @@ import {Lenis} from "lenis/react";
 import StaticsSection from "@/components/statics-section";
 import {HeroHeader} from "@/components/hero-header";
 import React from "react";
+import FeaturedProjectsSection from "@/components/featured-projects-section";
 
 
 const options = {next:{revalidate:30}};
@@ -18,12 +19,10 @@ export default async function Home() {
 
   return (
       <Lenis root>
-    <div>
-      <HeroHeader />
-    <HeroSection />
-
-      <StaticsSection/>
-    </div>
+        <HeroHeader />
+        <HeroSection />
+        <StaticsSection/>
+        <FeaturedProjectsSection/>
       </Lenis>
   );
 }
