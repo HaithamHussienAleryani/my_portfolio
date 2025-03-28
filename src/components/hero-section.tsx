@@ -3,25 +3,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {Button} from "@/components/ui/button";
 
-import { HeroHeader } from '@/components/hero-header'
 import HeroBg from '../../public/upscaled-hero-bg.png';
 import MeImage from "../../public/me.jpg";
-import {ArrowUpRight, Github, InstagramIcon, Linkedin} from "lucide-react";
+import { Github, InstagramIcon, Linkedin} from "lucide-react";
 import SocialMediaIcon from "@/components/social-media-icon";
 import PrimaryButton from "@/components/PrimaryButton";
-import CircularText from "@/components/motion-primitives/circle-text";
 
-
+// pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44
 
 
 export default function HeroSection() {
     return (
-        <div className={'relative'}>
+        <div className={'relative h-screen'}>
             <Image src={HeroBg} alt={"Hero Image"}  className={'absolute h-screen w-screen'}/>
-            <HeroHeader />
             <main className="overflow-x-hidden">
                 <section>
-                    <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">
+                    <div className="pt-12 lg:pt-44">
                         <div className="relative mx-auto flex max-w-6xl  lg:gap-x-10 flex-col px-6 lg:flex lg:flex-row justify-center items-start">
                             <div>
                                 <div className={" w-full justify-center pt-7   lg:pt-18 flex items-center  gap-x-4"}>
