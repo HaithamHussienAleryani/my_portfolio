@@ -2,6 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import OutlinedLogo from "../../public/logo-outlined.svg";
 import PrimaryButton from "@/components/PrimaryButton";
+import FeaturedProjectCard from "@/components/featured-proeject-card";
 
 
 
@@ -18,8 +19,9 @@ const FeaturedProjectsSection = () => {
                 <h1 className={'text-8xl font-thin max-w-4xl text-white'}>I blend creativity with technical expertise</h1>
                 <PrimaryButton className={'mt-16 '} title={"Let's work together"}/>
             </div>
-            <div className={'mt-56 flex '}>
-
+            <div className={'mt-56 grid md:grid-cols-2 '}>
+                <FeaturedProjectCard/>
+                <FeaturedProjectCard/>
             </div>
         </section>
     );

@@ -130,4 +130,7 @@
   .featured-projects-logo{
   @apply absolute   left-[60%] -top-6;
   }
+  .project-title-brackets{
+    @apply text-primary text-2xl;
+  }
 }
