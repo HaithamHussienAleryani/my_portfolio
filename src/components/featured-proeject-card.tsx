@@ -24,18 +24,20 @@ const FeaturedProjectCard = ({small = false}: props) => {
 
     return (
         <Link href="/" className={'z-10 bg-black'}>
-            <div className={cn("border pt-8 md:pt-20 pb-5 hover:bg-sidebar-primary duration-300  border-white/15  ")}>
+            <div className={cn("border pt-5 md:pt-20 pb-5 hover:bg-sidebar-primary duration-300  border-white/15  ")}>
 
 
-                <div className={'flex px-8 md:px-20 gap-x-8 text-white items-center'}>
-                    <p className={'text-xl tracking-tighter'}><span className={'project-title-brackets'}>{"{"}</span> Project
+                <div className={'flex px-6 md:px-20 gap-x-8 text-white items-center'}>
+                    <p className={'  md:text-xl tracking-tighter'}><span className={'project-title-brackets'}>{"{"}</span> Project
                         Title
                         One <span className={'project-title-brackets'}>{"}"}</span></p>
-                    <span className={'text-muted-foreground pt-0.5 font-semibold'}>25/02/13</span>
+                    <span className={'text-muted-foreground pt-0.5 text-sm md:text-md font-semibold'}>25/02/13</span>
                 </div>
-                <div className={'px-8 md:px-20'}>
-                    <h2 className={'text-white mt-4 tracking-tighter text-3xl font-light'}>Organization name</h2>
-                    <p className={'mt-4 text-muted-foreground text-lg tracking-tighter'}>Web Design & Web Development</p>
+                <div className={'px-6 md:px-20'}>
+                    <h2 className={'text-white mt-2 md:mt-4 tracking-tighter text-3xl font-light'}>Organization
+                        name</h2>
+                    <p className={'mt-2 md:mt-4 text-muted-foreground text-sm md:text-lg tracking-tighter'}>Web Design & Web
+                        Development</p>
                 </div>
 
 
@@ -45,7 +47,7 @@ const FeaturedProjectCard = ({small = false}: props) => {
                     }
                 }>
                     <Image src={ProjectImage} alt={"Project Image"}
-                           className={cn(!small && " h-[300px] md:h-[500px]", small && " h-[300px] md:h-[350px]", "rounded-xl mt-5  object-cover w-full")}/>
+                           className={cn(!small && " h-[250px] md:h-[500px]", small && " h-[250px] md:h-[350px]", "rounded-xl mt-5  object-cover w-full")}/>
                 </motion.div>
 
 
