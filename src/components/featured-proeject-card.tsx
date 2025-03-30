@@ -4,7 +4,7 @@ import {cn} from "@/lib/utils";
 import ProjectImage from '../../public/project.jpg';
 import Image from "next/image";
 import Link from "next/link";
-import {motion, useMotionValueEvent, useScroll, useTransform} from 'motion/react';
+import {motion, useScroll, useTransform} from 'motion/react';
 
 type props = {
     startPixel: number;
@@ -14,7 +14,7 @@ type props = {
 
 const FeaturedProjectCard = ({startPixel,endPixel,small=false}:props) => {
     const { scrollY } = useScroll();
-    
+
 
     const scale = useTransform(scrollY,[startPixel,endPixel],[0.7,1]);
 
