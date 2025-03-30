@@ -26,7 +26,6 @@ const FeaturedProjectsSection = () => {
             <div className={' grid md:grid-cols-3 '}>
                 <FeaturedProjectCard small startPixel={1800} endPixel={2200}/>
                 <FeaturedProjectCard small startPixel={1800} endPixel={2200}/>
-
             </div>
         </section>
     );

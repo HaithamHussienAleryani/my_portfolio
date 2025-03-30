@@ -35,7 +35,7 @@ const FeaturedProjectCard = ({startPixel,endPixel,small=false}:props) => {
                     scale,
                 }
             } >
-                <Image src={ProjectImage} alt={"Project Image"} className={ cn(!small&&"h-[500px]", small&&"h-[350px]" , "rounded-2xl mt-5  object-cover w-full")  } />
+                <Image src={ProjectImage} alt={"Project Image"} className={ cn(!small&&"h-[500px]", small&&"h-[350px]" , "rounded-xl mt-5  object-cover w-full")  } />
             </motion.div>
         </div>
         </Link>
