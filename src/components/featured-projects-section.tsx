@@ -20,8 +20,13 @@ const FeaturedProjectsSection = () => {
                 <PrimaryButton className={'mt-16 '} title={"Let's work together"}/>
             </div>
             <div className={'mt-56 grid md:grid-cols-2 '}>
-                <FeaturedProjectCard/>
-                <FeaturedProjectCard/>
+                <FeaturedProjectCard startPixel={1150} endPixel={1700}/>
+                <FeaturedProjectCard startPixel={1150} endPixel={1700}/>
+            </div>
+            <div className={' grid md:grid-cols-3 '}>
+                <FeaturedProjectCard small startPixel={1800} endPixel={2200}/>
+                <FeaturedProjectCard small startPixel={1800} endPixel={2200}/>
+
             </div>
         </section>
     );
