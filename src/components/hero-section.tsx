@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 
 import HeroBg from '../../public/upscaled-hero-bg.png';
 import MeImage from "../../public/me.jpg";
-import { Github, InstagramIcon, Linkedin} from "lucide-react";
+import {Github, InstagramIcon, Linkedin} from "lucide-react";
 import SocialMediaIcon from "@/components/social-media-icon";
 import PrimaryButton from "@/components/PrimaryButton";
 
@@ -14,22 +14,25 @@ import PrimaryButton from "@/components/PrimaryButton";
 
 export default function HeroSection() {
     return (
-        <div className={'relative h-screen'}>
-            <Image src={HeroBg} alt={"Hero Image"}  className={'absolute h-screen w-screen'}/>
+        <div className={'relative h-fit pb-10'}>
+            <Image src={HeroBg} alt={"Hero Image"} className={'absolute h-full w-screen'}/>
             <main className="overflow-x-hidden">
                 <section>
                     <div className="pt-12 lg:pt-44">
-                        <div className="relative mx-auto flex max-w-6xl  lg:gap-x-10 flex-col px-6 lg:flex lg:flex-row justify-center items-start">
+                        <div
+                            className="relative mx-auto flex max-w-6xl  lg:gap-x-10 flex-col px-6 lg:flex lg:flex-row justify-center items-start">
                             <div>
-                                <div className={" w-full justify-center pt-7   lg:pt-18 flex items-center  gap-x-4"}>
+                                <div
+                                    className={" w-full md:mx-23 lg:mx-0 justify-center pt-7   lg:pt-18 flex items-center  gap-x-4"}>
                                     <div>
-                                        <Image src={MeImage} alt={"Haitham`s image"} className={' size-14 bg-black lg:size-20 object-cover rounded-full'}/>
+                                        <Image src={MeImage} alt={"Haitham`s image"}
+                                               className={' size-14 bg-black lg:size-20 object-cover rounded-full'}/>
                                     </div>
                                     <div>
                                         <h4 className={'text-black text-xl lg:text-2xl font-medium'}>Haitham Hussein</h4>
                                         <p className={'text-muted-foreground text-sm lg:text-md'}>React & NextJs Developer</p>
                                         <ul className={' mt-2 lg:mt-4 flex space-x-4'}>
-                                            <SocialMediaIcon icon={<Github className={'size-4 lg:size-5'} />}/>
+                                            <SocialMediaIcon icon={<Github className={'size-4 lg:size-5'}/>}/>
                                             <SocialMediaIcon icon={<Linkedin className={'size-4 lg:size-5'}/>}/>
                                             <SocialMediaIcon icon={<InstagramIcon className={'size-4 lg:size-5'}/>}/>
                                         </ul>
@@ -39,12 +42,17 @@ export default function HeroSection() {
                             </div>
 
                             <div className="mx-auto max-w-lg  lg:ml-0 lg:max-w-4/6  text-left">
-                                <div className={'flex justify-start  pt-4 gap-x-2 items-center lg:pb-6'}>
+                                <div
+                                    className={'flex  justify-start  text-sm md:text-md font-semibold pt-7 gap-x-2 items-center lg:pb-6'}>
                                     <div className={'size-2 rounded-full bg-primary'}></div>
                                     <p>Available for freelance</p>
                                 </div>
-                                <h1 className="mt-3  text-balance  text-5xl md:text-6xl lg:text-7xl lg:mt-0 xl:text-8xl">Crafting Seamless Experiences with React & Next.js</h1>
-                                <p className="mt-8 max-w-2xl text-pretty text-lg">Focused on turning ideas into functional, high-performing web solutions with clean and maintainable code.</p>
+                                <h1 className="mt-6  text-balance font-[400]  text-5xl  lg:text-6xl lg:mt-0 xl:text-7xl"> Hi
+                                    ! im
+                                    Haitham a full stack developer from Yemen turning your ideas into seamless realities</h1>
+                                <p className="mt-8 max-w-2xl text-pretty md:text-lg">Focused on turning ideas into functional,
+                                    high-performing web solutions with clean and maintainable code with Experience in React &
+                                    Next.js</p>
 
                                 <div className="mt-12 flex flex-col items-center gap-2 sm:flex-row justify-start">
                                     <PrimaryButton title={"Let's Work Together"}/>
