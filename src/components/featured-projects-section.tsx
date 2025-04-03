@@ -1,9 +1,10 @@
 import React from 'react';
-import Image from "next/image";
-import OutlinedLogo from "../../public/logo-outlined.svg";
+
 import PrimaryButton from "@/components/PrimaryButton";
 import FeaturedProjectCard from "@/components/featured-proeject-card";
 import FeaturedBackgroundImage from "@/components/ui/featured-bg";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 
 const FeaturedProjectsSection = () => {
@@ -29,6 +30,13 @@ const FeaturedProjectsSection = () => {
             <div className={' grid md:grid-cols-3 '}>
                 <FeaturedProjectCard small/>
                 <FeaturedProjectCard small/>
+                <Link
+                    href={'#'}
+                    className={' bg-primary  text-center flex flex-col justify-center text-black h-auto text-xl m-6 rounded-2xl hover:rounded-none hover:m-0 hover:bg-primary duration-500'}>
+                    <p>View
+                        all
+                        projects</p>
+                </Link>
             </div>
         </section>
     );
