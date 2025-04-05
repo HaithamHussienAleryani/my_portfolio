@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PrimaryButton from "@/components/PrimaryButton";
 import FeaturedProjectCard from "@/components/featured-proeject-card";
 import FeaturedBackgroundImage from "@/components/ui/featured-bg";
@@ -25,12 +24,11 @@ const FeaturedProjectsSection = () => {
                 <FeaturedProjectCard/>
                 <FeaturedProjectCard/>
             </div>
-            <div className={' grid md:grid-cols-3 '}>
+            <div className={' grid xl:grid-cols-3 '}>
                 <FeaturedProjectCard small/>
                 <FeaturedProjectCard small/>
-                <Link
-                    href={'#'}
-                    className={' bg-primary  text-center flex flex-col justify-center text-black h-auto text-xl m-6 rounded-2xl hover:rounded-none hover:m-0 hover:bg-primary duration-500'}>
+                <Link href={'#'}
+                      className={' bg-primary h-72  text-center flex flex-col justify-center text-black lg:h-auto text-xl md:m-6 md:rounded-2xl hover:rounded-none hover:m-0 hover:bg-primary duration-500'}>
                     <p>View
                         all
                         projects</p>
