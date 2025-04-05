@@ -3,7 +3,6 @@ import React from 'react';
 import PrimaryButton from "@/components/PrimaryButton";
 import FeaturedProjectCard from "@/components/featured-proeject-card";
 import FeaturedBackgroundImage from "@/components/ui/featured-bg";
-import {Button} from "@/components/ui/button";
 import Link from "next/link";
 
 
@@ -15,7 +14,6 @@ const FeaturedProjectsSection = () => {
                 <div className={'flex justify-start px-6 md:px-0 pt-4 gap-x-2 items-center pb-3 lg:pb-6'}>
                     <div className={'size-3 rounded-full shadow-[0px_2px_13px_0px_rgba(130,255,31,0.5)] bg-primary'}></div>
                     <p className={'text-muted-foreground text-sm md:text-md font-semibold'}> 01 - Featured Projects</p>
-
                 </div>
                 <h1 className={' text-4xl md:text-8xl px-6 md:px-0   md:font-thin max-w-4xl text-white'}>I blend
                     creativity with
