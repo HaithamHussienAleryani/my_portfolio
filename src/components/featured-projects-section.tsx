@@ -24,6 +24,8 @@ const FeaturedProjectsSection = () => {
             <div className={' mt-10 md:mt-56 grid md:grid-cols-2 '}>
                 <FeaturedProjectCard/>
                 <FeaturedProjectCard/>
+
+
             </div>
             <div className={' grid xl:grid-cols-3 '}>
                 <FeaturedProjectCard small/>
