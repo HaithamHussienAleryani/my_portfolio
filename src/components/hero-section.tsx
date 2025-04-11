@@ -47,9 +47,9 @@ export default function HeroSection() {
                                     <div className={'size-2 rounded-full bg-primary'}></div>
                                     <p>Available for freelance</p>
                                 </div>
-                                <h1 className="mt-6  text-balance font-[400]  text-5xl  lg:text-6xl lg:mt-0 xl:text-7xl"> Hi
+                                <h1 className="mt-6  text-balance font-[400]  text-5xl  capitalize lg:text-6xl lg:mt-0 xl:text-7xl"> Hi
                                     ! im
-                                    Haitham a full stack developer from Yemen turning your ideas into seamless realities</h1>
+                                    Haitham a front-end developer from Yemen turning your ideas into seamless realities</h1>
                                 <p className="mt-8 max-w-2xl text-pretty md:text-lg">Focused on turning ideas into functional,
                                     high-performing web solutions with clean and maintainable code with Experience in React &
                                     Next.js</p>
