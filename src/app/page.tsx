@@ -8,6 +8,7 @@ import { HeroHeader } from "@/components/hero-header";
 import React from "react";
 import FeaturedProjectsSection from "@/components/featured-projects-section";
 import TechStackSection from "@/components/tech-stack-section";
+import WhatStandsMeOutSection from "@/components/ui/how-it-works-section";
 
 const options = { next: { revalidate: 30 } };
 export default async function Home() {
@@ -27,6 +28,7 @@ export default async function Home() {
       <FeaturedProjectsSection />
       <TechStackSection />
       <StaticsSection />
+      <WhatStandsMeOutSection />
     </Lenis>
   );
 }

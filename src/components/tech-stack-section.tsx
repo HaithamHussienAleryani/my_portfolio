@@ -27,7 +27,7 @@ const techStack = [
 
 const TechStackSection = () => {
   return (
-    <div className={" max-w-6xl mx-auto  py-10  lg:py-30 overflow-hidden "}>
+    <div className={" max-w-7xl mx-auto  py-10  lg:py-30 overflow-hidden "}>
       <div
         className={
           "flex justify-start px-6 lg:px-14 xl:px-0 lg:pt-4 gap-x-2 items-center pb-3 lg:pb-6"
