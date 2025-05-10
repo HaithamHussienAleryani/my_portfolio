@@ -137,7 +137,8 @@
     .project-title-brackets {
         @apply text-primary text-xl md:text-2xl;
     }
-    .tech-stack-icon{
-        @apply size-13 ;
+
+    .tech-stack-icon {
+        @apply size-8 md:size-13 ;
     }
 }

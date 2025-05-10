@@ -59,7 +59,6 @@ export default function HeroSection() {
                                     <Button
                                         key={2}
                                         asChild
-
                                         variant="ghost"
                                         className="px-5 text-base h-11 rounded-full">
                                         <Link href="#">
