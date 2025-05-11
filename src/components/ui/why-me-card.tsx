@@ -8,7 +8,7 @@ function WhyMeCard() {
       <h3 className="text-6xl font-light">87+</h3>
       <div className="text-end">
         <p>Projects</p>
-        <span className="mt-4">description</span>
+        <span className="mt-4">description s</span>
       </div>
     </div>
   );
