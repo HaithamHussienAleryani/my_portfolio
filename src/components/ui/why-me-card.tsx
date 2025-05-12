@@ -1,7 +1,10 @@
 import { AudioWaveform, Sparkle } from "lucide-react";
 import React from "react";
-
-function WhyMeCard() {
+import { WhyMeInfo } from "@/data/types";
+type Props = {
+  whyMeInfo: WhyMeInfo;
+};
+function WhyMeCard({ whyMeInfo }: Props) {
   return (
     <div className="bg-primary rounded-lg relative overflow-hidden p-8">
       <AudioWaveform className=" size-50 absolute opacity-10 top-10 left-1/2 transform -translate-x-1/2 " />
