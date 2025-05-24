@@ -2,10 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
-import HeroBg from "../../public/upscaled-hero-bg.png";
 import MeImage from "../../public/me.jpg";
-import { Github, InstagramIcon, Linkedin } from "lucide-react";
 import SocialMediaIcon from "@/components/social-media-icon";
 import PrimaryButton from "@/components/PrimaryButton";
 
@@ -14,11 +11,6 @@ import PrimaryButton from "@/components/PrimaryButton";
 export default function HeroSection() {
   return (
     <div className={"relative h-fit pb-10"}>
-      <Image
-        src={HeroBg}
-        alt={"Hero Image"}
-        className={"absolute h-full w-screen"}
-      />
       <main className="overflow-x-hidden">
         <section>
           <div className="pt-12 lg:pt-44">
@@ -47,17 +39,6 @@ export default function HeroSection() {
                     <p className={"text-muted-foreground text-sm lg:text-md"}>
                       React & NextJs Developer
                     </p>
-                    <ul className={" mt-2 lg:mt-4 flex space-x-4"}>
-                      <SocialMediaIcon
-                        icon={<Github className={"size-4 lg:size-5"} />}
-                      />
-                      <SocialMediaIcon
-                        icon={<Linkedin className={"size-4 lg:size-5"} />}
-                      />
-                      <SocialMediaIcon
-                        icon={<InstagramIcon className={"size-4 lg:size-5"} />}
-                      />
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -71,8 +52,7 @@ export default function HeroSection() {
                   <div className={"size-2 rounded-full bg-primary"}></div>
                   <p>Available for freelance</p>
                 </div>
-                <h1 className="mt-6  text-balance font-[400]  text-5xl  capitalize lg:text-6xl lg:mt-0 xl:text-7xl">
-                  {" "}
+                <h1 className="mt-6  text-balance font-me   text-5xl  capitalize lg:text-6xl lg:mt-0 xl:text-7xl">
                   Hi ! im Haitham a front-end developer from Yemen turning your
                   ideas into seamless realities
                 </h1>

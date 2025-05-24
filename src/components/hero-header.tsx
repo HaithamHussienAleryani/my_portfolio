@@ -3,36 +3,38 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ThemeToggleButton } from "./ThemeToggleButton";
 
 const menuItems = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "#link" },
   { name: "Projects", href: "#link" },
-  { name: "About & Contact", href: "#link" },
+  { name: "Contact", href: "#link" },
 ];
 
 export const HeroHeader = () => {
-  const [menuState, setMenuState] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 2);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <header>
-      <nav data-state={menuState && "active"} className=" z-20 w-full px-2">
+      <nav className="fixed top-0 z-20 w-full px-2">
         <div
           className={cn(
-            "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
+            " mt-3 main-container  px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-primary/20 max-w-4xl rounded-2xl  backdrop-blur-lg lg:px-5"
+              " max-w-2xl rounded-full   lg:px-5 bg-white dark:bg-black border border-gray-00"
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="relative flex flex-wrap items-center justify-between gap-6  lg:gap-0 lg:py-2">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
                 href="/"
@@ -41,15 +43,6 @@ export const HeroHeader = () => {
               >
                 <Logo />
               </Link>
-
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-              >
-                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
             </div>
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
@@ -58,15 +51,10 @@ export const HeroHeader = () => {
                   <li key={index} className={"group/nav-item"}>
                     <Link
                       href={item.href}
-                      className="text-muted-foreground group-hover/nav-item:text-lime-500  block duration-150"
+                      className="text-foreground group-hover/nav-item:text-primary  block duration-150"
                     >
                       <span>{item.name}</span>
                     </Link>
-                    <div
-                      className={
-                        "h-[2px] w-0 group-hover/nav-item:w-[100%]  duration-200 bg-lime-300"
-                      }
-                    ></div>
                   </li>
                 ))}
               </ul>
@@ -88,30 +76,7 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button
-                  asChild
-                  size="lg"
-                  className={cn(
-                    isScrolled && "lg:hidden",
-                    "rounded-full hover:text-black bg-black"
-                  )}
-                >
-                  <Link href="#">
-                    <span>Contact Me</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  className={cn(
-                    isScrolled ? "lg:inline-flex " : "hidden",
-                    " rounded-full hover:text-black bg-black"
-                  )}
-                >
-                  <Link href="#">
-                    <span>Contact Me</span>
-                  </Link>
-                </Button>
+                <ThemeToggleButton />
               </div>
             </div>
           </div>
