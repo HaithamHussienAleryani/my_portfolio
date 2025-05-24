@@ -1,79 +1,46 @@
 import React from "react";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import MeImage from "../../public/me.jpg";
-import SocialMediaIcon from "@/components/social-media-icon";
+
 import PrimaryButton from "@/components/PrimaryButton";
+import HandShakeIcon from "./HandShakeIcon";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 // pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44
 
 export default function HeroSection() {
   return (
     <div className={"relative h-fit pb-10"}>
-      <main className="overflow-x-hidden">
+      <main className="main-container px-10 ">
         <section>
-          <div className="pt-12 lg:pt-44">
-            <div className="relative mx-auto flex max-w-7xl  lg:gap-x-10 flex-col px-6 lg:flex lg:flex-row justify-center items-start">
-              <div>
-                <div
-                  className={
-                    " w-full md:mx-23 lg:mx-0 justify-center pt-7   lg:pt-18 flex items-center  gap-x-4"
-                  }
-                >
-                  <div>
-                    <Image
-                      src={MeImage}
-                      alt={"Haitham`s image"}
-                      className={
-                        " size-14 bg-black lg:size-20 object-cover rounded-full"
-                      }
-                    />
-                  </div>
-                  <div>
-                    <h4
-                      className={"text-black text-xl lg:text-2xl font-medium"}
-                    >
-                      Haitham Hussein
-                    </h4>
-                    <p className={"text-muted-foreground text-sm lg:text-md"}>
-                      React & NextJs Developer
-                    </p>
-                  </div>
+          <div className=" pt-30 md:pt-40  ">
+            <div className="relative justify-center items-start">
+              <div className="mx-auto  text-left">
+                <div className="flex mb-10  items-center gap-x-2">
+                  <HandShakeIcon />
+                  <p className={"pt-2 m-0 text-lg"}>Hi! it's Haitham,</p>
                 </div>
-              </div>
-
-              <div className="mx-auto max-w-lg  lg:ml-0 lg:max-w-4/6  text-left">
-                <div
-                  className={
-                    "flex  justify-start  text-sm md:text-md font-semibold pt-7 gap-x-2 items-center lg:pb-6"
-                  }
-                >
-                  <div className={"size-2 rounded-full bg-primary"}></div>
-                  <p>Available for freelance</p>
-                </div>
-                <h1 className="mt-6  text-balance font-me   text-5xl  capitalize lg:text-6xl lg:mt-0 xl:text-7xl">
-                  Hi ! im Haitham a front-end developer from Yemen turning your
-                  ideas into seamless realities
+                <h1 className="mt-6   lg:w-5/6 text-4xl md:text-7xl font-semibold capitalize lg:mt-0">
+                  Crafting{" "}
+                  <span className="text-primary">
+                    purpose driven experiences
+                  </span>{" "}
+                  that inspire & engage.
                 </h1>
-                <p className="mt-8 max-w-2xl text-pretty md:text-lg">
-                  Focused on turning ideas into functional, high-performing web
-                  solutions with clean and maintainable code with Experience in
-                  React & Next.js
-                </p>
 
-                <div className="mt-12 flex flex-col items-center gap-2 sm:flex-row justify-start">
+                <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
+                  <div className="h-[1px] w-full bg-gray-300"></div>
+                  <p>
+                    Flutter developer with a passion for creating beautiful and
+                    functional mobile applications. I specialize in building
+                    cross-platform apps that provide a seamless user experience
+                  </p>
+                </div>
+
+                <div className="my-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
+                  <SocialMediaLinks />
                   <PrimaryButton title={"Let's Work Together"} />
-                  <Button
-                    key={2}
-                    asChild
-                    variant="ghost"
-                    className="px-5 text-base h-11 rounded-full"
-                  >
-                    <Link href="#">
-                      <span className="text-nowrap">View My CV</span>
-                    </Link>
-                  </Button>
                 </div>
               </div>
             </div>
