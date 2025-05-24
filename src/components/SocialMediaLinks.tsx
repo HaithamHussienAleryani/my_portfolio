@@ -1,4 +1,4 @@
-import { ArrowUp, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import React from "react";
 
 function SocialMediaLinks() {

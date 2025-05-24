@@ -1,8 +1,5 @@
 import React from "react";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-
 import PrimaryButton from "@/components/PrimaryButton";
 import HandShakeIcon from "./HandShakeIcon";
 import SocialMediaLinks from "./SocialMediaLinks";
@@ -19,13 +16,13 @@ export default function HeroSection() {
               <div className="mx-auto  text-left">
                 <div className="flex mb-10  items-center gap-x-2">
                   <HandShakeIcon />
-                  <p className={"pt-2 m-0 text-lg"}>Hi! it's Haitham,</p>
+                  <p className={"pt-2 m-0 text-lg"}>Hi! it&apos;s Haitham,</p>
                 </div>
                 <h1 className="mt-6   lg:w-5/6 text-4xl md:text-7xl font-semibold capitalize lg:mt-0">
-                  Crafting{" "}
+                  Crafting
                   <span className="text-primary">
                     purpose driven experiences
-                  </span>{" "}
+                  </span>
                   that inspire & engage.
                 </h1>
 

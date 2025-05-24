@@ -1,4 +1,4 @@
-import { DynamicIconModule, IconName } from "lucide-react/dynamic";
+import { IconName } from "lucide-react/dynamic";
 
 export type WhyMeInfo = {
     title: string;
