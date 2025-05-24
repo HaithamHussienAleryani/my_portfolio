@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Work_Sans, Manjari } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import MobileNavBar from "@/components/MobileNavBar";
 
-const manrope = Manrope({
-  variable: "--font-geist-sans",
+const work_sans = Work_Sans({
+  weight: ["200", "300", "400", "700", "800", "900"],
+  style: ["normal"],
   subsets: ["latin"],
+  variable: "--font-work-sans",
+});
+const manjari = Manjari({
+  weight: ["100", "400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-manjari",
 });
 
 // const geistMono = Geist_Mono({
@@ -23,11 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${manrope.variable}  antialiased`}
+        className={` ${work_sans.variable} ${manjari.variable}    antialiased`}
       >
-        {children}
+        <ThemeProvider attribute={"class"} defaultTheme={"light"}>
+          {children}
+        </ThemeProvider>
+        <MobileNavBar />
       </body>
     </html>
   );
