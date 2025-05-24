@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans, Manjari } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import MobileNavBar from "@/components/MobileNavBar";
 
 const work_sans = Work_Sans({
   weight: ["200", "300", "400", "700", "800", "900"],
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ThemeProvider attribute={"class"} defaultTheme={"light"}>
           {children}
         </ThemeProvider>
+        <MobileNavBar />
       </body>
     </html>
   );

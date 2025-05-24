@@ -27,14 +27,14 @@ export function ThemeToggleButton() {
     <Button
       variant="ghost"
       size="icon"
-      className="rounded-full cursor-pointer"
+      className="rounded-full cursor-pointer bg-white border p-5 dark:bg-muted md:dark:bg-transparent md:bg-transparent md:border-none"
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
       {resolvedTheme === "dark" ? (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Sun className="h-[1.4rem] w-[1.4rem]" />
       ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
+        <Moon className="h-[1.4rem] w-[1.4rem]" />
       )}
     </Button>
   );
