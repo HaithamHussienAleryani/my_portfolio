@@ -35,6 +35,26 @@ const whatStandsMeOutData: WhyMeInfo[] = [
     backgroundColor: "bg-primary",
     iconColor: "text-primary",
   },
+  {
+    title: "87+",
+    description: "Projects",
+    icon: (
+      <Sparkle className=" size-50 absolute opacity-10 top-10 left-1/2 transform -translate-x-1/2 " />
+    ),
+    color: "text-primary",
+    backgroundColor: "bg-primary",
+    iconColor: "text-primary",
+  },
+  {
+    title: "87+",
+    description: "Projects",
+    icon: (
+      <Sparkle className=" size-50 absolute opacity-10 top-10 left-1/2 transform -translate-x-1/2 " />
+    ),
+    color: "text-primary",
+    backgroundColor: "bg-primary",
+    iconColor: "text-primary",
+  },
 ];
 
 function WhatStandsMeOutSection() {
