@@ -1,5 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
 import React from "react";
+
+import AnimatedSocialMediaLinks from "./animations/AnimatedSocialMediaLinks";
 
 function SocialMediaLinks() {
   const socialLinks = [
@@ -24,17 +25,12 @@ function SocialMediaLinks() {
   return (
     <ul className=" space-x-4 hidden lg:flex">
       {socialLinks.map((link, index) => (
-        <li key={index} className="mb-2 flex space-x-2">
-          <a
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="  uppercase"
-          >
-            {link.name}
-          </a>
-          <ArrowUpRight size={18} />
-        </li>
+        <AnimatedSocialMediaLinks
+          key={index}
+          index={index}
+          name={link.name}
+          url={link.url}
+        />
       ))}
     </ul>
   );
