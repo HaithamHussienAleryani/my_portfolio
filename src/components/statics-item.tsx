@@ -1,7 +1,6 @@
 import React from "react";
 
 const StaticsItem = ({
-  staticRate,
   staticDesc,
 }: {
   staticRate: string;
