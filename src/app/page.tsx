@@ -25,10 +25,10 @@ export default async function Home() {
       <HeroHeader />
       <HeroSection />
       <StaticsSection />
-      <FeaturedProjectsSection />
+      {/* <FeaturedProjectsSection />
       <TechStackSection />
       <StaticsSection />
-      <WhatStandsMeOutSection />
+      <WhatStandsMeOutSection /> */}
     </Lenis>
   );
 }

@@ -10,7 +10,7 @@ import AnimatedDivider from "./animations/AnimatedDivider";
 
 export default function HeroSection() {
   return (
-    <div className={"relative h-fit pb-10"}>
+    <div className={"relative h-fit pb-5"}>
       <main className="main-container px-10 ">
         <section>
           <div className=" pt-30 md:pt-40  ">
