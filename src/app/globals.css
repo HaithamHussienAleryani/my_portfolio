@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --color-white-gray:var(--white-gray);
     --font-manjari:var(--font-manjari);
     --font-work-sans: var(--work-sans-font);
     --color-OffBlack: var(--off-black);
@@ -47,6 +48,7 @@
 }
 
 :root {
+    --white-gray:hsl(213, 27%, 84%);
     --work-sans-font:var(--font-work-sans);
     --off-black: #1C1C1C;
     --background: hsl(220, 23%, 98%);
@@ -85,6 +87,7 @@
 }
 
 .dark {
+     --color-white-gray:var(--white-gray);
     --work-sans-font:var(--font-work-sans);
     --OffBlack: var(--off-black);
     --background: hsl(240, 12%, 5%);

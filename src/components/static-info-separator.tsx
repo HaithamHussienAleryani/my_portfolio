@@ -1,10 +1,8 @@
-import React from 'react';
-import {Asterisk} from "lucide-react";
+import React from "react";
+import { Diamond } from "lucide-react";
 
 const StaticInfoSeparator = () => {
-    return (
-        <Asterisk className={'text-primary size-10 group-hover/static-hover:rotate-180 transition-all delay-100 duration-1000 ease-in-out  md:size-16'}/>
-    );
+  return <Diamond className={"text-white-gray mt-1  size-10  md:size-5"} />;
 };
 
 export default StaticInfoSeparator;
