@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 function AboutMeSection() {
   return (
     <main className="my-24 text-center">
-      <SectionHeader className="justify-center" />
+      <SectionHeader header="ABOUT ME" className="justify-center" />
       <Paragraph
         paragraph=" I Haithm Hussien, with over 5 years of experience in Mobile App
         Development and a passion for creating innovative solutions, am
