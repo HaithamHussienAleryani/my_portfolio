@@ -8,6 +8,7 @@ import { HeroHeader } from "@/components/hero-header";
 import React from "react";
 
 import AboutMeSection from "@/components/AboutMe";
+import ProjectsSection from "@/components/ProjectsSection";
 
 const options = { next: { revalidate: 30 } };
 export default async function Home() {
@@ -25,6 +26,7 @@ export default async function Home() {
       <HeroSection />
       <StaticsSection />
       <AboutMeSection />
+      <ProjectsSection />
       {/* <FeaturedProjectsSection />
       <TechStackSection />
       <StaticsSection />
