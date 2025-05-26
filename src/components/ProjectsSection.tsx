@@ -1,4 +1,3 @@
-import { Section } from "lucide-react";
 import React from "react";
 import SectionHeader from "./SectionHeader";
 
@@ -10,7 +9,7 @@ function ProjectsSection() {
         Selected Projects
       </h1>
       <p>
-        Here's a curated selection showcasing my expertise and the achieved
+        Here&apos;s a curated selection showcasing my expertise and the achieved
         results.
       </p>
     </section>

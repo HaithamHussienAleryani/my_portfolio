@@ -1,6 +1,5 @@
 import React from "react";
 import Paragraph from "./animations/AnimatedCharactar";
-import StarIcon from "./StarIcon";
 import SectionHeader from "./SectionHeader";
 
 function AboutMeSection() {
