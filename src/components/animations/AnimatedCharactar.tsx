@@ -43,7 +43,7 @@ const Word = ({
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={"relative mr-1 mt-2"}>
+    <span className={"relative mr-1 md:mr-2 mt-2 md:mt-3"}>
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;
