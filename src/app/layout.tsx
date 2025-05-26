@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Work_Sans, Manjari } from "next/font/google";
+import { DM_Serif_Display, Questrial } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import MobileNavBar from "@/components/MobileNavBar";
 
-const work_sans = Work_Sans({
-  weight: ["200", "300", "400", "700", "800", "900"],
+const work_sans = DM_Serif_Display({
+  weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
   variable: "--font-work-sans",
 });
-const manjari = Manjari({
-  weight: ["100", "400", "700"],
+const dm_sans = Questrial({
+  weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
-  variable: "--font-manjari",
+  variable: "--font-sans",
 });
 
 // const geistMono = Geist_Mono({
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${work_sans.variable} ${manjari.variable}    antialiased`}
+        className={` ${work_sans.variable} ${dm_sans.variable}   antialiased`}
       >
         <ThemeProvider attribute={"class"} defaultTheme={"light"}>
           {children}
