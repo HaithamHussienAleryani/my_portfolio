@@ -28,7 +28,7 @@ export default function HeroSection() {
                   </TextEffect>
                 </div>
 
-                <div className="flex flex-wrap gap-0">
+                <div className="flex flex-wrap gap-0 font-work-sans">
                   <TextEffect
                     preset="fade-in-blur"
                     speedReveal={1.1}

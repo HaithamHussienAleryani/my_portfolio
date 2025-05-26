@@ -15,7 +15,7 @@ export default function Paragraph({ paragraph }: { paragraph: string }) {
       ref={container}
       style={{ lineHeight: 1 }}
       className={
-        "flex text-3xl font-bold justify-center leading-none p-10 max-w-screen-xl flex-wrap mx-auto"
+        "flex text-xl md:text-3xl font-bold justify-center leading-none p-10 max-w-screen-xl flex-wrap mx-auto"
       }
     >
       {words.map((word, i) => {
@@ -43,7 +43,7 @@ const Word = ({
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className={"relative mr-2 mt-3"}>
+    <span className={"relative mr-1 mt-2"}>
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;

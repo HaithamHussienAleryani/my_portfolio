@@ -12,7 +12,7 @@ const StaticsSection = () => {
           <InfiniteSlider
             speed={20}
             gap={30}
-            className={"hidden md:block mt-3 justify-center items-center"}
+            className={"hidden md:block  justify-center items-center"}
           >
             <StaticsItem staticRate={"4+"} staticDesc={"Years of Experience"} />
             <StaticInfoSeparator />
