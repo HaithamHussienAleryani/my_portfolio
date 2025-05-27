@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
