@@ -9,9 +9,11 @@ import { motion } from "framer-motion";
 function PrimaryButton({
   title,
   className,
+  href = "#",
 }: {
   title: string;
   className?: string;
+  href?: string;
 }) {
   return (
     <motion.div
@@ -26,9 +28,9 @@ function PrimaryButton({
           className
         )}
       >
-        <Link href="#">
+        <Link href={href}>
           <span className="pt-1 mx-3">{title}</span>
-          <div
+          {/* <div
             className={
               "bg-background text-black dark:text-white rounded-full p-2 group-hover/arrow:translate-x-2 transition-all duration-500 "
             }
@@ -38,7 +40,7 @@ function PrimaryButton({
                 "size-6  group-hover/arrow:rotate-[135deg] transition-all ease-in-out duration-300"
               }
             />
-          </div>
+          </div> */}
         </Link>
       </Button>
     </motion.div>

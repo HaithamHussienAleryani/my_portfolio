@@ -12,3 +12,12 @@ export type WhyMeInfo = {
 
 export type TMenuItems =
     { name: string; href: string; icon: IconName };
+
+export type TProject = {
+    title: string,
+    description: string,
+    imageUrl: string,
+    link: string,
+    date: string,
+    bgColor: string,
+};

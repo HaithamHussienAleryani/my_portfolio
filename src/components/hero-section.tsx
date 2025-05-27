@@ -16,19 +16,19 @@ export default function HeroSection() {
           <div className=" pt-30 md:pt-40  ">
             <div className="relative justify-center items-start">
               <div className="mx-auto  text-left">
-                <div className="flex mb-10  items-center gap-x-2">
+                <div className="flex mb-10  items-center gap-x-2 racking-wider">
                   <HandShakeIcon />
                   <TextEffect
                     preset="fade-in-blur"
                     speedReveal={0.6}
                     speedSegment={0.3}
-                    className={"pt-2 m-0 text-lg"}
+                    className={"pt-2 m-0 text-lg "}
                   >
                     Hi! it&apos;s Haitham,
                   </TextEffect>
                 </div>
 
-                <div className="flex flex-wrap gap-0 font-work-sans">
+                <div className="flex flex-wrap gap-0 tracking-widest font-work-sans">
                   <TextEffect
                     preset="fade-in-blur"
                     speedReveal={1.1}
