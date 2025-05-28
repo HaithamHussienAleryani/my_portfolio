@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 function SpecialitySection() {
   return (
@@ -15,14 +16,17 @@ function SpecialitySection() {
         Area of Expertise
       </h1>
 
-      <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <div className="flex ">
+        <Image src={""} alt={""}/>
+        <Accordion type="single" className="bg-muted w-full rounded-xl px-3 py-3" collapsible>
+          <AccordionItem value="item-1"> 
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </section>
   );
 }
