@@ -9,6 +9,7 @@
     --font-work-sans: var(--font-work-sans);
     --font-sans: var(--font-sans);
     --color-OffBlack: var(--off-black);
+    --color-OffBlack2: var(--off-black-2);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-sidebar-ring: var(--sidebar-ring);
@@ -86,6 +87,7 @@
 }
 
 .dark {
+    --off-black-2:#111116;
      --color-white-gray:var(--white-gray);
     --OffBlack: var(--off-black);
     --background: hsl(240, 12%, 5%);
