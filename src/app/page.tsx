@@ -8,6 +8,7 @@ import React from "react";
 import AboutMeSection from "@/components/AboutMe";
 import ProjectsSection from "@/components/ProjectsSection";
 import SpecialitySection from "@/components/SpecialitySection";
+import TechStackSection from "@/components/tech-stack-section";
 
 // const options = { next: { revalidate: 30 } };
 export default async function Home() {
@@ -26,9 +27,10 @@ export default async function Home() {
       <StaticsSection />
       <AboutMeSection />
       <ProjectsSection />
-      <SpecialitySection/>
-      {/* <FeaturedProjectsSection />
+      <SpecialitySection />
       <TechStackSection />
+      {/* <FeaturedProjectsSection />
+     
       <StaticsSection />
       <WhatStandsMeOutSection /> */}
     </Lenis>
