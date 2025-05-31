@@ -7,7 +7,7 @@ import { TechStackIcons } from "@/constants/icons";
 
 const TechStackSection = () => {
   return (
-    <section className="main-conainer max-w-sm md:max-w-lg lg:max-w-6xl mx-auto">
+    <section className="main-conainer max-w-sm md:max-w-lg lg:max-w-6xl mx-auto mb-10">
       <div className="flex flex-col justify-center items-center md:flex-row">
         <div className="relative h-20 group/static-hover md:h-24 flex flex-col justify-center   w-full">
           <InfiniteSlider
