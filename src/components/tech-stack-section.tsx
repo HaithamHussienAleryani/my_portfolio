@@ -1,64 +1,40 @@
 import React from "react";
-import StackIcon from "tech-stack-icons"; // You can also use any another import name
+import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
+import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 
-const techStack = [
-  "reactjs",
-  "nextjs2",
-  "typescript",
-  "tailwindcss",
-  "nodejs",
-  "mongodb",
-  "prisma",
-  "sass",
-  "jest",
-  "github",
-  "docker",
-  "aws",
-  "azure",
-  "gcloud",
-  "firebase",
-  "mysql",
-  "postgresql",
-];
+import TechStackItem from "./TechStackItem";
+import { TechStackIcons } from "@/constants/icons";
 
 const TechStackSection = () => {
   return (
-    <div className={" max-w-7xl mx-auto  py-10  lg:py-30 overflow-hidden "}>
-      <div
-        className={
-          "flex justify-start px-6 lg:px-14 xl:px-0 lg:pt-4 gap-x-2 items-center pb-3 lg:pb-6"
-        }
-      >
-        <div
-          className={
-            "size-3  rounded-full shadow-[0px_2px_13px_0px_rgba(130,255,31,0.5)] bg-primary"
-          }
-        ></div>
-        <p className={"text-muted-foreground text-sm md:text-md font-semibold"}>
-          02 - TechStack & Tools
-        </p>
-      </div>
-      <div className="lg:flex lg:flex-row flex-col justify-between">
-        <h1
-          className={
-            " text-4xl md:text-8xl lg:px-14 px-6 xl:px-0    text-OffBlack   "
-          }
-        >
-          My creative <span className="font-thin">toolbox</span>
-        </h1>
+    <section className="main-conainer max-w-sm md:max-w-lg lg:max-w-6xl mx-auto mb-10">
+      <div className="flex flex-col justify-center items-center md:flex-row">
+        <div className="relative h-20 group/static-hover md:h-24 flex flex-col justify-center   w-full">
+          <InfiniteSlider
+            speed={20}
+            gap={30}
+            className={"hidden md:block  justify-center items-center"}
+          >
+            {TechStackIcons.getIcons().map((item, index) => (
+              <TechStackItem key={index} icon={item.icon} name={item.name} />
+            ))}
+          </InfiniteSlider>
 
-        <div className="grid grid-cols-6 px-6 place-items-center   lg:grid-cols-7 gap-8  lg:gap-12 lg:px-10 mt-12 ">
-          {techStack.map((icon) => (
-            <StackIcon
-              key={icon}
-              name={icon}
-              grayscale={false}
-              className="tech-stack-icon"
-            />
-          ))}
+          <div className="bg-linear-to-r   from-background absolute inset-y-0 left-0 w-20"></div>
+          <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+          <ProgressiveBlur
+            className="pointer-events-none absolute left-0 top-0 h-full w-20"
+            direction="left"
+            blurIntensity={1}
+          />
+          <ProgressiveBlur
+            className="pointer-events-none absolute right-0 top-0 h-full w-20"
+            direction="right"
+            blurIntensity={1}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
