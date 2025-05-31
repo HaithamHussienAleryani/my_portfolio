@@ -21,11 +21,30 @@ export abstract class TechStackIcons {
   public static MongoDbIcon = MongoDbIcon;
   public static TailwindIcon = TailwindIcon;
   public static GitIcon = GitIcon;
-    public static GithubIcon = GithubIcon;
-    public static HTMLIcon = HTMLIcon;
-    public static JsIcon = JsIcon;
-    public static CssIcon = CssIcon;
-    public static tsIcon = tsIcon;
-    public static ReduxIcon = ReduxIcon;
-    public static NodeIcon = NodeIcon;
+  public static GithubIcon = GithubIcon;
+  public static HTMLIcon = HTMLIcon;
+  public static JsIcon = JsIcon;
+  public static CssIcon = CssIcon;
+  public static tsIcon = tsIcon;
+  public static ReduxIcon = ReduxIcon;
+  public static NodeIcon = NodeIcon;
+
+
+  public static getIcons(): { icon: string, name: string }[] {
+    return [
+      { icon: TechStackIcons.REACT, name: "react" },
+      { icon: TechStackIcons.NextJsIcon, name: "nextjs" },
+      { icon: TechStackIcons.JestIcon, name: "jest" },
+      { icon: TechStackIcons.MongoDbIcon, name: "mongodb" },
+      { icon: TechStackIcons.TailwindIcon, name: "tailwind" },
+      { icon: TechStackIcons.GitIcon, name: "git" },
+      { icon: TechStackIcons.GithubIcon, name: "github" },
+      { icon: TechStackIcons.HTMLIcon, name: "html" },
+      { icon: TechStackIcons.JsIcon, name: "javastrcipt" },
+      { icon: TechStackIcons.CssIcon, name: "css" },
+      { icon: TechStackIcons.tsIcon, name: "typescript" },
+      { icon: TechStackIcons.ReduxIcon, name: "redux" },
+      { icon: TechStackIcons.NodeIcon, name: "node" },
+    ];
+  }
 }
