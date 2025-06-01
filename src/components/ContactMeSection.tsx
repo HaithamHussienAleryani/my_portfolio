@@ -7,7 +7,7 @@ function ContactMeSection() {
   return (
     <section className="main-conainer max-w-sm md:max-w-lg lg:max-w-6xl bg-white dark:bg-OffBlack2 rounded-3xl mx-auto mb-10">
       <div className="flex  flex-col items-center justify-center p-6">
-        <div className="flex mt-5 items-center bg-primary2 px-3 py-1 rounded-full justify-center space-x-2">
+        <div className="flex mt-5 items-center bg-primary2 px-3.5 py-1 rounded-full justify-center space-x-2">
           <div className="size-1.5 bg-primary rounded-full"></div>
           <p className="text-sm">Available for work</p>
         </div>

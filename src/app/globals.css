@@ -9,7 +9,7 @@
     --font-work-sans: var(--font-work-sans);
     --font-sans: var(--font-sans);
     --color-OffBlack: var(--off-black);
-    --color-primary2: var(--primary-light);
+    --color-primary2: var(--primary-2);
     
     --color-OffBlack2: var(--off-black-2);
     --color-background: var(--background);
@@ -51,10 +51,11 @@
 }
 
 :root {
+  
     --white-gray:hsl(213, 27%, 84%);
     --off-black: #1C1C1C;
-    --primary-light:#f7fff1;
-    --primary-dark:#212920;
+    --primary-2:#f7fff1;
+    
     --background: hsl(220, 23%, 98%);
     --foreground: oklch(0.145 0 0);
     --card: oklch(1 0 0);
@@ -91,6 +92,7 @@
 }
 
 .dark {
+    --primary-2:#212920;
     --off-black-2:#111116;
      --color-primary2: var(--primary-dark);
      --color-white-gray:var(--white-gray);
