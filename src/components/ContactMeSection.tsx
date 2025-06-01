@@ -1,28 +1,7 @@
 import React from "react";
-import { SocialIcon } from "react-social-icons";
+
 import PrimaryButton from "./PrimaryButton";
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/your-profile",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/your-github-username",
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/your-twitter-handle",
-  },
-  {
-    name: "Email",
-    url: "mailto:           ",
-  },
-  {
-    name: "instagram",
-    url: "https://www.instagram.com/your-instagram-handle",
-  },
-];
+import SocialMediaIconsSection from "./SocialMediaIcons";
 
 function ContactMeSection() {
   return (
@@ -39,16 +18,7 @@ function ContactMeSection() {
 
         <div>
           <div className="flex md:hidden flex-wrap mt-4 justify-center space-x-4">
-            {socialLinks.map((link) => (
-              <SocialIcon
-                key={link.name}
-                bgColor="transparent"
-                fgColor="#000"
-                className="p-0 !size-8 md:!size-10 hover:scale-110 transition-transform duration-300"
-                network={link.name.toLowerCase()}
-                url={link.url}
-              />
-            ))}
+            <SocialMediaIconsSection className=" md:hidden " />
           </div>
         </div>
       </div>

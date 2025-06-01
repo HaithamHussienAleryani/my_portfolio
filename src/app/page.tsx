@@ -10,6 +10,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SpecialitySection from "@/components/SpecialitySection";
 import TechStackSection from "@/components/tech-stack-section";
 import ContactMeSection from "@/components/ContactMeSection";
+import RightsReservedSection from "@/components/RightsReservedSection";
 
 // const options = { next: { revalidate: 30 } };
 export default async function Home() {
@@ -31,6 +32,7 @@ export default async function Home() {
       <SpecialitySection />
       <TechStackSection />
       <ContactMeSection />
+      <RightsReservedSection />
       {/* <FeaturedProjectsSection />
      
       <StaticsSection />
