@@ -24,18 +24,18 @@ export default function HeroSection() {
                     speedSegment={0.3}
                     className={"pt-2 m-0 text-lg "}
                   >
-                    Hi! it&apos;s Haitham,
+                    Hey! it&apos;s Haitham,
                   </TextEffect>
                 </div>
 
-                <div className="flex flex-wrap gap-0 tracking-widest font-work-sans">
+                <div className="flex flex-wrap whitespace-nowrap gap-0 tracking-widest font-work-sans">
                   <TextEffect
                     preset="fade-in-blur"
                     speedReveal={1.1}
                     speedSegment={0.3}
                     className="mt-6 lg:w-5/6  text-4xl md:text-7xl font-semibold capitalize lg:mt-0"
                   >
-                    A Flutter developer
+                    A React developer Delivering
                   </TextEffect>
                   <TextEffect
                     preset="fade-in-blur"

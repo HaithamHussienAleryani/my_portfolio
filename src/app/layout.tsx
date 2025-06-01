@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Questrial } from "next/font/google";
+import { Coda, Questrial } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import MobileNavBar from "@/components/MobileNavBar";
 
-const work_sans = DM_Serif_Display({
+const work_sans = Coda({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
