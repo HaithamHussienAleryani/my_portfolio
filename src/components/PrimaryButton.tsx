@@ -24,7 +24,7 @@ function PrimaryButton({
       <Button
         asChild
         className={cn(
-          "h-12 group/arrow bg-black dark:bg-white    px-3 hover:px-5 transition-all duration-500 rounded-full text-base",
+          "h-10 group/arrow bg-black dark:bg-white    px-3 hover:px-5 transition-all duration-500 rounded-full ",
           className
         )}
       >
