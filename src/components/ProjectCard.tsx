@@ -17,7 +17,7 @@ function ProjectCard({ project, index }: { project: TProject; index: number }) {
             alt={`${project.title} image`}
             width={400}
             height={250}
-            className=" w-[95%] h-[95%] mx-auto my-[3%] md:w-[450px] hover:scale-[102%] duration-300 shadow-2xl md:h-[300px]  object-cover rounded-3xl md:my-10 "
+            className=" w-[95%] h-[95%] mx-auto my-[3%] lg:my-10 lg:h-[50%] lg:w-[80%]  hover:scale-[102%] duration-300 shadow-2xl   object-cover rounded-3xl  "
           />
         </div>
 
