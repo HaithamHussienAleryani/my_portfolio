@@ -11,7 +11,7 @@ import AnimatedDivider from "./animations/AnimatedDivider";
 export default function HeroSection() {
   return (
     <div className={"relative h-fit pb-5"}>
-      <main className="main-container px-10 ">
+      <main>
         <section>
           <div className=" pt-30 md:pt-40  ">
             <div className="relative justify-center items-start">
@@ -28,7 +28,7 @@ export default function HeroSection() {
                   </TextEffect>
                 </div>
 
-                <div className="flex flex-wrap whitespace-nowrap gap-0 tracking-widest font-work-sans">
+                <div className="flex flex-wrap lg:whitespace-nowrap gap-0 tracking-widest font-work-sans">
                   <TextEffect
                     preset="fade-in-blur"
                     speedReveal={1.1}

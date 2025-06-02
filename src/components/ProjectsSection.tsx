@@ -4,7 +4,7 @@ import SectionHeader from "./SectionHeader";
 
 function ProjectsSection() {
   return (
-    <section className="mt-5 main-conainer max-w-sm  md:max-w-lg lg:max-w-6xl mx-auto">
+    <section className="mt-5 main-conainer ">
       <SectionHeader header="MY WORK" />
       <h1 className="font-work-sans tracking-wider font-bold text-5xl mt-5 mb-3 ">
         Selected Projects

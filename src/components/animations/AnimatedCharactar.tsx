@@ -12,7 +12,7 @@ export default function Paragraph({ paragraph }: { paragraph: string }) {
   const words = paragraph.split(" ");
   return (
     <p
-      ref={container}
+      ref={container} 
       style={{ lineHeight: 1 }}
       className={
         "flex text-xl md:text-3xl font-bold justify-center leading-none p-10 max-w-screen-xl flex-wrap mx-auto"
