@@ -4,12 +4,12 @@ import SectionHeader from "./SectionHeader";
 
 function ProjectsSection() {
   return (
-    <section className="mt-5 main-conainer ">
+    <section className="mt-5 main-container ">
       <SectionHeader header="MY WORK" />
-      <h1 className="font-work-sans tracking-wider font-bold text-5xl mt-5 mb-3 ">
+      <h1 className="font-work-sans tracking-wider font-bold text-2xl md:text-5xl mt-5 mb-3 ">
         Selected Projects
       </h1>
-      <p>
+      <p className="text-sm md:text-lg">
         Here&apos;s a curated selection showcasing my expertise and the achieved
         results.
       </p>

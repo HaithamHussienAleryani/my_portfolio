@@ -13,7 +13,7 @@ const TechStackSection = () => {
           <InfiniteSlider
             speed={20}
             gap={30}
-            className={"hidden md:block  justify-center items-center"}
+            className={"  justify-center items-center"}
           >
             {TechStackIcons.getIcons().map((item, index) => (
               <TechStackItem key={index} icon={item.icon} name={item.name} />

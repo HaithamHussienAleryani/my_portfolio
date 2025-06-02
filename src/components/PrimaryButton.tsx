@@ -24,12 +24,12 @@ function PrimaryButton({
       <Button
         asChild
         className={cn(
-          "h-10 group/arrow bg-black dark:bg-white    px-3 hover:px-5 transition-all duration-500 rounded-full ",
+          " h-8 md:h-10 group/arrow bg-black dark:bg-white    px-3 hover:px-5 transition-all duration-500 rounded-full ",
           className
         )}
       >
         <Link href={href}>
-          <span className="pt-1 mx-3">{title}</span>
+          <span className="px-2 text-sm md:text-md">{title}</span>
           {/* <div
             className={
               "bg-background text-black dark:text-white rounded-full p-2 group-hover/arrow:translate-x-2 transition-all duration-500 "

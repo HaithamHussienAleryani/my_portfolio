@@ -159,6 +159,6 @@
         @apply size-8 md:size-13 ;
     }
     .main-container{
-        @apply px-5 lg:max-w-6xl max-w-7xl mx-auto;
+        @apply px-5 md:px-0 lg:max-w-6xl max-w-7xl mx-auto;
     }
 }

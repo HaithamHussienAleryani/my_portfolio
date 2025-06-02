@@ -22,9 +22,9 @@ const expertiseItems = [
 
 function SpecialitySection() {
   return (
-    <section className="mt-5 main-conainer max-w-sm  md:max-w-lg lg:max-w-6xl mx-auto">
+    <section className="main-container mt-20">
       <SectionHeader header="Speciality" />
-      <h1 className="font-work-sans tracking-wider font-bold text-5xl mt-5 mb-3 ">
+      <h1 className="font-work-sans tracking-wider font-bold text-2xl md:text-5xl mt-5 mb-3">
         Area of Expertise
       </h1>
 
