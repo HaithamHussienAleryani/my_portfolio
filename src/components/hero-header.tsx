@@ -20,12 +20,12 @@ export const HeroHeader = () => {
   }, []);
   return (
     <header>
-      <nav className="fixed top-0 z-20 w-full px-2">
+      <nav className="fixed top-0 z-20 w-full ">
         <div
           className={cn(
             " mt-3 main-container px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              " max-w-2xl rounded-full lg:px-5 bg-white dark:bg-black lg:border border-gray-00"
+              " max-w-2xl rounded-full lg:pe-3 lg:ps-5 bg-white dark:bg-black lg:border border-gray-00"
           )}
         >
           <div className="relative flex   flex-row items-center justify-between gap-6  lg:gap-0 py-2">
