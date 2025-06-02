@@ -3,6 +3,8 @@ import { Coda, Questrial } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import MobileNavBar from "@/components/MobileNavBar";
+import { HeroHeader } from "@/components/hero-header";
+import { Lenis } from "lenis/react";
 
 const work_sans = Coda({
   weight: ["400"],
@@ -34,14 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={` ${work_sans.variable} ${dm_sans.variable}   antialiased`}
-      >
-        <ThemeProvider attribute={"class"} defaultTheme={"light"}>
-          {children}
-        </ThemeProvider>
-        <MobileNavBar />
-      </body>
+      <Lenis root>
+        <body
+          className={` ${work_sans.variable} ${dm_sans.variable}   antialiased`}
+        >
+          <ThemeProvider attribute={"class"} defaultTheme={"light"}>
+            <HeroHeader />
+            {children}
+            <MobileNavBar />
+          </ThemeProvider>
+        </body>
+      </Lenis>
     </html>
   );
 }

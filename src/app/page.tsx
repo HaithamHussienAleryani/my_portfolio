@@ -1,8 +1,5 @@
 import HeroSection from "@/components/hero-section";
-
-import { Lenis } from "lenis/react";
 import StaticsSection from "@/components/statics-section";
-import { HeroHeader } from "@/components/hero-header";
 import React from "react";
 
 import AboutMeSection from "@/components/AboutMe";
@@ -23,8 +20,7 @@ export default async function Home() {
   // console.log(portfolio);
 
   return (
-    <Lenis root>
-      <HeroHeader />
+    <>
       <HeroSection />
       <StaticsSection />
       <AboutMeSection />
@@ -33,10 +29,6 @@ export default async function Home() {
       <TechStackSection />
       <ContactMeSection />
       <RightsReservedSection />
-      {/* <FeaturedProjectsSection />
-     
-      <StaticsSection />
-      <WhatStandsMeOutSection /> */}
-    </Lenis>
+    </>
   );
 }

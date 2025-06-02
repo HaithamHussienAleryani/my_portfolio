@@ -1,11 +1,9 @@
+import { cn } from "@/lib/utils";
 
-import Image from "next/image";
-import  MyLogo  from "../../public/logo.svg";
-
-export const Logo = () => {
+export const Logo = ({ className }: { className?: string }) => {
   return (
-    <div className={"flex justify-center items-center gap-x-3"}>
-      <Image src={MyLogo} height={60}  width={60} alt={"My Logo"} />
-    </div>
+    <h3 className={cn(className, "text-2xl font-bold font-work-sans")}>
+      H|<span className="text-primary font-normal">H</span>
+    </h3>
   );
 };

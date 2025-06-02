@@ -1,15 +1,17 @@
 "use client";
 import Link from "next/link";
 import { Logo } from "./logo";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import { menuItems } from "@/data/constants";
+import { usePathname } from "next/navigation";
 
 export const HeroHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -40,10 +42,13 @@ export const HeroHeader = () => {
             <div className="absolute inset-0 m-auto hidden size-fit md:block">
               <ul className="flex gap-8 text-sm">
                 {menuItems.map((item, index) => (
-                  <li key={index} className={"group/nav-item"}>
+                  <li key={index} className={cn("group/nav-item")}>
                     <Link
                       href={item.href}
-                      className="text-foreground group-hover/nav-item:text-primary  block duration-150"
+                      className={cn(
+                        "text-foreground group-hover/nav-item:text-primary block duration-150",
+                        pathname === item.href && "text-primary"
+                      )}
                     >
                       <span>{item.name}</span>
                     </Link>
