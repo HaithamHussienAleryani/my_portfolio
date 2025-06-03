@@ -23,7 +23,7 @@ export const HeroHeader = () => {
       <nav className="fixed top-0 z-20 w-full ">
         <div
           className={cn(
-            " mt-3 main-container px-6 transition-all duration-300 lg:px-12",
+            " mt-3 main-container  transition-all duration-300 ",
             isScrolled &&
               " max-w-2xl rounded-full lg:pe-3 lg:ps-5 bg-white dark:bg-black lg:border border-gray-00"
           )}
