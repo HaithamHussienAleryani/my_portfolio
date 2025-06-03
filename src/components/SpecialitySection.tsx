@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import SectionHeader from "./SectionHeader";
+
 import { Accordion } from "@/components/ui/accordion";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import AreaExpertiseAccordionItem from "./AreaExpertiseAccordionItem";

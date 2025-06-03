@@ -2,7 +2,7 @@ import Image from "next/image";
 import MeImage from "../../../public/me.jpg";
 import PrimaryButton from "@/components/PrimaryButton";
 import CircleText from "@/components/motion-primitives/circle-text";
-import { ArrowBigRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 function AboutHero() {

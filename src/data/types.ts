@@ -28,3 +28,18 @@ export type TExperience = {
     date: string;
     image: string;
 };
+export type TWhatIDo = {
+
+    title: string;
+    description: string;
+    icon: IconName;
+
+}
+
+
+export type TCertificate = {
+    degree: string;
+    school: string;
+    date: string;
+    url: string;
+};

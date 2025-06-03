@@ -1,6 +1,6 @@
 import PrimaryButton from "./PrimaryButton";
 import ProjectsCardsSection from "./ProjectsCardsSection";
-import SectionHeader from "./SectionHeader";
+
 import SectionMainHeader from "./SectionMainHeader";
 
 function ProjectsSection() {
