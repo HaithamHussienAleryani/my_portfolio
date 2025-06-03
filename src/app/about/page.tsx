@@ -1,48 +1,42 @@
-import Image from "next/image";
+import AboutHero from "@/components/about/AboutHero";
+import ExperienceItem from "@/components/about/ExperienceItem";
+import SectionHeader from "@/components/SectionHeader";
+import TechStackSection from "@/components/tech-stack-section";
 import MeImage from "../../../public/me.jpg";
-import PrimaryButton from "@/components/PrimaryButton";
-import CircleText from "@/components/motion-primitives/circle-text";
-import { ArrowBigRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { TExperience } from "@/data/types";
+import SectionMainHeader from "@/components/SectionMainHeader";
+
+const experiences: TExperience[] = [
+  {
+    company: "Waslafaq",
+    image: "/me.jpg",
+    title: "Front-end Developer",
+    date: "June 24 - Present",
+  },
+  {
+    company: "TechCorp",
+    image: "/me.jpg",
+    title: "Software Engineer",
+    date: "Jan 20 - May 24",
+  },
+];
 
 function AboutPage() {
   return (
-    <section className="main-container  mt-20 lg:mt-30">
-      <div className="flex flex-col md:flex-row mx-auto justify-center md:px-10 space-y-8 md:space-x-14 ">
-        <div className="relative">
-          <Image
-            src={MeImage}
-            alt="Haitham Image"
-            height={350}
-            width={350}
-            className="rounded-b-full w-[90%] mx-auto md:w-full  object-cover h-[500px]"
-          />
-          <Link
-            href={"/contact"}
-            className="absolute   end-10 md:end-0 bottom-0.5 flex   flex-col items-center justify-center"
-          >
-            <CircleText
-              spinDuration={10}
-              text={" Lets Talk . Lets Talk . Lets Talk "}
-              className=" bg-white  shadow-xl inset-shadow-xl "
-            />
-            <div className="absolute hid rounded-full border dark:border-zinc-300 p-4">
-              <ArrowUpRight className=" size-4 md:size-6  text-muted-foreground" />
-            </div>
-          </Link>
-        </div>
-
-        <div className="flex flex-col justify-center   gap-4">
-          <p className="text-4xl lg:text-7xl font-work-sans ">
-            A creative <span className="text-primary">React & Nextjs</span>{" "}
-            developer
-          </p>
-          <span className="  lg:w-2/3 ">
-            I collaborate with brands globally to design impactful,
-            mission-focused websites that drive results and achieve business
-            goals.
-          </span>
-          <PrimaryButton title="My Resume" />
+    <section>
+      <AboutHero />
+      <TechStackSection className="!min-w-full mt-7" />
+      <div className="main-container  flex flex-col lg:flex-row items-start justify-start my-20">
+        <SectionMainHeader
+          title="Experience"
+          heading="Work History"
+          description="I have worked with some of the most innovative industry leaders to help
+        build their top-notch products."
+        />
+        <div className="flex   flex-col w-full mt-10 lg:flex-1/2 gap-y-5">
+          {experiences.map((experience, index) => (
+            <ExperienceItem key={index} experience={experience} />
+          ))}
         </div>
       </div>
     </section>

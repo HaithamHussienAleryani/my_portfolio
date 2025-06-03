@@ -4,10 +4,11 @@ import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 
 import TechStackItem from "./TechStackItem";
 import { TechStackIcons } from "@/constants/icons";
+import { cn } from "@/lib/utils";
 
-const TechStackSection = () => {
+const TechStackSection = ({ className }: { className?: string }) => {
   return (
-    <section className="main-conainer max-w-sm md:max-w-lg lg:max-w-6xl mx-auto mb-10">
+    <section className={cn(className, "main-container  mb-10")}>
       <div className="flex flex-col justify-center items-center md:flex-row">
         <div className="relative h-20 group/static-hover md:h-24 flex flex-col justify-center   w-full">
           <InfiniteSlider

@@ -4,6 +4,7 @@ import SectionHeader from "./SectionHeader";
 import { Accordion } from "@/components/ui/accordion";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import AreaExpertiseAccordionItem from "./AreaExpertiseAccordionItem";
+import SectionMainHeader from "./SectionMainHeader";
 
 const expertiseItems = [
   {
@@ -23,12 +24,9 @@ const expertiseItems = [
 function SpecialitySection() {
   return (
     <section className="main-container mt-20">
-      <SectionHeader header="Speciality" />
-      <h1 className="font-work-sans tracking-wider font-bold text-2xl md:text-5xl mt-5 mb-3">
-        Area of Expertise
-      </h1>
+      <SectionMainHeader title="Area of Expertise" heading="Speciality" />
 
-      <div className="flex flex-col md:flex-row  mt-10">
+      <div className="flex flex-col md:flex-row  mt-5">
         <Accordion
           type="single"
           collapsible

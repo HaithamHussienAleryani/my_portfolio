@@ -21,3 +21,10 @@ export type TProject = {
     date: string,
     bgColor: string,
 };
+
+export type TExperience = {
+    title: string;
+    company: string;
+    date: string;
+    image: string;
+};
