@@ -21,3 +21,25 @@ export type TProject = {
     date: string,
     bgColor: string,
 };
+
+export type TExperience = {
+    title: string;
+    company: string;
+    date: string;
+    image: string;
+};
+export type TWhatIDo = {
+
+    title: string;
+    description: string;
+    icon: IconName;
+
+}
+
+
+export type TCertificate = {
+    degree: string;
+    school: string;
+    date: string;
+    url: string;
+};

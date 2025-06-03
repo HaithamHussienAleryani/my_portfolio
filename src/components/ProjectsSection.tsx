@@ -1,18 +1,18 @@
 import PrimaryButton from "./PrimaryButton";
 import ProjectsCardsSection from "./ProjectsCardsSection";
-import SectionHeader from "./SectionHeader";
+
+import SectionMainHeader from "./SectionMainHeader";
 
 function ProjectsSection() {
   return (
     <section className="mt-5 main-container ">
-      <SectionHeader header="MY WORK" />
-      <h1 className="font-work-sans tracking-wider font-bold text-2xl md:text-5xl mt-5 mb-3 ">
-        Selected Projects
-      </h1>
-      <p className="text-sm md:text-lg">
-        Here&apos;s a curated selection showcasing my expertise and the achieved
-        results.
-      </p>
+      <SectionMainHeader
+        title="Selected Projects"
+        heading="MY WORK"
+        description="  Here's a curated selection showcasing my expertise and the achieved
+        results."
+      />
+
       <ProjectsCardsSection />
 
       <div className="flex justify-center mt-10">
