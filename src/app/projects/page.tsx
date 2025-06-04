@@ -12,6 +12,7 @@ function ProjectsPage() {
         title="Creating next level products"
       />
       <ProjectsCardsSection />
+      <div className="mb-20"></div>
       <ContactMeSection />
       <RightsReservedSection />
     </section>
