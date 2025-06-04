@@ -11,7 +11,7 @@ function ContactMeSection() {
           <div className="size-1.5 bg-primary rounded-full"></div>
           <p className="text-xs md:text-sm">Available for work</p>
         </div>
-        <p className=" text-3xl md:text-5xl font-bold  md:px-16 font-work-sans mt-7 md:w-1/2 mb-6 text-center">
+        <p className="text-5xl font-bold  lg:px-0 lg:w-1/2 font-work-sans mt-7 px-20   mb-6 text-center">
           Let&apos;s Create Your Next Big Idea
         </p>
         <PrimaryButton className="my-3" title="Contact Me" />
