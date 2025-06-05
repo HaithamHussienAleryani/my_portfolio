@@ -30,7 +30,8 @@ export abstract class TechStackIcons {
   public static NodeIcon = NodeIcon;
 
 
-  public static getIcons(): { icon: string, name: string }[] {
+  public static getIcons(count?: number): { icon: string, name: string }[] {
+
     return [
       { icon: TechStackIcons.REACT, name: "react" },
       { icon: TechStackIcons.NextJsIcon, name: "nextjs" },
@@ -45,6 +46,6 @@ export abstract class TechStackIcons {
       { icon: TechStackIcons.tsIcon, name: "typescript" },
       { icon: TechStackIcons.ReduxIcon, name: "redux" },
       { icon: TechStackIcons.NodeIcon, name: "node" },
-    ];
+    ].splice(count ?? 13);
   }
 }
