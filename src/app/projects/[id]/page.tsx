@@ -2,6 +2,7 @@ import ProjectBanner from "@/components/projects-details/ProjectBanner";
 import ProjectDetailsHeader from "@/components/projects-details/ProjectDetailsHeader";
 import ProjectHeader from "@/components/projects-details/ProjectHeader";
 import ProjectOverview from "@/components/projects-details/ProjectOverview";
+import ProjectScreenshots from "@/components/projects-details/ProjectScreenshots";
 import React from "react";
 
 type props = {
@@ -17,6 +18,7 @@ async function ProjectDetails({ params }: props) {
       <ProjectBanner />
       <ProjectDetailsHeader />
       <ProjectOverview />
+      <ProjectScreenshots />
     </section>
   );
 }
