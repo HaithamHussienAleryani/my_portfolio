@@ -11,7 +11,7 @@ function SectionHeader({
   header: string;
 }) {
   return (
-    <div className={cn("flex  items-center space-x-2", className)}>
+    <div className={cn("flex uppercase items-center space-x-2", className)}>
       <StarIcon className="size-5" />
       <p className="text-primary">{header}</p>
     </div>
