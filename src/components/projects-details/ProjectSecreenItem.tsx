@@ -7,7 +7,6 @@ import {
   MorphingDialogContainer,
 } from "@/components/motion-primitives/morphing-dialog";
 import { XIcon } from "lucide-react";
-import MeImage from "../../../public/me.jpg";
 
 export function ProjectScreenshotItem() {
   return (

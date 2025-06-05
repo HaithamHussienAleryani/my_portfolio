@@ -27,8 +27,8 @@ function ProjectDetailsHeader() {
         <p className="md:w-2/3">
           The Video Sharing App is an engaging platform that empowers users to
           connect through video content. It allows users to seamlessly upload,
-          view, and share videos with others in the app's community, fostering
-          creativity and interaction.
+          view, and share videos with others in the app&apos;s community,
+          fostering creativity and interaction.
         </p>
         <div className="space-y-1">
           <p>
