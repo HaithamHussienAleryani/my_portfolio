@@ -123,7 +123,7 @@ export function ContactForm() {
           <p>
             My inbox is always open, Whether you have a project or just want to
             say Hi. I would love to hear from you. Feel free to contact me and
-            I'll get back to you.
+            I&apos;ll get back to you.
           </p>
           <div>
             <div className="flex  flex-wrap mt-4 space-x-4">
