@@ -3,7 +3,7 @@ import React from "react";
 
 import { Accordion } from "@/components/ui/accordion";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import AreaExpertiseAccordionItem from "./AreaExpertiseAccordionItem";
+import CustomAccordionItem from "./AreaExpertiseAccordionItem";
 import SectionMainHeader from "./SectionMainHeader";
 
 const expertiseItems = [
@@ -33,7 +33,7 @@ function SpecialitySection() {
           className="  space-y-4 border-0  h-fit w-full  py-3"
         >
           {expertiseItems.map((item, index) => (
-            <AreaExpertiseAccordionItem
+            <CustomAccordionItem
               key={index}
               index={index}
               title={item.title}

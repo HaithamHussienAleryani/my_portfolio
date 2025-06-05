@@ -1,4 +1,6 @@
 import { ContactForm } from "@/components/contact/ContactForm";
+import FAQsSection from "@/components/contact/FAQsSection";
+import RightsReservedSection from "@/components/RightsReservedSection";
 import SectionMainHeader from "@/components/SectionMainHeader";
 import React from "react";
 
@@ -10,6 +12,8 @@ function ContactPage() {
         title="Let's start a project together"
       />
       <ContactForm />
+      <FAQsSection />
+      <RightsReservedSection />
     </section>
   );
 }

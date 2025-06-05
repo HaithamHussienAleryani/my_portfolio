@@ -49,7 +49,7 @@ export function ContactForm() {
   }
 
   return (
-    <section className="flex flex-col md:flex-row mt-10 gap-10">
+    <section className="flex flex-col md:flex-row mt-10  gap-10">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
