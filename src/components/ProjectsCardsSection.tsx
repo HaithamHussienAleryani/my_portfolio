@@ -10,7 +10,7 @@ const projects: TProject[] = [
     description: "This is a brief description of project one.",
     imageUrl:
       "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "#",
+    link: "/projects/project-one",
     date: "2023",
     bgColor: "#32a852",
   },
@@ -19,7 +19,7 @@ const projects: TProject[] = [
     description: "This is a brief description of project two.",
     imageUrl:
       "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "#",
+    link: "/projects/project-two",
     date: "2023",
     bgColor: "#22a2d2",
   },
@@ -28,7 +28,7 @@ const projects: TProject[] = [
     description: "This is a brief description of project three.",
     imageUrl:
       "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "#",
+    link: "/projects/project-three",
     date: "2023",
     bgColor: "#50a2d2",
   },
@@ -37,7 +37,7 @@ const projects: TProject[] = [
     description: "This is a brief description of project four.",
     imageUrl:
       "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "#",
+    link: "/projects/project-four",
     date: "2023",
     bgColor: "#a2d250",
   },
@@ -48,7 +48,7 @@ function ProjectsCardsSection() {
   return (
     <div className="py-5 mt-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 mx-auto">
-        {projects.map((project, index) => ( 
+        {projects.map((project, index) => (
           <div
             key={project.title}
             onMouseEnter={() => setHoveredIndex(index)}
