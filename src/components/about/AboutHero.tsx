@@ -13,9 +13,7 @@ function AboutHero() {
           <Image
             src={MeImage}
             alt="Haitham Image"
-            height={350}
-            width={350}
-            className="rounded-b-full w-[90%] mx-auto md:w-full  object-cover h-[500px]"
+            className="rounded-full mx-auto w-[300px]  md:w-full  object-cover "
           />
           <Link
             href={"/contact"}
@@ -33,7 +31,7 @@ function AboutHero() {
         </div>
 
         <div className="flex flex-col justify-center   gap-4">
-          <p className="text-4xl lg:text-7xl font-work-sans ">
+          <p className="text-4xl lg:text-7xl font-bold font-work-sans ">
             A creative <span className="text-primary">React & Nextjs</span>{" "}
             developer
           </p>
