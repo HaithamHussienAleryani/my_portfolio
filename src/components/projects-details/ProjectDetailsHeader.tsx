@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import PrimaryButton from "../PrimaryButton";
 
@@ -20,6 +19,22 @@ function ProjectDetailsHeader() {
             href="#"
             className="flex md:hidden !font-bold"
           />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row mt-5  items-start gap-2  md:gap-14 ">
+        <p className="md:w-2/3">
+          The Video Sharing App is an engaging platform that empowers users to
+          connect through video content. It allows users to seamlessly upload,
+          view, and share videos with others in the app's community, fostering
+          creativity and interaction.
+        </p>
+        <div className=" space-y-1">
+          <p>
+            <span className="font-bold me-2">Roles:</span> App Developer.
+          </p>
+          <p>
+            <span className="font-bold me-2">Client:</span> Personal Project.
+          </p>
         </div>
       </div>
     </div>
