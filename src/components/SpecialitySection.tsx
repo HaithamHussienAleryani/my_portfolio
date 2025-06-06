@@ -26,29 +26,7 @@ function SpecialitySection() {
     <section className="main-container mt-20">
       <SectionMainHeader title="Area of Expertise" heading="Speciality" />
 
-      <div className="flex flex-col md:flex-row  mt-5">
-        <Accordion
-          type="single"
-          collapsible
-          className="  space-y-4 border-0  h-fit w-full  py-3"
-        >
-          {expertiseItems.map((item, index) => (
-            <CustomAccordionItem
-              key={index}
-              index={index}
-              title={item.title}
-              content={item.content}
-            />
-          ))}
-        </Accordion>
-
-        <DotLottieReact
-          src="https://lottie.host/dd1dadf1-3390-4efc-9dca-d99f2306ba28/soa3WoCUGz.lottie"
-          loop
-          className=" hidden md:flex h-full md:-translate-y-10  w-full  "
-          autoplay
-        />
-      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2"></div>
     </section>
   );
 }

@@ -12,7 +12,7 @@ import ScreenWrapper from "./ScreenWrapper";
 export default function HeroSection() {
   return (
     <ScreenWrapper>
-      <div className={"relative h-fit pb-5"}>
+      <div className={"relative h-fit"}>
         <main>
           <section>
             <div className=" pt-30 md:pt-40  ">
@@ -30,10 +30,13 @@ export default function HeroSection() {
                     </TextEffect>
                   </div>
 
-                  <p className="mt-5 tracking-widest font-work-sans lg:w-5/6  font-bold text-2xl md:text-6xl md:font-semibold capitalize lg:mt-0">
+                  <p className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0">
                     A React developer Delivering
-                    <span className="text-primary"> purpose driven experiences</span> that inspire &
-                    engage
+                    <span className="text-primary">
+                      {" "}
+                      purpose driven experiences
+                    </span>{" "}
+                    that inspire & engage
                   </p>
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
@@ -51,7 +54,7 @@ export default function HeroSection() {
                     </TextEffect>
                   </div>
 
-                  <div className="my-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
+                  <div className="mt-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
                     <SocialMediaLinks />
                     <PrimaryButton title={"Let's Work Together"} />
                   </div>

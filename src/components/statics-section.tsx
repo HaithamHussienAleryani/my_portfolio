@@ -6,9 +6,9 @@ import StaticInfoSeparator from "@/components/static-info-separator";
 
 const StaticsSection = () => {
   return (
-    <section className="">
+    <section className="mt-20">
       <div className="flex border-t border-b flex-col justify-center   items-center md:flex-row">
-        <div className="relative h-20 group/static-hover md:h-24 flex flex-col justify-center   w-full">
+        <div className="relative h-16 group/static-hover md:h-24 flex flex-col justify-center  w-full">
           <InfiniteSlider
             speed={20}
             gap={30}
@@ -27,7 +27,7 @@ const StaticsSection = () => {
             <StaticInfoSeparator />
           </InfiniteSlider>
 
-          <InfiniteSlider speed={20} gap={30} className={"block md:hidden"}>
+          <InfiniteSlider speed={20} gap={10} className={"block md:hidden "}>
             <StaticsItem staticRate={"4+"} staticDesc={"Years of Experience"} />
             <StaticInfoSeparator />
             <StaticsItem staticRate={"5+"} staticDesc={"Projects Finished"} />
