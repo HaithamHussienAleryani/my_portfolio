@@ -1,5 +1,6 @@
 import ContactMeSection from "@/components/ContactMeSection";
 import ProjectBanner from "@/components/projects-details/ProjectBanner";
+import ProjectBuildStep from "@/components/projects-details/ProjectBuildStep";
 import ProjectDetailsHeader from "@/components/projects-details/ProjectDetailsHeader";
 import ProjectFeatures from "@/components/projects-details/ProjectFeatures";
 import ProjectHeader from "@/components/projects-details/ProjectHeader";
@@ -25,6 +26,7 @@ async function ProjectDetails() {
         <ProjectScreenshots />
         <ProjectTechStack />
         <ProjectFeatures />
+        <ProjectBuildStep />
       </section>
       <ContactMeSection />
     </div>
