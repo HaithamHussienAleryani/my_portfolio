@@ -17,7 +17,6 @@ function AboutPage() {
       <ExperienceSection />
       <CertificateSection />
       <ContactMeSection />
-      <RightsReservedSection />
     </section>
   );
 }

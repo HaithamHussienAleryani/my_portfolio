@@ -7,7 +7,7 @@ const StaticsItem = ({
   staticDesc: string;
 }) => {
   return (
-    <p className="flex flex-col items-center font-work-sans justify-center dark:text-muted-foreground text-white-gray text-2xl md:text-3xl capitalize font-semibold tracking-wide">
+    <p className="flex flex-col items-center font-work-sans justify-center dark:text-muted-foreground text-white-gray text-xl md:text-2xl lg:text-3xl capitalize font-semibold tracking-wide">
       {staticDesc}
     </p>
   );

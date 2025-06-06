@@ -1,11 +1,10 @@
 import React from "react";
+import ProjectBorderedHeader from "./ProjectBorderedHeader";
 
 function ProjectOverview() {
   return (
     <section className="mt-14">
-      <div className="border-b-1 ">
-        <p className="text-2xl  mb-2 font-bold font-work-sans">Overview</p>
-      </div>
+      <ProjectBorderedHeader header="Overview" />
       <p className="mt-4">
         Built using React Native, this app delivers a fast, responsive, and
         platform-agnostic experience, making it accessible across Android and

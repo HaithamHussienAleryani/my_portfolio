@@ -1,6 +1,6 @@
 import ContactMeSection from "@/components/ContactMeSection";
 import ProjectsCardsSection from "@/components/ProjectsCardsSection";
-import RightsReservedSection from "@/components/RightsReservedSection";
+
 import SectionMainHeader from "@/components/SectionMainHeader";
 import React from "react";
 
@@ -14,7 +14,6 @@ function ProjectsPage() {
       <ProjectsCardsSection />
       <div className="mb-20"></div>
       <ContactMeSection />
-      <RightsReservedSection />
     </section>
   );
 }

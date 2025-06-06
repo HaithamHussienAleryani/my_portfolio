@@ -23,17 +23,17 @@ export const HeroHeader = () => {
       <nav className="fixed top-0 z-20 w-full ">
         <div
           className={cn(
-            " mt-3 main-container  transition-all duration-300 ",
+            " mt-3 main-container mx-2 md:mx-auto transition-all duration-300 ",
             isScrolled &&
-              " max-w-2xl rounded-full lg:pe-3 lg:ps-5 bg-white dark:bg-black lg:border border-gray-00"
+              " max-w-2xl rounded-full bg-white dark:bg-black lg:border dark:border-neutral-900 border-neutral-200"
           )}
         >
-          <div className="relative flex   flex-row items-center justify-between gap-6  lg:gap-0 py-2">
+          <div className="relative flex flex-row items-center justify-between gap-6  lg:gap-0 py-2">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center space-x-2"
+                className="flex items-center justify-center space-x-2"
               >
                 <Logo />
               </Link>
@@ -56,6 +56,7 @@ export const HeroHeader = () => {
                 ))}
               </ul>
             </div>
+
             <ThemeToggleButton />
           </div>
         </div>
