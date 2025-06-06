@@ -6,6 +6,7 @@ import MobileNavBar from "@/components/MobileNavBar";
 import { HeroHeader } from "@/components/hero-header";
 import { Lenis } from "lenis/react";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
+import RightsReservedSection from "@/components/RightsReservedSection";
 
 const work_sans = Coda({
   weight: ["400"],
@@ -44,6 +45,7 @@ export default function RootLayout({
           <ThemeProvider attribute={"class"} defaultTheme={"light"}>
             <HeroHeader />
             {children}
+            <RightsReservedSection />
             <MobileNavBar />
             <TailwindIndicator />
           </ThemeProvider>

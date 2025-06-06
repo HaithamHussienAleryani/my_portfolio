@@ -25,7 +25,7 @@ export const HeroHeader = () => {
           className={cn(
             " mt-3 main-container  transition-all duration-300 ",
             isScrolled &&
-              " max-w-2xl rounded-full lg:pe-3 lg:ps-5 bg-white dark:bg-black lg:border border-gray-00"
+              " max-w-2xl rounded-full mx-2 md:mx-auto  bg-indigo-500 dark:bg-black lg:border border-gray-00"
           )}
         >
           <div className="relative flex   flex-row items-center justify-between gap-6  lg:gap-0 py-2">
