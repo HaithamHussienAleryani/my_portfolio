@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type props = {
   title: string;
   className?: string;
   href?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost";
+  icon?: string;
+  invertIcon?: boolean;
 };
 
 function PrimaryButton({
@@ -18,6 +21,8 @@ function PrimaryButton({
   className,
   href = "#",
   variant = "default",
+  icon,
+  invertIcon = false,
 }: props) {
   return (
     <motion.div
@@ -30,12 +35,19 @@ function PrimaryButton({
         size={"lg"}
         variant={variant}
         className={cn(
-          "px-3 hover:px-5  transition-all duration-500 rounded-full",
+          "px-3 hover:px-5 w-fit transition-all duration-500 rounded-full",
           className
         )}
       >
         <Link href={href}>
-          <span className="px-2 text-sm md:text-md">{title}</span>
+          {icon && (
+            <Image
+              src={icon}
+              alt={`${title} button`}
+              className={cn("size-5", invertIcon && "dark:invert-100")}
+            />
+          )}
+          <span className="px-1 text-sm md:text-md">{title}</span>
         </Link>
       </Button>
     </motion.div>
