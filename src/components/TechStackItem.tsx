@@ -5,7 +5,7 @@ type props = {
   icon: string;
   name: string;
   hideImage?: boolean;
-  invert: boolean;
+  invert?: boolean;
 };
 
 function TechStackItem(props: props) {
