@@ -6,20 +6,21 @@ import TechStackItem from "../TechStackItem";
 function ProjectDetailsHeader() {
   return (
     <div className="mt-10">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col space-y-3 md:flex-row md:items-center md:justify-between">
         <p className="text-4xl font-bold font-work-sans">Mask Api</p>
-        <div>
+        <div className="flex items-center space-x-4 ">
           <PrimaryButton
-            title={"Check it out"}
+            icon={TechStackIcons.REACT}
+            title={"Visit website"}
             variant="outline"
             href="#"
-            className="hidden md:flex"
           />
           <PrimaryButton
-            title={"Check it out"}
-            variant="ghost"
+            title={"Source code"}
+            icon={TechStackIcons.GithubIcon}
+            invertIcon
+            variant="outline"
             href="#"
-            className="flex md:hidden !font-bold"
           />
         </div>
       </div>
