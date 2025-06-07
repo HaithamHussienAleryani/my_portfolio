@@ -30,22 +30,22 @@ export abstract class TechStackIcons {
   public static NodeIcon = NodeIcon;
 
 
-  public static getIcons(count?: number): { icon: string, name: string }[] {
+  public static getIcons(count?: number): { icon: string, name: string, invert: boolean }[] {
 
     return [
-      { icon: TechStackIcons.REACT, name: "react" },
-      { icon: TechStackIcons.NextJsIcon, name: "nextjs" },
-      { icon: TechStackIcons.JestIcon, name: "jest" },
-      { icon: TechStackIcons.MongoDbIcon, name: "mongodb" },
-      { icon: TechStackIcons.TailwindIcon, name: "tailwind" },
-      { icon: TechStackIcons.GitIcon, name: "git" },
-      { icon: TechStackIcons.GithubIcon, name: "github" },
-      { icon: TechStackIcons.HTMLIcon, name: "html" },
-      { icon: TechStackIcons.JsIcon, name: "javastrcipt" },
-      { icon: TechStackIcons.CssIcon, name: "css" },
-      { icon: TechStackIcons.tsIcon, name: "typescript" },
-      { icon: TechStackIcons.ReduxIcon, name: "redux" },
-      { icon: TechStackIcons.NodeIcon, name: "node" },
+      { icon: TechStackIcons.REACT, name: "react", invert: false },
+      { icon: TechStackIcons.NextJsIcon, name: "nextjs", invert: true },
+      { icon: TechStackIcons.JestIcon, name: "jest", invert: false },
+      { icon: TechStackIcons.MongoDbIcon, name: "mongodb", invert: false },
+      { icon: TechStackIcons.TailwindIcon, name: "tailwind", invert: false },
+      { icon: TechStackIcons.GitIcon, name: "git", invert: false },
+      { icon: TechStackIcons.GithubIcon, name: "github", invert: true },
+      { icon: TechStackIcons.HTMLIcon, name: "html", invert: false },
+      { icon: TechStackIcons.JsIcon, name: "javastrcipt", invert: false },
+      { icon: TechStackIcons.CssIcon, name: "css", invert: false },
+      { icon: TechStackIcons.tsIcon, name: "typescript", invert: false },
+      { icon: TechStackIcons.ReduxIcon, name: "redux", invert: false },
+      { icon: TechStackIcons.NodeIcon, name: "node", invert: false },
     ].splice(count ?? 13);
   }
 }

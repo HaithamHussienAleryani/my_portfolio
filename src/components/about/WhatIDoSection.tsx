@@ -30,7 +30,7 @@ const whatIDoItems: TWhatIDo[] = [
 
 function WhatIDoSection() {
   return (
-    <div className="main-container lg:!mt-30 lg:mb-40">
+    <div className="main-container lg:mb-40">
       <SectionMainHeader
         heading="What I Do"
         title="My Work Capabities"
