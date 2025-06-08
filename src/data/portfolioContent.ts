@@ -1,4 +1,5 @@
 export interface PortfolioContent {
+    hero_greating: string;
     hero_header: string;
     hero_sub_header: string;
     hero_image: SanityImageAsset;

@@ -1,12 +1,17 @@
-import {defineField, defineType} from "sanity";
-import {ListIcon} from "lucide-react";
+import { defineField, defineType } from "sanity";
+import { ListIcon } from "lucide-react";
 
 export const portfolioContentType = defineType({
-    name:'portfolio_content',
-    title:'Portfolio content',
-    type:'document',
-    icon:ListIcon,
-    fields:[
+    name: 'portfolio_content',
+    title: 'Portfolio content',
+    type: 'document',
+    icon: ListIcon,
+    fields: [
+        defineField({
+            name: 'hero_greating',
+            title: 'Hero Greating',
+            type: 'string',
+        }),
         defineField({
             name: 'hero_header',
             title: 'Hero Header',
@@ -34,7 +39,7 @@ export const portfolioContentType = defineType({
             name: 'hero_clients',
             title: 'Hero Clients',
             type: 'array',
-            of:[{type:'image'}]
+            of: [{ type: 'image' }]
         }),
 
         defineField({
@@ -73,7 +78,7 @@ export const portfolioContentType = defineType({
             name: 'services',
             title: 'Services',
             type: 'array',
-            of:[{type:'reference',to:{type: 'service'}}]
+            of: [{ type: 'reference', to: { type: 'service' } }]
         }),
 
 
@@ -81,7 +86,7 @@ export const portfolioContentType = defineType({
             name: 'projects',
             title: 'Projects',
             type: 'array',
-            of:[{type:'reference',to:{type: 'project'}}]
+            of: [{ type: 'reference', to: { type: 'project' } }]
         }),
 
 
@@ -108,7 +113,7 @@ export const portfolioContentType = defineType({
             name: 'choose_me_services',
             title: 'Choose Me Services',
             type: 'array',
-            of:[{type:'reference',to:{type: 'service'}}],
+            of: [{ type: 'reference', to: { type: 'service' } }],
         }),
 
 
@@ -123,7 +128,7 @@ export const portfolioContentType = defineType({
             name: 'testimonials',
             title: 'Testimonials',
             type: 'array',
-            of:[{type:'reference',to:{type: 'testimonial'}}],
+            of: [{ type: 'reference', to: { type: 'testimonial' } }],
         }),
 
 
@@ -167,10 +172,10 @@ export const portfolioContentType = defineType({
 
 
         defineField({
-            name: 'social_edia',
+            name: 'social_media',
             title: 'social media',
             type: 'array',
-            of:[{type:'reference',to:{type: 'social'}}],
+            of: [{ type: 'reference', to: { type: 'social' } }],
         }),
 
 
