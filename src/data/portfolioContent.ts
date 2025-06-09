@@ -58,7 +58,7 @@ interface TestimonialReference {
     _ref: string;
 }
 
-interface SocialReference {
+export interface SocialReference {
     _type: 'reference';
     _ref: string;
 }
