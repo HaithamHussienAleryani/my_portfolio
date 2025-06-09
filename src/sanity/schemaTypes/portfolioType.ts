@@ -175,7 +175,7 @@ export const portfolioContentType = defineType({
             name: 'social_media',
             title: 'social media',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'social' } }],
+            of: [{ type: 'reference', to: { type: 'social_media' } }],
         }),
 
 

@@ -1,9 +1,9 @@
 
-import {defineField, defineType} from 'sanity'
-import {GlobeIcon} from "lucide-react";
+import { defineField, defineType } from 'sanity'
+import { GlobeIcon } from "lucide-react";
 
 export const socialType = defineType({
-    name: 'social',
+    name: 'social_media',
     title: 'Social Media',
     type: 'document',
     icon: GlobeIcon,

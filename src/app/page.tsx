@@ -17,12 +17,13 @@ export default async function Home() {
     options
   );
 
-  console.log(portfolio);
   const herodata = portfolio[0];
+
+  console.log(herodata);
 
   return (
     <>
-      <HeroSection content={portfolio[0]} />
+      <HeroSection content={herodata} />
       <StaticsSection />
       <AboutMeSection />
       <ProjectsSection />
