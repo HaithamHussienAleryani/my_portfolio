@@ -2,13 +2,17 @@ import React from "react";
 import Paragraph from "./animations/AnimatedCharactar";
 import SectionHeader from "./SectionHeader";
 
-function AboutMeSection() {
+function AboutMeSection({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <main className="my-24">
-      <SectionHeader header="ABOUT ME" className="justify-center" />
-      <Paragraph
-        paragraph="I'm Haithm Hussien, with over 5 years of experience in Mobile App Development and a passion for creating innovative solutions, am dedicated to delivering high-quality applications that enhance user experiences."
-      />
+      <SectionHeader header={title} className="justify-center" />
+      <Paragraph paragraph={description} />
     </main>
   );
 }

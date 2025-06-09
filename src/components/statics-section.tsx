@@ -15,19 +15,25 @@ const StaticsSection = ({ items }: { items: string[] }) => {
             className={"hidden md:block  justify-center items-center"}
           >
             {items.map((item, index) => (
-              <>
-                <StaticsItem key={index} staticRate={item} staticDesc={item} />
+              <div
+                key={index}
+                className="flex space-x-5 -space-y-2 items-center justify-center"
+              >
+                <StaticsItem staticRate={item} staticDesc={item} />
                 <StaticInfoSeparator />
-              </>
+              </div>
             ))}
           </InfiniteSlider>
 
           <InfiniteSlider speed={20} gap={10} className={"block md:hidden "}>
             {items.map((item, index) => (
-              <>
-                <StaticsItem key={index} staticRate={item} staticDesc={item} />
+              <div
+                key={index}
+                className="flex space-x-5 -space-y-2 items-center justify-center"
+              >
+                <StaticsItem staticRate={item} staticDesc={item} />
                 <StaticInfoSeparator />
-              </>
+              </div>
             ))}
           </InfiniteSlider>
 

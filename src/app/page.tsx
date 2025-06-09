@@ -9,13 +9,9 @@ import { PortfolioContent } from "@/data/portfolioContent";
 import { client } from "@/sanity/client";
 import { PORTFOLIO_QUERY } from "@/sanity/queries";
 
-const options = { next: { revalidate: 30 } };
+//const options = { next: { revalidate: 30 } };
 export default async function Home() {
-  const portfolio = await client.fetch<PortfolioContent[]>(
-    PORTFOLIO_QUERY,
-    {},
-    options
-  );
+  const portfolio = await client.fetch<PortfolioContent[]>(PORTFOLIO_QUERY, {});
 
   const herodata = portfolio[0];
 
@@ -25,7 +21,10 @@ export default async function Home() {
     <>
       <HeroSection content={herodata} />
       <StaticsSection items={herodata.hero_slider} />
-      <AboutMeSection />
+      <AboutMeSection
+        title={herodata.about_title}
+        description={herodata.about_subtitle}
+      />
       <ProjectsSection />
       <SpecialitySection />
       <TechStackSection />
