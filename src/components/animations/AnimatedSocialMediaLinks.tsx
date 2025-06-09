@@ -26,11 +26,11 @@ function AnimatedSocialMediaLinks(props: SocialLinksProps) {
         href={props.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="  uppercase"
+        className=" flex  items-center space-x-1.5  uppercase"
       >
         <TextEffect preset="slide">{props.name}</TextEffect>
+        <ArrowUpRight size={18} />
       </a>
-      <ArrowUpRight size={18} />
     </motion.li>
   );
 }

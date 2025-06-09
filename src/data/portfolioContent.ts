@@ -24,7 +24,7 @@ export interface PortfolioContent {
     contact_phone: string;
     contact_address: string;
     footer_description: string;
-    social_media: SocialReference[];
+    social_edia: SocialReference[];
 }
 
 interface SanityImageAsset {
