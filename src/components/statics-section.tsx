@@ -4,7 +4,7 @@ import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import StaticsItem from "@/components/statics-item";
 import StaticInfoSeparator from "@/components/static-info-separator";
 
-const StaticsSection = () => {
+const StaticsSection = ({ items }: { items: string[] }) => {
   return (
     <section className="mt-20">
       <div className="flex border-t border-b flex-col justify-center   items-center md:flex-row">
@@ -14,31 +14,21 @@ const StaticsSection = () => {
             gap={30}
             className={"hidden md:block  justify-center items-center"}
           >
-            <StaticsItem staticRate={"4+"} staticDesc={"Years of Experience"} />
-            <StaticInfoSeparator />
-            <StaticsItem staticRate={"5+"} staticDesc={"Projects Finished"} />
-            <StaticInfoSeparator />
-            <StaticsItem
-              staticRate={"93%"}
-              staticDesc={"client retention rate"}
-            />
-            <StaticInfoSeparator />
-            <StaticsItem staticRate={"6+"} staticDesc={"Satisfied Clients"} />
-            <StaticInfoSeparator />
+            {items.map((item, index) => (
+              <>
+                <StaticsItem key={index} staticRate={item} staticDesc={item} />
+                <StaticInfoSeparator />
+              </>
+            ))}
           </InfiniteSlider>
 
           <InfiniteSlider speed={20} gap={10} className={"block md:hidden "}>
-            <StaticsItem staticRate={"4+"} staticDesc={"Years of Experience"} />
-            <StaticInfoSeparator />
-            <StaticsItem staticRate={"5+"} staticDesc={"Projects Finished"} />
-            <StaticInfoSeparator />
-            <StaticsItem
-              staticRate={"93%"}
-              staticDesc={"client retention rate"}
-            />
-            <StaticInfoSeparator />
-            <StaticsItem staticRate={"6+"} staticDesc={"Satisfied Clients"} />
-            <StaticInfoSeparator />
+            {items.map((item, index) => (
+              <>
+                <StaticsItem key={index} staticRate={item} staticDesc={item} />
+                <StaticInfoSeparator />
+              </>
+            ))}
           </InfiniteSlider>
 
           <div className="bg-linear-to-r   from-background absolute inset-y-0 left-0 w-20"></div>

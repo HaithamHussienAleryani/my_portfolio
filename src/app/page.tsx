@@ -24,7 +24,7 @@ export default async function Home() {
   return (
     <>
       <HeroSection content={herodata} />
-      <StaticsSection />
+      <StaticsSection items={herodata.hero_slider} />
       <AboutMeSection />
       <ProjectsSection />
       <SpecialitySection />

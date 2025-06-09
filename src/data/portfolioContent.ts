@@ -5,6 +5,7 @@ export interface PortfolioContent {
     hero_image: SanityImageAsset;
     hero_cv: SanityFileAsset;
     hero_clients: SanityImageAsset[];
+    hero_slider: string[];
     about_title: string;
     about_subtitle: string;
     about_button: string;

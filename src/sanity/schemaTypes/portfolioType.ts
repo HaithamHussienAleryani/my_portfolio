@@ -36,6 +36,14 @@ export const portfolioContentType = defineType({
         }),
 
         defineField({
+            name: 'hero_slider',
+            title: 'Hero Slider',
+            type: 'array',
+            of: [{ type: 'string' }]
+        }),
+
+
+        defineField({
             name: 'hero_clients',
             title: 'Hero Clients',
             type: 'array',
