@@ -52,8 +52,11 @@ export default function HeroSection({
                   </div>
 
                   <div className="mt-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
-                    <SocialMediaLinks socialMedia={content.social_edia} />
-                    <PrimaryButton title={"Let's Work Together"} />
+                    <SocialMediaLinks socialMedia={content.social_media} />
+                    <PrimaryButton
+                      href="/contact"
+                      title={"Let's Work Together"}
+                    />
                   </div>
                 </div>
               </div>

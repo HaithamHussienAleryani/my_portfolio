@@ -2,7 +2,7 @@ export const PORTFOLIO_QUERY = `*[
   _type == "portfolio_content"
 ] {
   ...,
-  "social_edia": social_edia[]->{
+  "social_media": social_media[]->{
     _id,
     name,
     url,
