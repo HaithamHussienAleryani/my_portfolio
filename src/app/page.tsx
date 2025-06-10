@@ -13,19 +13,19 @@ import { PORTFOLIO_QUERY } from "@/sanity/queries";
 export default async function Home() {
   const portfolio = await client.fetch<PortfolioContent[]>(PORTFOLIO_QUERY, {});
 
-  const herodata = portfolio[0];
+  const portfolioData = portfolio[0];
 
-  console.log(herodata);
+  console.log(portfolioData);
 
   return (
     <>
-      <HeroSection content={herodata} />
-      <StaticsSection items={herodata.hero_slider} />
+      <HeroSection content={portfolioData} />
+      <StaticsSection items={portfolioData.hero_slider} />
       <AboutMeSection
-        title={herodata.about_title}
-        description={herodata.about_subtitle}
+        title={portfolioData.about_title}
+        description={portfolioData.about_subtitle}
       />
-      <ProjectsSection />
+      <ProjectsSection projects={portfolioData.projects} />
       <SpecialitySection />
       <TechStackSection />
       <ContactMeSection />

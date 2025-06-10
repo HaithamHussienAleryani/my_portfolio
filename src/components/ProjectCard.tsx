@@ -1,20 +1,30 @@
 import { TProject } from "@/data/types";
-import { cn } from "@/lib/utils";
+import { cn, urlFor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function ProjectCard({ project, index }: { project: TProject; index: number }) {
+function ProjectCard({ project, index }: { project: any; index: number }) {
+  const imageUrl =
+    project.projectImage && project.projectImage.asset
+      ? urlFor(project.projectImage).fit("crop").url()
+      : "/images/placeholder.png";
+
+  const formattedDate = project._createdAt
+    ? new Date(project._createdAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    : "Date N/A";
+
   return (
     <div className={cn(index % 2 !== 0 ? "sm:pt-14" : "pt-0")}>
-      <Link href={project.link} className="flex  flex-col">
-        <div
-          style={{ backgroundColor: project.bgColor }}
-          className="rounded-4xl"
-        >
-          <div className="flex justify-center items-center p-12 sm:p-6  lg:py-12  ">
+      <Link href={project.liveDemoLink} className="flex  flex-col">
+        <div className="rounded-4xl">
+          <div className="flex justify-center items-center p-12 sm:p-6    ">
             <Image
-              src={project.imageUrl}
+              src={imageUrl}
               alt={`${project.title} image`}
               width={450}
               height={450}
@@ -30,7 +40,7 @@ function ProjectCard({ project, index }: { project: TProject; index: number }) {
           <p className="text-sm md:text-lg w-2/3  text-muted-foreground ">
             {project.description}
           </p>
-          <p className="text-sm md:text-lg">{project.date}</p>
+          <p className="text-sm md:text-lg">{formattedDate}</p>
         </div>
       </Link>
     </div>

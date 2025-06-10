@@ -2,11 +2,12 @@ export const PORTFOLIO_QUERY = `*[
   _type == "portfolio_content"
 ] {
   ...,
+  "projects": projects[]->{
+  ...
+  },
+  
   "social_media": social_media[]->{
-    _id,
-    name,
-    url,
-    icon
+  ...
   }
 }`;
 export const SOCIAL_MEDIA_QUERY = `*[

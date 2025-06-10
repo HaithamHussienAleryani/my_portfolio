@@ -1,49 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { TProject } from "@/data/types";
+
 import { cn } from "@/lib/utils";
 
-const projects: TProject[] = [
-  {
-    title: "Project One",
-    description: "This is a brief description of project one.",
-    imageUrl:
-      "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "/projects/project-one",
-    date: "2023",
-    bgColor: "#32a852",
-  },
-  {
-    title: "Project Two",
-    description: "This is a brief description of project two.",
-    imageUrl:
-      "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "/projects/project-two",
-    date: "2023",
-    bgColor: "#22a2d2",
-  },
-  {
-    title: "Project Three",
-    description: "This is a brief description of project three.",
-    imageUrl:
-      "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "/projects/project-three",
-    date: "2023",
-    bgColor: "#50a2d2",
-  },
-  {
-    title: "Project Four",
-    description: "This is a brief description of project four.",
-    imageUrl:
-      "https://i0.wp.com/freedesignresources.net/wp-content/uploads/2020/03/free-iphone-11-mockup-ui-ux-app-presentation-Leon_dsgn-110320-prev1.jpg?fit=1400%2C1050&ssl=1",
-    link: "/projects/project-four",
-    date: "2023",
-    bgColor: "#a2d250",
-  },
-];
-
-function ProjectsCardsSection() {
+function ProjectsCardsSection({ projects }: { projects: any[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="py-5 mt-5">

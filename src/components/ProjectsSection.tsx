@@ -3,7 +3,7 @@ import ProjectsCardsSection from "./ProjectsCardsSection";
 
 import SectionMainHeader from "./SectionMainHeader";
 
-function ProjectsSection() {
+function ProjectsSection({ projects }: { projects: any[] }) {
   return (
     <section className="mt-5 main-container ">
       <SectionMainHeader
@@ -13,7 +13,7 @@ function ProjectsSection() {
         results."
       />
 
-      <ProjectsCardsSection />
+      <ProjectsCardsSection projects={projects} />
 
       <div className="flex justify-center mt-10">
         <PrimaryButton title={"View All Projects"} href="/projects" />
