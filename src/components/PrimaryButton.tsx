@@ -35,7 +35,7 @@ function PrimaryButton({
         size={"lg"}
         variant={variant}
         className={cn(
-          "px-3 hover:px-5 w-fit transition-all duration-500 rounded-full",
+          "px-3 hover:px-5 w-fit hover:bg-primary dark:hover:bg-primary transition-all duration-500 rounded-full",
           className
         )}
       >
