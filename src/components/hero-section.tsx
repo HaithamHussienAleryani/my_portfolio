@@ -15,6 +15,37 @@ export default function HeroSection({
 }: {
   content: PortfolioContent;
 }) {
+  const heroGreetingText = content.hero_header || "";
+  const words = heroGreetingText.split(" ");
+  const numWords = words.length;
+
+  let greetingContent;
+
+  if (numWords >= 3) {
+    const middlePoint = Math.floor(numWords / 2);
+    // Indices for the three middle words
+    const firstMiddleWordIndex = middlePoint - 1;
+    const lastMiddleWordIndex = middlePoint + 1;
+
+    const beforeText = words.slice(0, firstMiddleWordIndex).join(" ");
+    const middleText = words
+      .slice(firstMiddleWordIndex, lastMiddleWordIndex + 1)
+      .join(" ");
+    const afterText = words.slice(lastMiddleWordIndex + 1).join(" ");
+
+    greetingContent = (
+      <>
+        {beforeText}
+        {beforeText && middleText ? " " : ""}
+        <span className="text-primary">{middleText}</span>
+        {middleText && afterText ? " " : ""}
+        {afterText}
+      </>
+    );
+  } else {
+    greetingContent = heroGreetingText;
+  }
+
   return (
     <ScreenWrapper>
       <div className={"relative h-fit"}>
@@ -36,7 +67,7 @@ export default function HeroSection({
                   </div>
 
                   <p className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0">
-                    {content.hero_header}
+                    {greetingContent}
                   </p>
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
