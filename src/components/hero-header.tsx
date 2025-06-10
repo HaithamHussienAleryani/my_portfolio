@@ -19,7 +19,7 @@ export const HeroHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <header>
+    <header className={cn(pathname.includes("studio") && "!hidden")}>
       <nav className="fixed top-0 z-20 w-full ">
         <div
           className={cn(
