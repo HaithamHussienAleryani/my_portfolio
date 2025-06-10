@@ -1,16 +1,21 @@
-import {defineField, defineType} from "sanity";
-import {ProjectsIcon} from "@sanity/icons";
+import { defineField, defineType } from "sanity";
+import { ProjectsIcon } from "@sanity/icons";
 
 export const projectType = defineType({
-    name:'project',
-    title:'Project',
-    type:'document',
-    icon:ProjectsIcon,
-    fields:[
+    name: 'project',
+    title: 'Project',
+    type: 'document',
+    icon: ProjectsIcon,
+    fields: [
         defineField({
             name: 'title',
             title: 'Title',
             type: 'string',
+        }),
+        defineField({
+            name: 'short_description',
+            title: 'Short description',
+            type: 'text',
         }),
         defineField({
             name: 'description',

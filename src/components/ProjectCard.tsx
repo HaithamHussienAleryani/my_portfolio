@@ -7,7 +7,7 @@ import React from "react";
 function ProjectCard({ project, index }: { project: any; index: number }) {
   const imageUrl =
     project.projectImage && project.projectImage.asset
-      ? urlFor(project.projectImage).fit("crop").url()
+      ? urlFor(project.projectImage).fit("fillmax").url()
       : "/images/placeholder.png";
 
   const formattedDate = project._createdAt
@@ -20,14 +20,14 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
   return (
     <div className={cn(index % 2 !== 0 ? "sm:pt-14" : "pt-0")}>
-      <Link href={project.liveDemoLink} className="flex  flex-col">
+      <Link href={"/projects/" + project._id} className="flex  flex-col">
         <div className="rounded-4xl">
-          <div className="flex justify-center items-center p-12 sm:p-6    ">
+          <div className="flex justify-center items-center">
             <Image
               src={imageUrl}
               alt={`${project.title} image`}
-              width={450}
-              height={450}
+              width={600}
+              height={500}
               className="hover:scale-[102%] duration-300 shadow-2xl object-cover rounded-3xl  "
             />
           </div>
@@ -38,7 +38,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         </p>
         <div className="flex justify-between mt-2">
           <p className="text-sm md:text-lg w-2/3  text-muted-foreground ">
-            {project.description}
+            {project.short_description}
           </p>
           <p className="text-sm md:text-lg">{formattedDate}</p>
         </div>
