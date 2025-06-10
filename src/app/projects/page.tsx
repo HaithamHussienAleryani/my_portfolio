@@ -11,7 +11,7 @@ function ProjectsPage() {
         heading="My Work"
         title="Creating next level products"
       />
-      <ProjectsCardsSection />
+      <ProjectsCardsSection projects={[]} />
       <div className="mb-20"></div>
       <ContactMeSection />
     </section>
