@@ -1,4 +1,3 @@
-import { TProject } from "@/data/types";
 import { cn, urlFor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,7 +26,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
               src={imageUrl}
               alt={`${project.title} image`}
               width={600}
-              height={500}
+              height={600}
               className="hover:scale-[102%] duration-300 shadow-2xl object-cover rounded-3xl  "
             />
           </div>

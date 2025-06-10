@@ -8,7 +8,7 @@ function ProjectsCardsSection({ projects }: { projects: any[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="py-5 mt-5">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-40 mx-auto">
         {projects.map((project, index) => (
           <div
             key={project.title}
