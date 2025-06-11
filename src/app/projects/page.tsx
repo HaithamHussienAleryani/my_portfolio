@@ -5,12 +5,9 @@ import SectionMainHeader from "@/components/SectionMainHeader";
 import { client } from "@/sanity/client";
 import { PROJECTS_QUERY } from "@/sanity/queries";
 import React from "react";
-import { ProjectData } from "sanity";
 
 async function ProjectsPage() {
   const projects = await client.fetch<any[]>(PROJECTS_QUERY, {});
-
-  console.log(projects);
 
   return (
     <section className=" mt-30 md:mt-40 main-container">
