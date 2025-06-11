@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const TechStackSection = ({ className }: { className?: string }) => {
   return (
-    <section className={cn(className, "main-container  mb-10")}>
+    <section className={cn(className, "main-container  my-10")}>
       <div className="flex flex-col  justify-center items-center md:flex-row">
         <div className="relative h-20 group/static-hover md:h-24 flex flex-col justify-center   w-full">
           <InfiniteSlider
