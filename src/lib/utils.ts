@@ -14,15 +14,5 @@ const builder = imageUrlBuilder(client);
 
 export function urlFor(source: SanityImageSource) {
 
-
-  return {
-    url: () => '/images/placeholder.png',
-
-    width: () => builder.image(source),
-    height: () => builder.image(source),
-    fit: () => builder.image(source),
-
-  };
-
   return builder.image(source);
 }
