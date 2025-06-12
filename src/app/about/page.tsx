@@ -27,7 +27,11 @@ async function AboutPage() {
         title={aboutMeContent.what_i_do_title}
         subtitle={aboutMeContent.what_i_do_subtitle}
       />
-      <ExperienceSection />
+      <ExperienceSection
+        experiences={aboutMeContent.experiences_list}
+        title={aboutMeContent.experience_title}
+        subtitle={aboutMeContent.experience_subtitle}
+      />
       <CertificateSection />
       <ContactMeSection />
     </section>

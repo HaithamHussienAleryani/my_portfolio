@@ -30,5 +30,8 @@ export const CONTACT_ME_QUERY = `*[
    ...,
   "what_i_do_items": what_i_do_items[]->{
    icon,title,subtitle
+  },
+  "experiences_list": experiences_list[]->{
+   image,position,company,dateRange
   }
   }[0]`;

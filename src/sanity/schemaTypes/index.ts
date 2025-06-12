@@ -12,9 +12,10 @@ import { testimonialType } from "@/sanity/schemaTypes/testimonialType";
 import { socialType } from "@/sanity/schemaTypes/socialType";
 import { contactMeType } from './ContactMeType'
 import { experienceType } from './experienceType'
+import { experiencesType } from './experiencesType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContentType, experienceType, contactMeType, categoryType, postType, socialType, testimonialType, serviceType, technologyType, projectType, portfolioContentType, authorType],
+  types: [blockContentType, experiencesType, experienceType, contactMeType, categoryType, postType, socialType, testimonialType, serviceType, technologyType, projectType, portfolioContentType, authorType],
 }
 
 
