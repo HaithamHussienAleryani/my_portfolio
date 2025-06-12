@@ -39,3 +39,13 @@ export const CONTACT_ME_QUERY = `*[
    title,school,link,date
   },
   }[0]`;
+
+
+export const CONTACT_ME_SECTION_QUERY = `*[
+  _type == "contact_me"]
+  {
+  available,
+  contact_me_text
+  
+  }[0]`;
+

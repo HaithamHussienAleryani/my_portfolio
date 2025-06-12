@@ -11,7 +11,6 @@ import { CONTACT_ME_QUERY } from "@/sanity/queries";
 
 async function AboutPage() {
   const aboutMeContent = await client.fetch(CONTACT_ME_QUERY);
-  console.log(aboutMeContent);
 
   return (
     <section>

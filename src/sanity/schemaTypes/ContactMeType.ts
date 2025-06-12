@@ -95,6 +95,19 @@ export const contactMeType = defineType({
             of: [{ type: 'reference', to: { type: 'certificate' } }],
         }),
 
+        defineField({
+            name: 'available',
+            title: 'Available for work',
+            type: 'boolean',
+            initialValue: false,
+        }),
+
+        defineField({
+            name: 'contact_me_text',
+            title: 'Contact me text',
+            type: 'string',
+        }),
+
 
 
 
