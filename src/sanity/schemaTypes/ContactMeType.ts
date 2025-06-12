@@ -36,5 +36,24 @@ export const contactMeType = defineType({
         }),
 
 
+        defineField({
+            name: 'what_i_do_title',
+            title: 'What i do title',
+            type: 'string',
+        }),
+
+        defineField({
+            name: 'what_i_do_subtitle',
+            title: 'What i do subtitle',
+            type: 'string',
+        }),
+
+        defineField({
+            name: 'what_i_do_items',
+            title: 'What i do items',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'experience' } }],
+        }),
+
     ],
 })

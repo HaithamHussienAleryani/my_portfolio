@@ -11,6 +11,7 @@ import { CONTACT_ME_QUERY } from "@/sanity/queries";
 
 async function AboutPage() {
   const aboutMeContent = await client.fetch(CONTACT_ME_QUERY);
+  console.log(aboutMeContent);
 
   return (
     <section>
@@ -21,7 +22,11 @@ async function AboutPage() {
         resume={aboutMeContent.resumeLink}
       />
       <TechStackSection className="!min-w-full mt-7" />
-      <WhatIDoSection />
+      <WhatIDoSection
+        experiences={aboutMeContent.what_i_do_items}
+        title={aboutMeContent.what_i_do_title}
+        subtitle={aboutMeContent.what_i_do_subtitle}
+      />
       <ExperienceSection />
       <CertificateSection />
       <ContactMeSection />

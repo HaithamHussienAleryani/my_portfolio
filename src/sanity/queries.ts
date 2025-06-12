@@ -25,6 +25,10 @@ export const TECHNOLOGIES_QUERY = `*[
 `;
 
 export const CONTACT_ME_QUERY = `*[
-  _type == "contact_me"
-  ][0]
-`;
+  _type == "contact_me"]
+  {
+   ...,
+  "what_i_do_items": what_i_do_items[]->{
+   icon,title,subtitle
+  }
+  }[0]`;
