@@ -32,7 +32,11 @@ async function AboutPage() {
         title={aboutMeContent.experience_title}
         subtitle={aboutMeContent.experience_subtitle}
       />
-      <CertificateSection />
+      <CertificateSection
+        title={aboutMeContent.certificates_title}
+        subtitle={aboutMeContent.certificates_subtitle}
+        certificates={aboutMeContent.certificates_list}
+      />
       <ContactMeSection />
     </section>
   );

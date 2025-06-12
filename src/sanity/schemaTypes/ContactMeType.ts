@@ -75,6 +75,18 @@ export const contactMeType = defineType({
             of: [{ type: 'reference', to: { type: 'experiences' } }],
         }),
 
+        defineField({
+            name: 'certificates_title',
+            title: 'Certificates title',
+            type: 'string',
+        }),
+
+        defineField({
+            name: 'certificates_subtitle',
+            title: 'Certificates subtitle',
+            type: 'string',
+        }),
+
 
         defineField({
             name: 'certificates_list',
