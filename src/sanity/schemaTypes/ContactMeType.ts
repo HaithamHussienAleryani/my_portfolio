@@ -3,7 +3,7 @@ import { defineField, defineType } from 'sanity'
 
 export const contactMeType = defineType({
     name: 'contact_me',
-    title: 'Contact me',
+    title: 'About me',
     type: 'document',
     icon: UsersIcon,
     fields: [
@@ -73,6 +73,14 @@ export const contactMeType = defineType({
             title: 'Experiences list',
             type: 'array',
             of: [{ type: 'reference', to: { type: 'experiences' } }],
+        }),
+
+
+        defineField({
+            name: 'certificates_list',
+            title: 'Certificates list',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'certificate' } }],
         }),
 
 

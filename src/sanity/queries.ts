@@ -33,5 +33,9 @@ export const CONTACT_ME_QUERY = `*[
   },
   "experiences_list": experiences_list[]->{
    image,position,company,dateRange
-  }
+  },
+
+  "certificates_list": certificates_list[]->{
+   title,school,link,date
+  },
   }[0]`;
