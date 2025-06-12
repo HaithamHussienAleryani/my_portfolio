@@ -12,7 +12,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 const builder = imageUrlBuilder(client);
 
-export function urlFor(source: SanityImageSource) {
+export function urlFor(source: SanityImageSource): string {
 
-  return builder.image(source);
+  return builder.image(source).url();
 }

@@ -15,7 +15,7 @@ export default async function Home() {
 
   const portfolioData = portfolio[0];
 
-  console.log(portfolioData);
+  //console.log(portfolioData);
 
   return (
     <>

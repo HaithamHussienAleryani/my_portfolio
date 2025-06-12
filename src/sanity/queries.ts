@@ -16,3 +16,10 @@ export const PROJECTS_QUERY = `*[
 ]
 `;
 
+export const TECHNOLOGIES_QUERY = `*[
+  _type == "technology" ] {
+  title,
+    "invert": coalesce(invert, false),
+  icon
+}
+`;

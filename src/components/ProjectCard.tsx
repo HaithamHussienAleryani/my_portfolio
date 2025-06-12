@@ -6,7 +6,7 @@ import React from "react";
 function ProjectCard({ project, index }: { project: any; index: number }) {
   const imageUrl =
     project.projectImage && project.projectImage.asset
-      ? urlFor(project.projectImage).fit("fillmax").url()
+      ? urlFor(project.projectImage)
       : "/images/placeholder.png";
 
   const formattedDate = project._createdAt

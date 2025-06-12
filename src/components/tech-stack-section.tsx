@@ -1,12 +1,14 @@
 import React from "react";
 import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
-
+import { client } from "@/sanity/client";
 import TechStackItem from "./TechStackItem";
 import { TechStackIcons } from "@/constants/icons";
 import { cn } from "@/lib/utils";
+import { TECHNOLOGIES_QUERY } from "@/sanity/queries";
 
-const TechStackSection = ({ className }: { className?: string }) => {
+const TechStackSection = async ({ className }: { className?: string }) => {
+  const technologies = await client.fetch<any[]>(TECHNOLOGIES_QUERY, {});
   return (
     <section className={cn(className, "main-container  my-10")}>
       <div className="flex flex-col  justify-center items-center md:flex-row">
@@ -16,13 +18,8 @@ const TechStackSection = ({ className }: { className?: string }) => {
             gap={30}
             className={" hidden md:block justify-center items-center"}
           >
-            {TechStackIcons.getIcons(1).map((item, index) => (
-              <TechStackItem
-                invert={item.invert}
-                key={index}
-                icon={item.icon}
-                name={item.name}
-              />
+            {technologies.map((item, index) => (
+              <TechStackItem key={index} item={item} />
             ))}
           </InfiniteSlider>
 
@@ -31,13 +28,8 @@ const TechStackSection = ({ className }: { className?: string }) => {
             gap={5}
             className={" block md:hidden  justify-center items-center"}
           >
-            {TechStackIcons.getIcons(1).map((item, index) => (
-              <TechStackItem
-                invert={item.invert}
-                key={index}
-                icon={item.icon}
-                name={item.name}
-              />
+            {technologies.map((item, index) => (
+              <TechStackItem item={item} key={index} />
             ))}
           </InfiniteSlider>
 
