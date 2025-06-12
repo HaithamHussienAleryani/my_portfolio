@@ -132,7 +132,17 @@
 
 @layer base {
     * {
-        @apply border-border outline-ring/50 ;
+        @apply border-border select-none md:select-text  outline-ring/50 ;
+    }
+
+    ::selection {
+        background-color: var(--color-primary);
+        color: var(--color-primary-foreground);
+
+    }
+    ::-moz-selection { /* Firefox Specific */
+        background-color: var(--color-primary);
+        color: var(--color-primary-foreground);
     }
 
     body {

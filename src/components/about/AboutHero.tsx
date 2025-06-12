@@ -4,6 +4,7 @@ import CircleText from "@/components/motion-primitives/circle-text";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { urlFor } from "@/lib/utils";
+import useSeperateText from "@/hooks/useSeperateText";
 type props = {
   header: string;
   subHeader: string;
@@ -13,6 +14,8 @@ type props = {
 
 function AboutHero({ header, subHeader, image, resume }: props) {
   const imageUrl = urlFor(image);
+
+  const greetingContent = useSeperateText(header);
 
   return (
     <div className="main-container  mt-20 lg:mt-30">
@@ -42,7 +45,7 @@ function AboutHero({ header, subHeader, image, resume }: props) {
 
         <div className="flex flex-col justify-center   gap-4">
           <p className="text-4xl lg:text-7xl font-bold font-work-sans ">
-            {header}
+            {greetingContent}
           </p>
           <span className="  lg:w-2/3 ">{subHeader}</span>
           <PrimaryButton href={resume} title="My Resume" />

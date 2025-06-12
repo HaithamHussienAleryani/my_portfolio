@@ -26,9 +26,9 @@ function PrimaryButton({
 }: props) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -80 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 2, ease: "backInOut" }}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
       <Button
         asChild

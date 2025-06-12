@@ -7,6 +7,7 @@ import { TextEffect } from "./motion-primitives/text-effect";
 import AnimatedDivider from "./animations/AnimatedDivider";
 import ScreenWrapper from "./ScreenWrapper";
 import { PortfolioContent } from "@/data/portfolioContent";
+import useSeperateText from "@/hooks/useSeperateText";
 
 // pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44
 
@@ -15,37 +16,7 @@ export default function HeroSection({
 }: {
   content: PortfolioContent;
 }) {
-  const heroGreetingText = content.hero_header || "";
-  const words = heroGreetingText.split(" ");
-  const numWords = words.length;
-
-  let greetingContent;
-
-  if (numWords >= 3) {
-    const middlePoint = Math.floor(numWords / 2);
-    // Indices for the three middle words
-    const firstMiddleWordIndex = middlePoint - 1;
-    const lastMiddleWordIndex = middlePoint + 1;
-
-    const beforeText = words.slice(0, firstMiddleWordIndex).join(" ");
-    const middleText = words
-      .slice(firstMiddleWordIndex, lastMiddleWordIndex + 1)
-      .join(" ");
-    const afterText = words.slice(lastMiddleWordIndex + 1).join(" ");
-
-    greetingContent = (
-      <>
-        {beforeText}
-        {beforeText && middleText ? " " : ""}
-        <span className="text-primary">{middleText}</span>
-        {middleText && afterText ? " " : ""}
-        {afterText}
-      </>
-    );
-  } else {
-    greetingContent = heroGreetingText;
-  }
-
+  const greetingContent = useSeperateText(content.hero_header);
   return (
     <ScreenWrapper>
       <div className={"relative h-fit"}>
