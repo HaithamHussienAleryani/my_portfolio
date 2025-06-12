@@ -3,7 +3,6 @@ import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { client } from "@/sanity/client";
 import TechStackItem from "./TechStackItem";
-import { TechStackIcons } from "@/constants/icons";
 import { cn } from "@/lib/utils";
 import { TECHNOLOGIES_QUERY } from "@/sanity/queries";
 

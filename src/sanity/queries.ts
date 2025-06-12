@@ -23,3 +23,8 @@ export const TECHNOLOGIES_QUERY = `*[
   icon
 }
 `;
+
+export const CONTACT_ME_QUERY = `*[
+  _type == "contact_me"
+  ][0]
+`;

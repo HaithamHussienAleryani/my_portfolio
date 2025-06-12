@@ -6,11 +6,20 @@ import ContactMeSection from "@/components/ContactMeSection";
 import ExperienceSection from "@/components/about/ExperienceSection";
 import WhatIDoSection from "@/components/about/WhatIDoSection";
 import CertificateSection from "@/components/about/CertificateSection";
+import { client } from "@/sanity/client";
+import { CONTACT_ME_QUERY } from "@/sanity/queries";
 
-function AboutPage() {
+async function AboutPage() {
+  const aboutMeContent = await client.fetch(CONTACT_ME_QUERY);
+
   return (
     <section>
-      <AboutHero />
+      <AboutHero
+        header={aboutMeContent.header}
+        subHeader={aboutMeContent.subheader}
+        image={aboutMeContent.image}
+        resume={aboutMeContent.resumeLink}
+      />
       <TechStackSection className="!min-w-full mt-7" />
       <WhatIDoSection />
       <ExperienceSection />

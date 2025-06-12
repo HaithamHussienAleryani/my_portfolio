@@ -1,17 +1,27 @@
 import Image from "next/image";
-import MeImage from "../../../public/me.jpg";
 import PrimaryButton from "@/components/PrimaryButton";
 import CircleText from "@/components/motion-primitives/circle-text";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { urlFor } from "@/lib/utils";
+type props = {
+  header: string;
+  subHeader: string;
+  image: any;
+  resume: string;
+};
 
-function AboutHero() {
+function AboutHero({ header, subHeader, image, resume }: props) {
+  const imageUrl = urlFor(image);
+
   return (
     <div className="main-container  mt-20 lg:mt-30">
       <div className="flex flex-col md:flex-row mx-auto justify-center md:px-10 space-y-8 md:space-x-14 ">
         <div className="relative">
           <Image
-            src={MeImage}
+            src={imageUrl}
+            width={800}
+            height={800}
             alt="Haitham Image"
             className="rounded-full mx-auto w-[300px]  md:w-full  object-cover "
           />
@@ -32,15 +42,10 @@ function AboutHero() {
 
         <div className="flex flex-col justify-center   gap-4">
           <p className="text-4xl lg:text-7xl font-bold font-work-sans ">
-            A creative <span className="text-primary">React & Nextjs</span>{" "}
-            developer
+            {header}
           </p>
-          <span className="  lg:w-2/3 ">
-            I collaborate with brands globally to design impactful,
-            mission-focused websites that drive results and achieve business
-            goals.
-          </span>
-          <PrimaryButton title="My Resume" />
+          <span className="  lg:w-2/3 ">{subHeader}</span>
+          <PrimaryButton href={resume} title="My Resume" />
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import PrimaryButton from "../PrimaryButton";
 import { TechStackIcons } from "@/constants/icons";
-import TechStackItem from "../TechStackItem";
 
 function ProjectDetailsHeader() {
   return (
@@ -41,14 +40,14 @@ function ProjectDetailsHeader() {
         </div>
       </div>
       <div className="flex mt-4 flex-wrap gap-2">
-        {TechStackIcons.getIcons(8).map((item, index) => (
+        {/* {TechStackIcons.getIcons(8).map((item, index) => (
           <TechStackItem
             hideImage
             key={index}
             icon={item.icon}
             name={item.name}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
