@@ -49,3 +49,12 @@ export const CONTACT_ME_SECTION_QUERY = `*[
   
   }[0]`;
 
+
+
+
+export const SOCIAL_MEDIA_QUERY = `*[
+  _type == "social_media"]
+  {
+  name,url
+  }
+  `;

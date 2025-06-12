@@ -1,30 +1,16 @@
 import { cn } from "@/lib/utils";
+import { client } from "@/sanity/client";
+import { SOCIAL_MEDIA_QUERY } from "@/sanity/queries";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/your-profile",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/your-github-username",
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/your-twitter-handle",
-  },
-  {
-    name: "Email",
-    url: "mailto:           ",
-  },
-  {
-    name: "instagram",
-    url: "https://www.instagram.com/your-instagram-handle",
-  },
-];
 
-function SocialMediaIconsSection({ className }: { className?: string }) {
+type props = {
+  className?: string;
+};
+
+async function SocialMediaIconsSection({ className }: props) {
+  const socialLinks = await client.fetch<any[]>(SOCIAL_MEDIA_QUERY, {});
+
   return (
     <div
       className={cn("flex flex-wrap mt-4 justify-center space-x-4", className)}

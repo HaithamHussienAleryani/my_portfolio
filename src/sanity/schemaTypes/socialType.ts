@@ -16,7 +16,7 @@ export const socialType = defineType({
         defineField({
             name: 'url',
             title: 'Url',
-            type: 'url',
+            type: 'string',
 
         }),
         defineField({
