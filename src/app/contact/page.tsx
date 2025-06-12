@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/contact/ContactForm";
+import ContactSection from "@/components/contact/ContactSection";
 import FAQsSection from "@/components/contact/FAQsSection";
 
 import SectionMainHeader from "@/components/SectionMainHeader";
@@ -11,7 +11,7 @@ function ContactPage() {
         heading="Connect with me"
         title="Let's start a project together"
       />
-      <ContactForm />
+      <ContactSection />
       <FAQsSection />
     </section>
   );
