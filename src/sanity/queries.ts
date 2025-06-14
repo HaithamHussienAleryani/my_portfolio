@@ -58,3 +58,11 @@ export const SOCIAL_MEDIA_QUERY = `*[
   name,url
   }
   `;
+
+
+export const FAQS_QUERY = `*[
+  _type == "faqs"]
+  {
+  question,answer
+  }
+  `;

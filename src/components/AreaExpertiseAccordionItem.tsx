@@ -7,19 +7,19 @@ import {
 
 function CustomAccordionItem(props: {
   index: number;
-  title: string;
-  content: string;
+  question: string;
+  answer: string;
 }) {
-  const { index, title, content } = props;
+  const { index, question, answer } = props;
   return (
     <AccordionItem
       value={`item-${index}`}
       className=" bg-white !cursor-pointer border-accent dark:border-muted shadow-neutral-100 dark:shadow-none dark:bg-OffBlack2 shadow-lg border-0 rounded-xl px-3"
     >
       <AccordionTrigger className="hover:no-underline font-bold bg-OffBlack2 !cursor-pointer  rounded-xl px-3">
-        {title}
+        {question}
       </AccordionTrigger>
-      <AccordionContent>{content}</AccordionContent>
+      <AccordionContent>{answer}</AccordionContent>
     </AccordionItem>
   );
 }
