@@ -32,7 +32,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           <p className="text-sm md:text-lg w-2/3  text-muted-foreground ">
             {project.short_description}
           </p>
-          <p className="text-sm md:text-lg">{formatDate(project._createdA)}</p>
+          <p className="text-sm md:text-lg">{formatDate(project._createdAt)}</p>
         </div>
       </Link>
     </div>

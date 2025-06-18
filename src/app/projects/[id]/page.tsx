@@ -7,6 +7,7 @@ import ProjectHeader from "@/components/projects-details/ProjectHeader";
 import ProjectOverview from "@/components/projects-details/ProjectOverview";
 import ProjectScreenshots from "@/components/projects-details/ProjectScreenshots";
 import ProjectTechStack from "@/components/projects-details/ProjectTechStack";
+import { formatDate } from "@/lib/utils";
 import { client } from "@/sanity/client";
 import { PROJECT_DETAILS_QUERY } from "@/sanity/queries";
 import React from "react";
@@ -18,13 +19,13 @@ type props = {
 };
 async function ProjectDetails({ params }: props) {
   const { id } = await params;
-  const ProjectDetails = await client.fetch(PROJECT_DETAILS_QUERY, { id });
-  console.log(ProjectDetails);
+  const project = await client.fetch(PROJECT_DETAILS_QUERY, { id });
+  console.log(project);
 
   return (
     <div>
       <section className=" max-w-5xl px-5 md:px-6 mx-auto mt-30">
-        <ProjectHeader date="2025" />
+        <ProjectHeader date={formatDate(project._createdAt)} />
         <ProjectBanner />
         <ProjectDetailsHeader />
         <ProjectOverview />
