@@ -2,7 +2,6 @@ import { cn, formatDate, urlFor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { date } from "zod";
 
 function ProjectCard({ project, index }: { project: any; index: number }) {
   const imageUrl =

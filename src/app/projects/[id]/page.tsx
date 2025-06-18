@@ -10,14 +10,8 @@ import ProjectTechStack from "@/components/projects-details/ProjectTechStack";
 import { formatDate } from "@/lib/utils";
 import { client } from "@/sanity/client";
 import { PROJECT_DETAILS_QUERY } from "@/sanity/queries";
-import React, { Suspense } from "react";
 
-type props = {
-  params: {
-    id: string;
-  };
-};
-async function ProjectDetails({ params }: props) {
+async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const project = await client.fetch(PROJECT_DETAILS_QUERY, { id });
   console.log(project);

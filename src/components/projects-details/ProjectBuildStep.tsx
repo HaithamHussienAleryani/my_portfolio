@@ -1,21 +1,20 @@
 import React from "react";
 import ProjectBorderedHeader from "./ProjectBorderedHeader";
-import ProjectCodeSnippit from "./ProjectCodeSnippit";
 
-const steps = [
-  {
-    title: "Clone this repo",
-    code: "git clone https://github.com/DevrajDC/dc-code-screenshot && cd code-screenshot",
-  },
-  {
-    title: "Install dependencies",
-    code: "npm install",
-  },
-  {
-    title: "Run the app",
-    code: "npm run dev",
-  },
-];
+// const steps = [
+//   {
+//     title: "Clone this repo",
+//     code: "git clone https://github.com/DevrajDC/dc-code-screenshot && cd code-screenshot",
+//   },
+//   {
+//     title: "Install dependencies",
+//     code: "npm install",
+//   },
+//   {
+//     title: "Run the app",
+//     code: "npm run dev",
+//   },
+// ];
 
 function ProjectBuildStep() {
   return (
