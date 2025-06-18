@@ -27,7 +27,12 @@ async function ProjectDetails({ params }: props) {
       <section className=" max-w-5xl px-5 md:px-6 mx-auto mt-30">
         <ProjectHeader date={formatDate(project._createdAt)} />
         <ProjectBanner image={project.projectImage} />
-        <ProjectDetailsHeader />
+        <ProjectDetailsHeader
+          title={project.title}
+          githubLink={project.githubLink}
+          description={project.description}
+          liveDemoLink={project.liveDemoLink}
+        />
         <ProjectOverview />
         <ProjectScreenshots />
         <ProjectTechStack />
