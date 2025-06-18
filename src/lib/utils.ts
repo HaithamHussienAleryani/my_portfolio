@@ -16,3 +16,13 @@ export function urlFor(source: SanityImageSource): string {
 
   return builder.image(source).url();
 }
+export function formatDate(dateString: string): string {
+  const formattedDate = dateString
+    ? new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
+    : "Date N/A";
+  return formattedDate;
+}

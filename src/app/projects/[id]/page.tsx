@@ -7,15 +7,20 @@ import ProjectHeader from "@/components/projects-details/ProjectHeader";
 import ProjectOverview from "@/components/projects-details/ProjectOverview";
 import ProjectScreenshots from "@/components/projects-details/ProjectScreenshots";
 import ProjectTechStack from "@/components/projects-details/ProjectTechStack";
+import { client } from "@/sanity/client";
+import { PROJECT_DETAILS_QUERY } from "@/sanity/queries";
 import React from "react";
 
-// type props = {
-//   params: {
-//     id: string;
-//   };
-// };
-async function ProjectDetails() {
-  // const { id } = await params;
+type props = {
+  params: {
+    id: string;
+  };
+};
+async function ProjectDetails({ params }: props) {
+  const { id } = await params;
+  const ProjectDetails = await client.fetch(PROJECT_DETAILS_QUERY, { id });
+  console.log(ProjectDetails);
+
   return (
     <div>
       <section className=" max-w-5xl px-5 md:px-6 mx-auto mt-30">

@@ -1,21 +1,14 @@
-import { cn, urlFor } from "@/lib/utils";
+import { cn, formatDate, urlFor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { date } from "zod";
 
 function ProjectCard({ project, index }: { project: any; index: number }) {
   const imageUrl =
     project.projectImage && project.projectImage.asset
       ? urlFor(project.projectImage)
       : "/images/placeholder.png";
-
-  const formattedDate = project._createdAt
-    ? new Date(project._createdAt).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      })
-    : "Date N/A";
 
   return (
     <div className={cn(index % 2 !== 0 ? "sm:pt-14" : "pt-0")}>
@@ -39,7 +32,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           <p className="text-sm md:text-lg w-2/3  text-muted-foreground ">
             {project.short_description}
           </p>
-          <p className="text-sm md:text-lg">{formattedDate}</p>
+          <p className="text-sm md:text-lg">{formatDate(project._createdA)}</p>
         </div>
       </Link>
     </div>
