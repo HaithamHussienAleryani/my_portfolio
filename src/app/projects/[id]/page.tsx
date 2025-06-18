@@ -26,7 +26,7 @@ async function ProjectDetails({ params }: props) {
     <div>
       <section className=" max-w-5xl px-5 md:px-6 mx-auto mt-30">
         <ProjectHeader date={formatDate(project._createdAt)} />
-        <ProjectBanner />
+        <ProjectBanner image={project.projectImage} />
         <ProjectDetailsHeader />
         <ProjectOverview />
         <ProjectScreenshots />
