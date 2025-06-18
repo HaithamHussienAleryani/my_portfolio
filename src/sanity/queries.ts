@@ -68,5 +68,11 @@ export const FAQS_QUERY = `*[
   `;
 
 export const PROJECT_DETAILS_QUERY = `*[_type == "project" && _id == $id][0]{
-...
+...,
+ "technologies":technologies[]->{
+    title,
+    "invert": coalesce(invert, false),
+    icon
+  }
   }`;
+

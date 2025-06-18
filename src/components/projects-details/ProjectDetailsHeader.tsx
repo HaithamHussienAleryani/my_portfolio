@@ -1,12 +1,14 @@
 import React from "react";
 import PrimaryButton from "../PrimaryButton";
 import { TechStackIcons } from "@/constants/icons";
+import TechStackItem from "../TechStackItem";
 
 type props = {
   title: string;
   description: string;
   liveDemoLink: string;
   githubLink?: string;
+  technologies: any[];
 };
 
 function ProjectDetailsHeader({
@@ -14,6 +16,7 @@ function ProjectDetailsHeader({
   description,
   githubLink,
   liveDemoLink,
+  technologies,
 }: props) {
   return (
     <div className="mt-10">
@@ -49,14 +52,9 @@ function ProjectDetailsHeader({
         </div>
       </div>
       <div className="flex mt-4 flex-wrap gap-2">
-        {/* {TechStackIcons.getIcons(8).map((item, index) => (
-          <TechStackItem
-            hideImage
-            key={index}
-            icon={item.icon}
-            name={item.name}
-          />
-        ))} */}
+        {technologies.map((item, index) => (
+          <TechStackItem hideImage key={index} item={item} />
+        ))}
       </div>
     </div>
   );

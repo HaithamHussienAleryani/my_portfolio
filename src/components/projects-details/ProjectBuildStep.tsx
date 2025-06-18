@@ -23,9 +23,9 @@ function ProjectBuildStep() {
       <ProjectBorderedHeader header="Build Steps" />
       <div className="mt-10">
         <ul className="space-y-5 list-decimal ms-6 md:ms-10 mt-5 mb-20">
-          {steps.map((item, index) => (
+          {/* {steps.map((item, index) => (
             <ProjectCodeSnippit item={item} key={index} />
-          ))}
+          ))} */}
         </ul>
       </div>
     </section>
