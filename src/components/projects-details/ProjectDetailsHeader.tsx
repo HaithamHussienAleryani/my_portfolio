@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryButton from "../PrimaryButton";
 import { TechStackIcons } from "@/constants/icons";
 import TechStackItem from "../TechStackItem";
+import { client } from "@/sanity/client";
 
 type props = {
   title: string;
@@ -9,6 +10,7 @@ type props = {
   liveDemoLink: string;
   role: string;
   githubLink?: string;
+  client: string;
   technologies: any[];
 };
 
@@ -17,6 +19,7 @@ function ProjectDetailsHeader({
   description,
   githubLink,
   role,
+  client,
   liveDemoLink,
   technologies,
 }: props) {
@@ -37,7 +40,7 @@ function ProjectDetailsHeader({
               icon={TechStackIcons.GithubIcon}
               invertIcon
               variant="outline"
-              href="#"
+              href={githubLink}
             />
           )}
         </div>
@@ -49,7 +52,7 @@ function ProjectDetailsHeader({
             <span className="font-bold me-2">Role:</span> {role}
           </p>
           <p>
-            <span className="font-bold me-2">Client:</span> Personal Project.
+            <span className="font-bold me-2">Client:</span> {client}
           </p>
         </div>
       </div>
