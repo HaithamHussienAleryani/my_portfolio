@@ -4,6 +4,9 @@ import ProjectCodeSnippit from "./ProjectCodeSnippit";
 import { TBuildStep } from "@/data/types";
 
 function ProjectBuildStep({ buildSteps }: { buildSteps: TBuildStep[] }) {
+  if (!buildSteps || buildSteps.length === 0) {
+    return null; // Return null if there are no build steps to display
+  }
   return (
     <section className="mt-14">
       <ProjectBorderedHeader header="Build Steps" />

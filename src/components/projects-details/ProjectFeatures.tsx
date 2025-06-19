@@ -6,6 +6,9 @@ function ProjectFeatures({
 }: {
   features: { title: string; description: string }[];
 }) {
+  if (!features || features.length === 0) {
+    return null; // Return null if there are no features to display
+  }
   return (
     <section className="my-18 ">
       <ProjectBorderedHeader header="Features" />

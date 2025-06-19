@@ -75,10 +75,6 @@ export const PROJECT_DETAILS_QUERY = `*[_type == "project" && _id == $id][0]{
     description,
     link,
     icon
-  },
-    "features": features[]->{
-    title,
-    description
   }
   }`;
 

@@ -41,7 +41,15 @@ export const projectType = defineType({
             name: 'features',
             title: 'Features',
             type: 'array',
-            of: [{ type: 'reference', to: { type: 'feature' } }],
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        { name: 'title', title: 'Title', type: 'string' },
+                        { name: 'description', title: 'Description', type: 'text' },
+                    ],
+                },
+            ],
         }),
         defineField({
             name: 'projectImage',
