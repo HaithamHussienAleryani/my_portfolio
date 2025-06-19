@@ -23,6 +23,11 @@ export const projectType = defineType({
             type: 'text',
         }),
         defineField({
+            name: 'role',
+            title: 'Role',
+            type: 'text',
+        }),
+        defineField({
             name: 'overview',
             title: 'Overview',
             type: 'text',
@@ -58,6 +63,7 @@ export const projectType = defineType({
             title: 'Live Demo Link',
             type: 'url',
         }),
+
         defineField({
             name: 'featured',
             title: 'Featured Project',

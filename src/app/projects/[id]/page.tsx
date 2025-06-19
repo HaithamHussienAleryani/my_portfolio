@@ -21,6 +21,7 @@ async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
         <ProjectHeader date={formatDate(project._createdAt)} />
         <ProjectBanner image={project.projectImage} />
         <ProjectDetailsHeader
+          role={project.role}
           technologies={project.technologies}
           title={project.title}
           githubLink={project.githubLink}

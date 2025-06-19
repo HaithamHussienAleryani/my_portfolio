@@ -7,6 +7,7 @@ type props = {
   title: string;
   description: string;
   liveDemoLink: string;
+  role: string;
   githubLink?: string;
   technologies: any[];
 };
@@ -15,6 +16,7 @@ function ProjectDetailsHeader({
   title,
   description,
   githubLink,
+  role,
   liveDemoLink,
   technologies,
 }: props) {
@@ -44,7 +46,7 @@ function ProjectDetailsHeader({
         <p className="md:w-2/3">{description}</p>
         <div className="space-y-1">
           <p>
-            <span className="font-bold me-2">Roles:</span> App Developer.
+            <span className="font-bold me-2">Role:</span> {role}
           </p>
           <p>
             <span className="font-bold me-2">Client:</span> Personal Project.
