@@ -43,3 +43,8 @@ export type TCertificate = {
     date: string;
     url: string;
 };
+
+export type TBuildStep = {
+    step: string;
+    command: string;
+}

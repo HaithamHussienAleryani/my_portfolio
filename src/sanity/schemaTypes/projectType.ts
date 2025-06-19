@@ -100,5 +100,19 @@ export const projectType = defineType({
             type: 'datetime',
             initialValue: () => new Date().toISOString(),
         }),
+        defineField({
+            name: 'buildSteps',
+            title: 'Build Steps',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        { name: 'step', title: 'Step', type: 'string' },
+                        { name: 'command', title: 'Command', type: 'text' },
+                    ],
+                },
+            ],
+        }),
     ],
 })

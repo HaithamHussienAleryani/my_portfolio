@@ -2,7 +2,6 @@ import React from "react";
 import PrimaryButton from "../PrimaryButton";
 import { TechStackIcons } from "@/constants/icons";
 import TechStackItem from "../TechStackItem";
-import { client } from "@/sanity/client";
 
 type props = {
   title: string;
