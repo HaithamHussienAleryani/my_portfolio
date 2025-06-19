@@ -15,9 +15,10 @@ import { experienceType } from './experienceType'
 import { experiencesType } from './experiencesType'
 import { certificateType } from './certificateType'
 import { faqsType } from './faqsType'
+import { featureType } from './featureType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContentType, faqsType, certificateType, experiencesType, experienceType, contactMeType, categoryType, postType, socialType, testimonialType, serviceType, technologyType, projectType, portfolioContentType, authorType],
+  types: [blockContentType, faqsType, featureType, certificateType, experiencesType, experienceType, contactMeType, categoryType, postType, socialType, testimonialType, serviceType, technologyType, projectType, portfolioContentType, authorType],
 }
 
 
