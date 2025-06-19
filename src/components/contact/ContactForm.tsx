@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { sendEmail } from "@/lib/email-service";
 
 const FormSchema = z.object({
   full_name: z.string().min(2, {
@@ -37,14 +38,16 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast("You submitted the following values", {
-      description: (
-        <pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    try {
+      await sendEmail(data.full_name, data.email, data.message);
+      toast.success("SMS sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error("Error sending SMS:", error);
+      toast(error as string);
+      return;
+    }
   }
 
   return (
@@ -96,7 +99,7 @@ export function ContactForm() {
           )}
         />
         <Button
-          className="rounded-full bg-black dark:bg-white px-10"
+          className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
           size={"lg"}
           type="submit"
         >
