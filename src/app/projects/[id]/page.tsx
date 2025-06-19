@@ -32,7 +32,7 @@ async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
         <ProjectOverview overview={project.overview} />
         <ProjectScreenshots screenshots={project.screenshots} />
         <ProjectTechStack technologies={project.technologies} />
-        <ProjectFeatures />
+        <ProjectFeatures features={project.features} />
         <ProjectBuildStep />
       </section>
       <ContactMeSection />

@@ -1,22 +1,11 @@
 import React from "react";
 import ProjectBorderedHeader from "./ProjectBorderedHeader";
-const features: { title: string; description: string }[] = [
-  {
-    title: "React",
-    description: "A JavaScript library for building user interfaces",
-  },
-  {
-    title: "TypeScript",
 
-    description: "A strongly typed programming language",
-  },
-  {
-    title: "Node.js",
-
-    description: "A JavaScript runtime environment",
-  },
-];
-function ProjectFeatures() {
+function ProjectFeatures({
+  features,
+}: {
+  features: { title: string; description: string }[];
+}) {
   return (
     <section className="my-18 ">
       <ProjectBorderedHeader header="Features" />
