@@ -31,7 +31,7 @@ async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
         />
         <ProjectOverview overview={project.overview} />
         <ProjectScreenshots screenshots={project.screenshots} />
-        <ProjectTechStack />
+        <ProjectTechStack technologies={project.technologies} />
         <ProjectFeatures />
         <ProjectBuildStep />
       </section>

@@ -19,6 +19,16 @@ export default defineType({
             initialValue: false,
         }),
         defineField({
+            name: 'description',
+            title: 'Description',
+            type: 'text',
+        }),
+        defineField({
+            name: 'link',
+            title: 'Link',
+            type: 'url',
+        }),
+        defineField({
             name: 'icon',
             title: 'Icon',
             type: 'image',
