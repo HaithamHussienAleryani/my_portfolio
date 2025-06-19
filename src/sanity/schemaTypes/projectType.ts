@@ -27,6 +27,7 @@ export const projectType = defineType({
             title: 'Overview',
             type: 'text',
         }),
+
         defineField({
             name: 'projectImage',
             title: 'Project Image',
@@ -70,6 +71,12 @@ export const projectType = defineType({
                 source: 'title',
                 maxLength: 96,
             },
+        }),
+        defineField({
+            name: 'screenshots',
+            title: 'Screenshots',
+            type: 'array',
+            of: [{ type: 'image' }],
         }),
         defineField({
             name: 'createdAt',

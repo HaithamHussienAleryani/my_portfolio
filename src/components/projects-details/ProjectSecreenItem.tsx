@@ -6,9 +6,11 @@ import {
   MorphingDialogImage,
   MorphingDialogContainer,
 } from "@/components/motion-primitives/morphing-dialog";
+import { urlFor } from "@/lib/utils";
 import { XIcon } from "lucide-react";
 
-export function ProjectScreenshotItem() {
+export function ProjectScreenshotItem({ image }: { image: any }) {
+  const imageUrl = urlFor(image);
   return (
     <MorphingDialog
       transition={{
@@ -18,15 +20,15 @@ export function ProjectScreenshotItem() {
     >
       <MorphingDialogTrigger>
         <MorphingDialogImage
-          src={"/me.jpg"}
+          src={imageUrl}
           alt="Sony Style Store in the Sony Center complex - Berlin, Germany (2000)"
-          className="max-w-[11rem] md:max-w-[14rem] rounded-md"
+          className="max-w-[11rem] object-cover md:max-w-[14rem] rounded-md"
         />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
         <MorphingDialogContent className="relative">
           <MorphingDialogImage
-            src="/me.jpg"
+            src={imageUrl}
             alt="Sony Style Store in the Sony Center complex - Berlin, Germany (2000)"
             className="h-auto w-full max-w-[90vw] rounded-[4px] object-cover lg:h-[90vh]"
           />

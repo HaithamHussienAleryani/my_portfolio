@@ -15,14 +15,11 @@ async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const project = await client.fetch(PROJECT_DETAILS_QUERY, { id });
   console.log(project);
-
   return (
     <div>
       <section className=" max-w-5xl px-5 md:px-6 mx-auto mt-30">
         <ProjectHeader date={formatDate(project._createdAt)} />
-
         <ProjectBanner image={project.projectImage} />
-
         <ProjectDetailsHeader
           technologies={project.technologies}
           title={project.title}
@@ -31,7 +28,7 @@ async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
           liveDemoLink={project.liveDemoLink}
         />
         <ProjectOverview overview={project.overview} />
-        <ProjectScreenshots />
+        <ProjectScreenshots screenshots={project.screenshots} />
         <ProjectTechStack />
         <ProjectFeatures />
         <ProjectBuildStep />
