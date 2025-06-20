@@ -8,8 +8,7 @@ import AnimatedDivider from "./animations/AnimatedDivider";
 import ScreenWrapper from "./ScreenWrapper";
 import { PortfolioContent } from "@/data/portfolioContent";
 import useSeperateText from "@/hooks/useSeperateText";
-
-// pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44
+import AnimatedText from "./animations/AnimatedText";
 
 export default function HeroSection({
   content,
@@ -37,9 +36,10 @@ export default function HeroSection({
                     </TextEffect>
                   </div>
 
-                  <p className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0">
-                    {greetingContent}
-                  </p>
+                  <AnimatedText
+                    text={content.hero_header}
+                    className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0"
+                  ></AnimatedText>
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
                     <AnimatedDivider />

@@ -18,13 +18,13 @@ export default function useSeperateText(header: string) {
     const afterText = words.slice(lastMiddleWordIndex + 1).join(" ");
 
     greetingContent = (
-      <>
-        {beforeText}
-        {beforeText && middleText ? " " : ""}
+      <div>
+        <span>{beforeText}</span>
+        <span>{beforeText && middleText ? " " : ""}</span>
         <span className="text-primary">{middleText}</span>
-        {middleText && afterText ? " " : ""}
-        {afterText}
-      </>
+        <span>{middleText && afterText ? " " : ""}</span>
+        <span>{afterText}</span>
+      </div>
     );
   } else {
     greetingContent = heroGreetingText;
