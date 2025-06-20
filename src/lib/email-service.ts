@@ -24,7 +24,7 @@ export async function sendEmail(name: string, from: string, message: string) {
 
     try {
         initEmailService();
-        emailjs.send(process.env.NEXT_EMAIL_SERVICE_ID as string, process.env.NEXT_EMAIL_TEMPLATE_ID as string, {
+        await emailjs.send(process.env.NEXT_EMAIL_SERVICE_ID as string, process.env.NEXT_EMAIL_TEMPLATE_ID as string, {
             name,
             from,
             message,
