@@ -24,7 +24,7 @@ export default function HeroSection({
                   <div className="flex mb-10  items-center gap-x-2 racking-wider">
                     <HandShakeIcon />
                     <AnimatedText
-                      duration={1.5}
+                      duration={1}
                       stagger={0.05}
                       text={content.hero_greating}
                       className={"pt-2 m-0 text-md "}
@@ -34,7 +34,8 @@ export default function HeroSection({
                   <AnimatedText
                     text={content.hero_header}
                     hasColor
-                    duration={2}
+                    stagger={0.05}
+                    duration={1}
                     from={2}
                     to={5}
                     className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0"
@@ -43,7 +44,7 @@ export default function HeroSection({
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
                     <AnimatedDivider />
                     <AnimatedText
-                      duration={1.5}
+                      duration={1}
                       stagger={0.05}
                       text={content.hero_sub_header}
                     />

@@ -24,23 +24,26 @@ function AnimatedText({
 }) {
   const textRef = useRef<HTMLDivElement | null>(null);
 
-  useGSAP(() => {
-    const split = SplitText.create(textRef.current, { type: "words" });
-    if (hasColor) {
-      gsap.to(split.words.slice(from, to), {
-        color: "var(--primary)",
-      });
-    }
+  useGSAP(
+    () => {
+      const split = SplitText.create(textRef.current, { type: "words" });
+      if (hasColor) {
+        gsap.to(split.words.slice(from, to), {
+          color: "var(--primary)",
+        });
+      }
 
-    gsap.from(split.words, {
-      opacity: 0,
-      filter: "blur(20px)",
-      y: 100,
-      ease: "expo.out",
-      duration,
-      stagger: stagger ?? 0.1,
-    });
-  });
+      gsap.from(split.words, {
+        opacity: 0,
+        filter: "blur(20px)",
+        y: 100,
+        ease: "expo.out",
+        duration,
+        stagger: stagger ?? 0.1,
+      });
+    },
+    { scope: textRef }
+  );
 
   return (
     <div ref={textRef} className={cn(className)}>
