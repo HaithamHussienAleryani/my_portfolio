@@ -21,7 +21,7 @@ async function ContactMeSection() {
         <p className=" text-4xl lg:text-5xl font-bold  lg:px-0 lg:w-1/2 font-work-sans mt-7 px-5   mb-6 text-center">
           {contactMeContent.contact_me_text}
         </p>
-        <PrimaryButton className="my-3" title="Contact Me" />
+        <PrimaryButton href="/contact" className="my-3" title="Contact Me" />
 
         <div>
           <div className="flex md:hidden flex-wrap mt-4 justify-center space-x-4">
