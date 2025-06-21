@@ -38,19 +38,20 @@ export default function HeroSection({
 
                   <AnimatedText
                     text={content.hero_header}
+                    hasColor
+                    duration={2}
+                    from={2}
+                    to={5}
                     className="mt-5 tracking-widest font-work-sans lg:w-5/6   text-2xl md:text-6xl font-semibold capitalize lg:mt-0"
-                  ></AnimatedText>
+                  />
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
                     <AnimatedDivider />
-                    <TextEffect
-                      per="word"
-                      as="h3"
-                      preset="blur"
-                      speedReveal={2.5}
-                    >
-                      {content.hero_sub_header}
-                    </TextEffect>
+                    <AnimatedText
+                      duration={0.5}
+                      stagger={0.05}
+                      text={content.hero_sub_header}
+                    />
                   </div>
 
                   <div className="mt-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
