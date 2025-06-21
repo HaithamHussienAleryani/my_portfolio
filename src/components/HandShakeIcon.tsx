@@ -5,7 +5,11 @@ import Lottie from "lottie-react";
 function HandShakeIcon() {
   return (
     <div>
-      <Lottie animationData={HandAnimation} loop className={"size-8"} />
+      <Lottie
+        animationData={HandAnimation}
+        loop
+        className={"size-8 animate-bounce"}
+      />
     </div>
   );
 }

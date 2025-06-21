@@ -3,11 +3,9 @@ import React from "react";
 import PrimaryButton from "@/components/PrimaryButton";
 import HandShakeIcon from "./HandShakeIcon";
 import SocialMediaLinks from "./SocialMediaLinks";
-import { TextEffect } from "./motion-primitives/text-effect";
 import AnimatedDivider from "./animations/AnimatedDivider";
 import ScreenWrapper from "./ScreenWrapper";
 import { PortfolioContent } from "@/data/portfolioContent";
-import useSeperateText from "@/hooks/useSeperateText";
 import AnimatedText from "./animations/AnimatedText";
 
 export default function HeroSection({
@@ -15,7 +13,6 @@ export default function HeroSection({
 }: {
   content: PortfolioContent;
 }) {
-  const greetingContent = useSeperateText(content.hero_header);
   return (
     <ScreenWrapper>
       <div className={"relative h-fit"}>
@@ -26,14 +23,12 @@ export default function HeroSection({
                 <div className="mx-auto  text-left">
                   <div className="flex mb-10  items-center gap-x-2 racking-wider">
                     <HandShakeIcon />
-                    <TextEffect
-                      preset="fade-in-blur"
-                      speedReveal={0.6}
-                      speedSegment={0.3}
+                    <AnimatedText
+                      duration={1.5}
+                      stagger={0.05}
+                      text={content.hero_greating}
                       className={"pt-2 m-0 text-md "}
-                    >
-                      {content.hero_greating}
-                    </TextEffect>
+                    />
                   </div>
 
                   <AnimatedText
@@ -48,7 +43,7 @@ export default function HeroSection({
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
                     <AnimatedDivider />
                     <AnimatedText
-                      duration={0.5}
+                      duration={1.5}
                       stagger={0.05}
                       text={content.hero_sub_header}
                     />
