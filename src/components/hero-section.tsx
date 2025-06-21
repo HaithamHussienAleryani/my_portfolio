@@ -27,7 +27,9 @@ export default function HeroSection({
                       duration={1}
                       stagger={0.05}
                       text={content.hero_greating}
-                      className={"pt-2 m-0 text-md "}
+                      className={
+                        "pt-2 m-0 text-lg  font-semibold text-accent-foreground "
+                      }
                     />
                   </div>
 
@@ -37,8 +39,8 @@ export default function HeroSection({
                     stagger={0.05}
                     duration={1}
                     from={2}
-                    to={5}
-                    className="mt-5 tracking-widest font-work-sans lg:w-5/6  text-4xl  lg:text-6xl font-semibold capitalize lg:mt-0"
+                    to={6}
+                    className="mt-5 tracking-tight  font-work-sans lg:w-5/6  text-4xl  lg:text-6xl    lg:mt-0"
                   />
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">

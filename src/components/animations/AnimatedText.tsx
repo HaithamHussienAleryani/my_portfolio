@@ -30,6 +30,7 @@ function AnimatedText({
       if (hasColor) {
         gsap.to(split.words.slice(from, to), {
           color: "var(--primary)",
+          fontWeight: "bold",
         });
       }
 

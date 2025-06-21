@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Coda, Questrial } from "next/font/google";
+import { Titillium_Web, Questrial } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import MobileNavBar from "@/components/MobileNavBar";
@@ -8,8 +8,8 @@ import { Lenis } from "lenis/react";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import RightsReservedSection from "@/components/RightsReservedSection";
 
-const work_sans = Coda({
-  weight: ["400"],
+const work_sans = Titillium_Web({
+  weight: ["200", "300", "400", "600", "700", "900"],
   style: ["normal"],
   subsets: ["latin"],
   variable: "--font-work-sans",
