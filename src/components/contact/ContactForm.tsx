@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
-import { sendEmail } from "@/lib/email-service";
 import { useActionState } from "react";
 import { FormSchema } from "./schema";
 import { onSubmit } from "./action";
@@ -33,10 +32,10 @@ export function ContactForm() {
   const initialState = { success: false };
   const [state, formAction, isPending] = useActionState(onSubmit, initialState);
 
-  console.log("Form state:", state);
-
   return (
     <Form {...form}>
+      {state.success &&
+        toast.success("Your message has been sent successfully!")}
       <form className="w-full md:w-2/3 space-y-6">
         <FormField
           control={form.control}
@@ -79,14 +78,19 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button
-          className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
-          size={"lg"}
-          formAction={formAction}
-          type="submit"
-        >
-          Submit
-        </Button>
+
+        {isPending ? (
+          <p>loading</p>
+        ) : (
+          <Button
+            className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
+            size={"lg"}
+            formAction={formAction}
+            type="submit"
+          >
+            Submit
+          </Button>
+        )}
       </form>
     </Form>
   );
