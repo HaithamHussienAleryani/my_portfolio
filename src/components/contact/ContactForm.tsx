@@ -17,16 +17,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import { sendEmail } from "@/lib/email-service";
-
-const FormSchema = z.object({
-  full_name: z.string().min(2, {
-    message: "Full name must be at least 2 characters.",
-  }),
-  email: z.string().email(),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
-});
+import { useActionState } from "react";
+import { FormSchema } from "./schema";
+import { onSubmit } from "./action";
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -37,25 +30,14 @@ export function ContactForm() {
       message: "",
     },
   });
+  const initialState = { success: false };
+  const [state, formAction, isPending] = useActionState(onSubmit, initialState);
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
-    try {
-      await sendEmail(data.full_name, data.email, data.message);
-      toast.success("SMS sent successfully!");
-      form.reset();
-    } catch (error) {
-      console.error("Error sending SMS:", error);
-      toast(error as string);
-      return;
-    }
-  }
+  console.log("Form state:", state);
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full md:w-2/3 space-y-6"
-      >
+      <form className="w-full md:w-2/3 space-y-6">
         <FormField
           control={form.control}
           name="full_name"
@@ -101,6 +83,7 @@ export function ContactForm() {
         <Button
           className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
           size={"lg"}
+          formAction={formAction}
           type="submit"
         >
           Submit
