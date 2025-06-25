@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
-import { useActionState } from "react";
+import { useActionState, useEffect, useTransition } from "react";
 import { FormSchema } from "./schema";
 import { onSubmit } from "./action";
 
@@ -29,14 +29,35 @@ export function ContactForm() {
       message: "",
     },
   });
-  const initialState = { success: false };
+  const initialState = { success: false, message: "" };
   const [state, formAction, isPending] = useActionState(onSubmit, initialState);
+  const [isPendingTransition, startTransition] = useTransition();
+
+  useEffect(() => {
+    if (!state.message) return;
+
+    if (state.success) {
+      toast.success(state.message);
+      form.reset();
+    } else {
+      toast.error(state.message);
+    }
+  }, [state, form]);
+
+  function handleAction(data: z.infer<typeof FormSchema>) {
+    const formData = new FormData();
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+    startTransition(() => formAction(formData));
+  }
 
   return (
     <Form {...form}>
-      {state.success &&
-        toast.success("Your message has been sent successfully!")}
-      <form className="w-full md:w-2/3 space-y-6">
+      <form
+        onSubmit={form.handleSubmit(handleAction)}
+        className="w-full md:w-2/3 space-y-6"
+      >
         <FormField
           control={form.control}
           name="full_name"
@@ -79,18 +100,14 @@ export function ContactForm() {
           )}
         />
 
-        {isPending ? (
-          <p>loading</p>
-        ) : (
-          <Button
-            className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
-            size={"lg"}
-            formAction={formAction}
-            type="submit"
-          >
-            Submit
-          </Button>
-        )}
+        <Button
+          disabled={isPendingTransition}
+          className="rounded-full cursor-pointer bg-black dark:bg-white px-10"
+          size={"lg"}
+          type="submit"
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   );
