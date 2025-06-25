@@ -30,7 +30,7 @@ export function ContactForm() {
     },
   });
   const initialState = { success: false, message: "" };
-  const [state, formAction, isPending] = useActionState(onSubmit, initialState);
+  const [state, formAction] = useActionState(onSubmit, initialState);
   const [isPendingTransition, startTransition] = useTransition();
 
   useEffect(() => {

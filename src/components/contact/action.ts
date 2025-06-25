@@ -1,6 +1,6 @@
 "use server"
 import { sendEmail } from '@/lib/email-service';
-import { FormSchema, type FormState } from './schema'
+import { type FormState } from './schema'
 
 export async function onSubmit(
     previousState: FormState,
