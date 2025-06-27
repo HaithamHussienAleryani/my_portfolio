@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { urlFor } from "@/lib/utils";
 import useSeperateText from "@/hooks/useSeperateText";
+import AnimatedText from "../animations/AnimatedText";
 type props = {
   header: string;
   subHeader: string;
@@ -15,8 +16,6 @@ type props = {
 function AboutHero({ header, subHeader, image, resume }: props) {
   const imageUrl = urlFor(image);
 
-  const greetingContent = useSeperateText(header);
-
   return (
     <div className="main-container  mt-20 lg:mt-30">
       <div className="flex flex-col md:flex-row mx-auto justify-center md:px-10 space-y-8 md:space-x-14 ">
@@ -26,7 +25,7 @@ function AboutHero({ header, subHeader, image, resume }: props) {
             width={800}
             height={800}
             alt="Haitham Image"
-            className="rounded-full mx-auto w-[300px]  md:w-full  object-cover "
+            className="rounded-full mx-auto   object-cover "
           />
           <Link
             href={"/contact"}
@@ -44,10 +43,22 @@ function AboutHero({ header, subHeader, image, resume }: props) {
         </div>
 
         <div className="flex flex-col justify-center   gap-4">
-          <p className="text-4xl lg:text-7xl font-bold font-work-sans ">
-            {greetingContent}
-          </p>
-          <span className="  lg:w-2/3 ">{subHeader}</span>
+          <AnimatedText
+            text={header}
+            hasColor={true}
+            duration={1.5}
+            stagger={0.1}
+            from={2}
+            to={5}
+            className="text-4xl lg:text-7xl font-bold font-work-sans "
+          />
+
+          <AnimatedText
+            duration={0.2}
+            stagger={0.05}
+            className="  lg:w-2/3 "
+            text={subHeader}
+          />
           <PrimaryButton href={resume} title="My Resume" />
         </div>
       </div>
