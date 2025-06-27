@@ -3,7 +3,6 @@ import Image from "next/image";
 
 function ExperienceItem({ experience }: { experience: any }) {
   const { company, image, position, dateRange } = experience;
-  console.log(dateRange);
 
   const imageUrl = urlFor(image);
 
