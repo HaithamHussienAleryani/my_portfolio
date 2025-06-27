@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import { menuItems } from "@/data/constants";
 import { usePathname } from "next/navigation";
+import gsap, { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const HeroHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);

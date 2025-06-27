@@ -1,19 +1,19 @@
 "use client";
 import { useGSAP } from "@gsap/react";
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import gsap from "gsap/all";
-import React, { useRef } from "react";
+import gsap, { SplitText } from "gsap/all";
+import React from "react";
 
 export default function Paragraph({ paragraph }: { paragraph: string }) {
   useGSAP(() => {
-    gsap.to(".animated-text", {
+    const text = SplitText.create(".animated-text", { type: "chars" });
+    gsap.from(text.chars, {
       scrollTrigger: {
         trigger: ".animated-text",
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 75%",
+        end: "bottom 50%",
         scrub: 1,
       },
-      opacity: 1,
+      opacity: 0.3,
       y: 0,
       stagger: 0.1,
       ease: "power1.out",
@@ -21,9 +21,8 @@ export default function Paragraph({ paragraph }: { paragraph: string }) {
   });
   return (
     <p
-      style={{ lineHeight: 1 }}
       className={
-        " text-xl animated-text md:text-3xl text-center opacity-30 font-bold  leading-none p-10 max-w-screen-xl  mx-auto"
+        " text-xl animated-text md:text-3xl text-center   font-bold tracking-wide p-10 max-w-screen-xl  mx-auto"
       }
     >
       {paragraph}
