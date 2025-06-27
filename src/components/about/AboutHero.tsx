@@ -4,7 +4,6 @@ import CircleText from "@/components/motion-primitives/circle-text";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { urlFor } from "@/lib/utils";
-import useSeperateText from "@/hooks/useSeperateText";
 import AnimatedText from "../animations/AnimatedText";
 type props = {
   header: string;
