@@ -10,9 +10,11 @@ import { client } from "@/sanity/client";
 import { PORTFOLIO_QUERY } from "@/sanity/queries";
 import InfoSection from "@/components/InfoSection";
 
-//const options = { next: { revalidate: 30 } };
+const options = { next: { revalidate: 30 } };
 export default async function Home() {
-  const portfolio = await client.fetch<PortfolioContent[]>(PORTFOLIO_QUERY, {});
+  const portfolio = await client.fetch<PortfolioContent[]>(PORTFOLIO_QUERY, {
+    options,
+  });
 
   const portfolioData = portfolio[0];
 
