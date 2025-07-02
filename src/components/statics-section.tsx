@@ -17,7 +17,7 @@ const StaticsSection = ({ items }: { items: string[] }) => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="flex space-x-5 -space-y-2 items-center justify-center"
+                className="flex space-x-5 items-center justify-center"
               >
                 <StaticsItem staticRate={item} staticDesc={item} />
                 <StaticInfoSeparator />
@@ -29,7 +29,7 @@ const StaticsSection = ({ items }: { items: string[] }) => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="flex space-x-5 -space-y-2 items-center justify-center"
+                className="flex space-x-5 items-center justify-center"
               >
                 <StaticsItem staticRate={item} staticDesc={item} />
                 <StaticInfoSeparator />
