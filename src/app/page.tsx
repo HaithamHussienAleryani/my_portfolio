@@ -8,6 +8,7 @@ import ContactMeSection from "@/components/ContactMeSection";
 import { PortfolioContent } from "@/data/portfolioContent";
 import { client } from "@/sanity/client";
 import { PORTFOLIO_QUERY } from "@/sanity/queries";
+import InfoSection from "@/components/InfoSection";
 
 //const options = { next: { revalidate: 30 } };
 export default async function Home() {
@@ -25,6 +26,7 @@ export default async function Home() {
         title={portfolioData.about_title}
         description={portfolioData.about_subtitle}
       />
+      <InfoSection />
       <ProjectsSection projects={portfolioData.projects} />
       <SpecialitySection />
       <TechStackSection />

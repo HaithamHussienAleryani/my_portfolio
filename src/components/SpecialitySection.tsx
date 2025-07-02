@@ -13,15 +13,15 @@ function SpecialitySection() {
         <MyExpertiseCard
           logo={TechStackIcons.REACT}
           tag="Front end developer"
-          title="React developer"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium error totam ex eius. Voluptas qui beatae quasi possimus repellat nemo laboriosam porro nesciunt veniam? Provident libero temporibus eveniet velit eos, iste amet at?"
+          title="React Enthusiast"
+          description="I saw in React that everything is possible with its component-based architecture and vast ecosystem, enabling me to build complex UIs with ease."
         />
         <MyExpertiseCard
           logo={TechStackIcons.NextJsIcon}
-          tag="Full stack developer"
+          tag="Front end developer"
           invertBg
-          title="NextJs developer"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nemo laboriosam ipsa vero repudiandae, quo et similique placeat aliquid cumque ea recusandae pariatur quis."
+          title="Next.js developer"
+          description="I embrace Next.js for its production-ready features like SSR and SSG, allowing me to build fast, scalable, and SEO-optimized React applications with confidence."
         />
       </div>
     </section>
