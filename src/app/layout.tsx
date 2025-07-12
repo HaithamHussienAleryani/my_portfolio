@@ -29,6 +29,7 @@ const dm_sans = Questrial({
 export const metadata: Metadata = {
   title: "Haitham Hussien | Flutter Developer",
   description: "A portfolio website for Haitham Hussien, a Flutter developer.",
+  metadataBase: new URL("https://haithm.dev"),
 };
 
 export default function RootLayout({
