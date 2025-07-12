@@ -7,7 +7,6 @@ import { HeroHeader } from "@/components/hero-header";
 import { Lenis } from "lenis/react";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import RightsReservedSection from "@/components/RightsReservedSection";
-import ogImage from "./../../public/og.png";
 
 const work_sans = Titillium_Web({
   weight: ["200", "300", "400", "600", "700", "900"],
@@ -35,9 +34,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://haithm.dev",
     images: {
-      url: ogImage.src,
-      width: ogImage.width,
-      height: ogImage.height,
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "My Website Open Graph Image",
     },
   },
 };
