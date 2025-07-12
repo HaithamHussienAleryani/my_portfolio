@@ -7,6 +7,7 @@ import { HeroHeader } from "@/components/hero-header";
 import { Lenis } from "lenis/react";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import RightsReservedSection from "@/components/RightsReservedSection";
+import ogImage from "./opengraph-image.png";
 
 const work_sans = Titillium_Web({
   weight: ["200", "300", "400", "600", "700", "900"],
@@ -27,9 +28,16 @@ const dm_sans = Questrial({
 // });
 
 export const metadata: Metadata = {
-  title: "Haitham Hussien | Flutter Developer",
-  description: "A portfolio website for Haitham Hussien, a Flutter developer.",
+  title: "Haitham Hussien | Senior Front-End Developer",
+  description: "Please click the link and check out my portfolio",
   metadataBase: new URL("https://haithm.dev"),
+  openGraph: {
+    images: {
+      url: ogImage.src,
+      width: ogImage.width,
+      height: ogImage.height,
+    },
+  },
 };
 
 export default function RootLayout({
