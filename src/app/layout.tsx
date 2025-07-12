@@ -38,6 +38,7 @@ export const metadata: Metadata = {
       url: "/opengraph-image.png", // This will now resolve to https://haithm.dev/opengraph-image.png
       width: 1200,
       height: 630,
+      secureUrl: "https://haithm.dev/opengraph-image.png",
       alt: "My Website Open Graph Image",
       type: "image/png", // Optional but good practice to explicitly state the type
     },
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Haitham Hussien | Senior Front-End Developer",
     description: "Please click the link and check out my portfolio",
+
     images: ["/opengraph-image.png"],
   },
 };
