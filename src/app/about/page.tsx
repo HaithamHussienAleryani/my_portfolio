@@ -9,8 +9,10 @@ import CertificateSection from "@/components/about/CertificateSection";
 import { client } from "@/sanity/client";
 import { CONTACT_ME_QUERY } from "@/sanity/queries";
 
+const options = { next: { revalidate: 30 } };
+
 async function AboutPage() {
-  const aboutMeContent = await client.fetch(CONTACT_ME_QUERY);
+  const aboutMeContent = await client.fetch(CONTACT_ME_QUERY, { options });
 
   return (
     <section>
