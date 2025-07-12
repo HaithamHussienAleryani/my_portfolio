@@ -42,6 +42,12 @@ export const metadata: Metadata = {
       type: "image/png", // Optional but good practice to explicitly state the type
     },
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Haitham Hussien | Senior Front-End Developer",
+    description: "Please click the link and check out my portfolio",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
