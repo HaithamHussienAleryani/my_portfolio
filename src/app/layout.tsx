@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   description: "Please click the link and check out my portfolio",
   metadataBase: new URL("https://haithm.dev"), // <--- ADD THIS LINE
   openGraph: {
-    images: ["opengraph-image.png"],
+    images: ["og.png"],
   },
   twitter: {
     card: "summary_large_image",
     site: "haithm.dev",
     title: "Haitham Hussien | Senior Front-End Developer",
     description: "Please click the link and check out my portfolio",
-    images: ["opengraph-image.png"],
+    images: ["og.png"],
   },
 };
 
