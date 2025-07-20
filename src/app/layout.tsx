@@ -29,7 +29,7 @@ const dm_sans = Questrial({
 export const metadata: Metadata = {
   title: "Haitham Hussien | Senior Front-End Developer",
   description: "Please click the link and check out my portfolio",
-  metadataBase: new URL("https://haithm.dev"), // <--- ADD THIS LINE
+  metadataBase: new URL("https://haithm.dev/"), // <--- ADD THIS LINE
   openGraph: {
     images: ["og.png"],
   },
