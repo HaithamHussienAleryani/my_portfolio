@@ -1,6 +1,5 @@
-import React from "react";
-import PrimaryButton from "../PrimaryButton";
 import { TechStackIcons } from "@/constants/icons";
+import PrimaryButton from "../PrimaryButton";
 import TechStackItem from "../TechStackItem";
 
 type props = {
@@ -23,7 +22,7 @@ function ProjectDetailsHeader({
   technologies,
 }: props) {
   return (
-    <div className="mt-10">
+    <div className="mb-10">
       <div className="flex flex-col space-y-3 md:flex-row md:items-center md:justify-between">
         <p className="text-4xl font-bold font-work-sans">{title}</p>
         <div className="flex items-center space-x-4 ">

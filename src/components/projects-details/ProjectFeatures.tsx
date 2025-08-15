@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectBorderedHeader from "./ProjectBorderedHeader";
 
 function ProjectFeatures({
@@ -10,7 +9,7 @@ function ProjectFeatures({
     return null; // Return null if there are no features to display
   }
   return (
-    <section className="my-18 ">
+    <section className="mb-18 ">
       <ProjectBorderedHeader header="Features" />
       <div>
         <ul className="space-y-3 list-disc ms-6 md:ms-10  mt-5">

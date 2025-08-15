@@ -1,6 +1,5 @@
-import React from "react";
-import { ProjectScreenshotItem } from "./ProjectSecreenItem";
 import ProjectBorderedHeader from "./ProjectBorderedHeader";
+import { ProjectScreenshotItem } from "./ProjectSecreenItem";
 
 function ProjectScreenshots({ screenshots }: { screenshots: any[] }) {
   if (!screenshots || screenshots.length === 0) {
@@ -8,7 +7,7 @@ function ProjectScreenshots({ screenshots }: { screenshots: any[] }) {
   }
 
   return (
-    <section className="mt-14">
+    <section className="mb-14">
       <ProjectBorderedHeader header="Project Screens" />
       <div className="my-6  flex flex-wrap gap-4">
         {screenshots.map((image, index) => (

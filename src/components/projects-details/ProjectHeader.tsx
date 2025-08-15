@@ -1,10 +1,9 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 function ProjectHeader({ date }: { date: string }) {
   return (
-    <div className="flex  justify-between items-center">
+    <div className="flex mb-5 justify-between items-center">
       <Link href="/projects" className="flex space-x-2 items-center">
         <ArrowLeft className="size-4" />
         <span className="text-sm">Back to Projects</span>

@@ -1,9 +1,8 @@
-import React from "react";
 import ProjectBorderedHeader from "./ProjectBorderedHeader";
 
 function ProjectTechStack({ technologies }: { technologies: any[] }) {
   return (
-    <section className="mt-18 ">
+    <section className="mb-18 ">
       <ProjectBorderedHeader header="Tech Stack" />
       <div>
         <ul className="space-y-3 list-disc ms-6 md:ms-10 mt-5">
