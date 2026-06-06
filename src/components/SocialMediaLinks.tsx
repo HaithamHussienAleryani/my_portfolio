@@ -1,5 +1,3 @@
-import React from "react";
-
 import AnimatedSocialMediaLinks from "./animations/AnimatedSocialMediaLinks";
 
 function SocialMediaLinks({ socialMedia }: { socialMedia: any[] }) {

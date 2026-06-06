@@ -90,7 +90,7 @@
 }
 
 .dark {
-    --primary:#B5FF6D;
+    --primary:hsl(141, 58%, 44%);
     --primary-2:#212920;
     --off-black-2:#111116;
      --color-primary2: var(--primary-dark);

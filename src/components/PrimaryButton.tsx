@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 type props = {
@@ -36,7 +35,7 @@ function PrimaryButton({
         variant={variant}
         className={cn(
           "px-3 hover:px-5 w-fit hover:text-white dark:hover:text-black hover:bg-primary dark:hover:bg-primary transition-all duration-500 rounded-full",
-          className
+          className,
         )}
       >
         <Link href={href}>

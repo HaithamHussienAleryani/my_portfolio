@@ -1,9 +1,7 @@
 "use client";
-import React from "react";
-import { TextEffect } from "../motion-primitives/text-effect";
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
-
+import { motion } from "motion/react";
+import { TextEffect } from "../motion-primitives/text-effect";
 type SocialLinksProps = {
   name: string;
   url: string;

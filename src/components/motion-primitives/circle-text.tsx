@@ -1,7 +1,6 @@
 "use client";
+import { motion, useAnimation, type Transition } from "motion/react";
 import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-
 interface CircularTextProps {
   text: string;
   spinDuration?: number;
@@ -12,17 +11,16 @@ interface CircularTextProps {
 const getRotationTransition = (
   duration: number,
   from: number,
-  loop: boolean = true
+  loop: boolean = true,
 ) => ({
-  from: from,
-  to: from + 360,
-  ease: "linear",
-  duration: duration,
-  type: "tween",
+  from,
+  ease: "linear" as const,
+  duration,
+  type: "tween" as const,
   repeat: loop ? Infinity : 0,
 });
 
-const getTransition = (duration: number, from: number) => ({
+const getTransition = (duration: number, from: number): Transition => ({
   rotate: getRotationTransition(duration, from),
   scale: {
     type: "spring",

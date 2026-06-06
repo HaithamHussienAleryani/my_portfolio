@@ -10,9 +10,19 @@ export function ThemeToggleButton() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  const syncThemeCookie = (theme: "light" | "dark") => {
+    document.cookie = `theme=${theme}; path=/; max-age=31536000; samesite=lax`;
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!mounted || !resolvedTheme) return;
+
+    syncThemeCookie(resolvedTheme === "dark" ? "dark" : "light");
+  }, [mounted, resolvedTheme]);
 
   if (!mounted) {
     // Render a placeholder or null to avoid hydration errors and flash of incorrect icon
@@ -20,7 +30,10 @@ export function ThemeToggleButton() {
   }
 
   const toggleTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
+
+    setTheme(nextTheme);
+    syncThemeCookie(nextTheme);
   };
 
   return (

@@ -1,12 +1,12 @@
-import React from "react";
-
 import PrimaryButton from "@/components/PrimaryButton";
-import HandShakeIcon from "./HandShakeIcon";
-import SocialMediaLinks from "./SocialMediaLinks";
-import AnimatedDivider from "./animations/AnimatedDivider";
-import ScreenWrapper from "./ScreenWrapper";
 import { PortfolioContent } from "@/data/portfolioContent";
+
+import AnimatedDivider from "./animations/AnimatedDivider";
 import AnimatedText from "./animations/AnimatedText";
+import HandShakeIcon from "./HandShakeIcon";
+import LazyHeroVisual from "./LazyHeroVisual";
+import ScreenWrapper from "./ScreenWrapper";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 export default function HeroSection({
   content,
@@ -17,7 +17,8 @@ export default function HeroSection({
     <ScreenWrapper>
       <div className={"relative h-fit"}>
         <main>
-          <section>
+          <section className="relative">
+            <LazyHeroVisual />
             <div className=" pt-30 md:pt-40  ">
               <div className="relative justify-center items-start">
                 <div className="mx-auto  text-left">
@@ -39,7 +40,7 @@ export default function HeroSection({
                     stagger={0.05}
                     duration={1}
                     from={2}
-                    to={6}
+                    to={5}
                     className="mt-5 tracking-tight  font-work-sans lg:w-5/6  text-4xl  lg:text-6xl    lg:mt-0"
                   />
 
@@ -48,6 +49,7 @@ export default function HeroSection({
                     <AnimatedText
                       duration={1}
                       stagger={0.05}
+                      className=""
                       text={content.hero_sub_header}
                     />
                   </div>

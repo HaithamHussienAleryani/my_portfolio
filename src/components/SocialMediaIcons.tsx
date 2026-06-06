@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { client } from "@/sanity/client";
 import { SOCIAL_MEDIA_QUERY } from "@/sanity/queries";
-import React from "react";
 import { SocialIcon } from "react-social-icons";
 
 type props = {
@@ -19,7 +18,7 @@ async function SocialMediaIconsSection({ className }: props) {
         <SocialIcon
           key={link.name}
           bgColor="transparent"
-          className="p-0 !size-8 !invert-100 dark:!invert-0 md:!size-10 hover:scale-110 transition-transform duration-300"
+          className="p-0 size-8! invert-100! dark:invert-0! md:size-10! hover:scale-110 transition-transform duration-300"
           network={link.name.toLowerCase()}
           url={link.url}
         />

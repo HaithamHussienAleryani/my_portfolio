@@ -2,6 +2,7 @@
 import { Card } from "@/components/ui/card";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { motion } from "motion/react";
 
 interface Stat {
   value: string;
@@ -38,11 +39,11 @@ const Stats = () => {
 
         start: "10% center",
       },
-      duration: 1.2,
+      duration: 1,
       filter: "blur(20px)",
-      ease: "power1.inOut",
+      ease: "power1",
       yPercent: 50,
-      stagger: 0.3,
+      stagger: 0.1,
     });
   });
 
@@ -75,14 +76,20 @@ const Stats = () => {
     <div className="main-container statics-container mb-20 space-y-8 py-4 px-2">
       <Card className="  border-none  shadow-none p-8 rounded-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
-          <div className="space-y-2">
+          <motion.div
+            className="space-y-2"
+            initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, amount: 0.7 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h2 className="text-3xl font-bold text-primary">
               I only deliver results.
             </h2>
             <p className="text-muted-foreground">
               I don&apos;t use excuses or something. Okay maybe sometimes.
             </p>
-          </div>
+          </motion.div>
         </div>
         <StatsGrid stats={statsData} />
       </Card>
