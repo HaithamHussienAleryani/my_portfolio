@@ -1,16 +1,12 @@
-"use client";
-import HandAnimation from "../../public/animations/hand-shake.json";
-import Lottie from "lottie-react";
-
 function HandShakeIcon() {
   return (
-    <div>
-      <Lottie
-        animationData={HandAnimation}
-        loop
-        className={"size-8 animate-bounce"}
-      />
-    </div>
+    <span
+      aria-label="Waving hand"
+      className="inline-block text-2xl leading-none motion-safe:animate-pulse"
+      role="img"
+    >
+      &#128075;
+    </span>
   );
 }
 
