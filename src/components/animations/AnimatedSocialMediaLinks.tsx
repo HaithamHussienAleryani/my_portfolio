@@ -1,5 +1,7 @@
+"use client";
 import { ArrowUpRight } from "lucide-react";
-
+import { motion } from "motion/react";
+import { TextEffect } from "../motion-primitives/text-effect";
 type SocialLinksProps = {
   name: string;
   url: string;
@@ -8,17 +10,26 @@ type SocialLinksProps = {
 
 function AnimatedSocialMediaLinks(props: SocialLinksProps) {
   return (
-    <li className="mb-2 flex space-x-2">
+    <motion.li
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: props.index * 0.3,
+        duration: 0.5,
+        ease: "easeInOut",
+      }}
+      className="mb-2 flex space-x-2"
+    >
       <a
         href={props.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-1.5 uppercase transition-colors duration-200 hover:text-primary"
+        className=" flex  items-center space-x-1.5  uppercase"
       >
-        <span>{props.name}</span>
+        <TextEffect preset="slide">{props.name}</TextEffect>
         <ArrowUpRight size={18} />
       </a>
-    </li>
+    </motion.li>
   );
 }
 

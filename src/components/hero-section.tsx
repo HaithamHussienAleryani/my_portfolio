@@ -24,9 +24,14 @@ export default function HeroSection({
                 <div className="mx-auto  text-left">
                   <div className="flex mb-10  items-center gap-x-2 racking-wider">
                     <HandShakeIcon />
-                    <p className="animate-in fade-in slide-in-from-bottom-2 duration-500 pt-2 m-0 text-lg font-semibold text-accent-foreground">
-                      {content.hero_greating}
-                    </p>
+                    <AnimatedText
+                      duration={1}
+                      stagger={0.05}
+                      text={content.hero_greating}
+                      className={
+                        "pt-2 m-0 text-lg  font-semibold text-accent-foreground "
+                      }
+                    />
                   </div>
 
                   <AnimatedText
@@ -41,9 +46,12 @@ export default function HeroSection({
 
                   <div className="flex flex-col space-y-8 lg:flex-row mt-8  justify-center lg:mt-12 space-x-6 items-center">
                     <AnimatedDivider />
-                    <p className="animate-in fade-in slide-in-from-bottom-3 duration-700 text-center lg:text-left">
-                      {content.hero_sub_header}
-                    </p>
+                    <AnimatedText
+                      duration={1}
+                      stagger={0.05}
+                      className=""
+                      text={content.hero_sub_header}
+                    />
                   </div>
 
                   <div className="mt-12 flex justify-start bg- flex-col items-center gap-2 sm:flex-row lg:justify-between">
